@@ -1,0 +1,75 @@
+.benefitsBlock {
+    margin-top: 87px;
+    width: 1104px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description {
+    /*margin-left: auto;*/
+    /*    margin-right: auto;*/
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.description p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.description h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    margin-top: 9px;
+}
+
+.benefits {
+    display: inline-flex;
+    margin-top: 72px;
+
+
+}
+
+
+.benefit {
+    text-align: center;
+    width: 226px;
+}
+
+.benefit + .benefit {
+    margin-left: 68px;
+}
+
+.benefit img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 17px;
+}
+
+.benefit h2 {
+    margin-top: 41px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232C38;
+}
+
+.benefit p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151D28;
+    margin-top: 12px;
+}
+

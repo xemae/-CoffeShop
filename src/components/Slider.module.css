@@ -1,0 +1,138 @@
+.sliderBlock {
+    background-color: #232C38;
+    width: 384px;
+    height: 894px;
+}
+
+.sliderInfo {
+    position: relative;
+    left: 537px;
+    top: 90px;
+    right: auto;
+    margin-bottom: 72px;
+}
+
+.sliderInfo h2 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #415167;
+}
+
+.sliderInfo h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+    text-align: center;
+}
+
+.slider {
+    margin-top: 72px;
+    margin-left: 130px;
+    /*overflow: hidden;*/
+    display: inline-flex;
+    position: relative;
+    right: 0px;
+    top: 0px;
+}
+
+.slide {
+    width: 1149px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-right: 30px;
+    grid-auto-flow: column;
+}
+
+.card {
+    display: flex;
+    background-color: #FFFFFF;
+    margin-right: 30px;
+    margin-bottom: 32px;
+    width: 559px;
+    height: 256px;
+}
+
+.card:hover {
+    box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
+}
+
+.card img {
+
+}
+
+.cardContent {
+    padding: 42px 41px 42px 41px;
+
+}
+
+.card h2 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-accent);
+}
+
+.card h1 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232C38;
+    margin-top: 8px;
+}
+
+.card p {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151D28;
+    margin-top: 24px;
+    margin-bottom: 18px;
+}
+
+/*.card button {*/
+/*    font-family: 'Nunito';*/
+/*    font-style: normal;*/
+/*    font-weight: 700;*/
+/*    font-size: 16px;*/
+/*    line-height: 22px;*/
+/*}*/
+
+
+/*.card .buy {*/
+/*    background: var(--color-accent);*/
+/*    border-radius: 19px;*/
+/*    color: #F9FBFF;*/
+/*    padding: 7px 15px 7px 17px;*/
+/*    margin-right: 18px;*/
+/*}*/
+
+/*.card .buy:hover {*/
+/*    background-color: var(--color-accent-hover);*/
+/*    color: #FFFFFF;*/
+/*}*/
+
+/*.card .info {*/
+/*    border-radius: 19px;*/
+/*    color: var(--color-primary);*/
+/*    padding: 7px 11px 7px 11px;*/
+/*}*/
+
+/*.card .info:hover {*/
+/*    color: var(--color-text);*/
+/*    background-color: var(--color-second-hover);*/
+/*}*/
+

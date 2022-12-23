@@ -1,0 +1,33 @@
+button {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+
+.buy {
+    background: var(--color-accent);
+    border-radius: 19px;
+    color: #F9FBFF;
+    padding: 7px 15px 7px 17px;
+    margin-right: 18px;
+}
+
+.buy:hover {
+    background-color: var(--color-accent-hover);
+    color: #FFFFFF;
+}
+
+.info {
+    border-radius: 19px;
+    color: var(--color-primary);
+    padding: 7px 11px 7px 11px;
+}
+
+.info:hover {
+    color: var(--color-text);
+    background-color: var(--color-second-hover);
+}
+

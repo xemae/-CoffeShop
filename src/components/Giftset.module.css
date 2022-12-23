@@ -1,0 +1,157 @@
+.giftsetBlock {
+    position: absolute;
+    width: 1076px;
+    height: 802px;
+    left: -2px;
+    top: 2259px;
+    background: #EDF0F5;
+}
+
+.desctiption {
+    position: relative;
+    left: 584px;
+    top: 86px;
+    right: auto;
+    margin-bottom: 66px;
+    text-align: center;
+    width: 224px;
+    height: 62px;
+}
+
+.desctiption h2 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #415167;
+}
+
+.desctiption h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+}
+
+.slider {
+
+}
+
+.giftCard {
+    background-color: #FFFFFF;
+    width: 882px;
+    height: 460px;
+    position: absolute;
+    left: 386px;
+    top: 216px;
+    display: flex;
+    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5)
+}
+
+.giftImage {
+    margin-left: -256px;
+}
+
+.cardContent {
+    padding: 64px;
+    /*height: 332px;*/
+    /*width: 430px;*/
+}
+
+.cardContent h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A;
+}
+
+.cardContent h1{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color: #232C38;
+    margin-top: 12px;
+}
+
+.cardContent p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151D28;
+    margin-top: 12px;
+    width: 430px;
+}
+
+.giftProperties {
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 46px;
+}
+
+.giftProperties .property{
+    display: flex;
+}
+
+.giftProperties img {
+
+}
+
+.giftProperties h4 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #415167;
+}
+
+.giftProperties h3 {
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #415167;
+}
+
+.pages {
+}
+
+.pages button{
+    width: 88px;
+    height: 154px;
+    background-color: rgba(237, 240, 245, 0.3);
+    width: 88px;
+    height: 154px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: rgba(65, 81, 103, 0.3);
+
+
+}
+
+.pages button.active{
+    background-color: #FFFFFF;;
+    width: 88px;
+    height: 154px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+    /*mix-blend-mode: normal;*/
+
+}
