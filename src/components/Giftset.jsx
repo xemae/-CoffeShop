@@ -4,7 +4,7 @@ import GiftCard from "./GiftsetCard";
 
 const Giftset = () => {
 
-    const [isActive, setActive] = useState("false");
+    // const [isActive, setActive] = useState("false");
 
     const onButtonClick = (e) => {
         e.preventDefault();
