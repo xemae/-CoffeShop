@@ -11,12 +11,12 @@
 }
 
 .container h1 {
+    color: var(--color-primary);
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 54px;
     line-height: 70px;
-    color: var(--color-primary);
 }
 
 .logo {
@@ -25,12 +25,12 @@
 
 h1.backgrounded {
     background-color: var(--color-accent);
+    color: #F9FBFF;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 54px;
     line-height: 70px;
-    color: #F9FBFF;
     margin-left: -15px;
     display: inline-block;
     padding-right: 15px;
@@ -43,11 +43,11 @@ h1.backgrounded {
     display: flex;
 }
 
-.basket svg{
+.basket svg {
     fill: #F9FBFF;
 }
 
-.basket:hover svg{
+.basket:hover svg {
     fill: var(--color-second-hover);
 }
 
@@ -91,8 +91,8 @@ ul li {
 }
 
 ul li a:hover {
-    cursor: pointer;
     color: var(--color-accent);
+    cursor: pointer;
     transition: all .15s;
 }
 

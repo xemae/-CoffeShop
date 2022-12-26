@@ -11,7 +11,7 @@ import gift1 from "./img/gift1.svg";
 import beans from "./img/coffeeBeans.svg";
 import place from "./img/mountain.svg";
 
-const GiftCard = (props) => {
+const GiftsetCard = (props) => {
 
     const ComboCards = [
         {
@@ -58,37 +58,36 @@ const GiftCard = (props) => {
         },
     ]
 
-    const Card = ComboCards.find(el => el.id = props.id)
+    const Card = ComboCards.find(el => el.id === props.id)
 
     return (
         <div className={s.giftCard}>
-        <img className={s.giftImage} src={Card.image}/>
-    <div className={s.cardContent}>
-        <h2>{Card.price}</h2>
-        <h1>{Card.title}</h1>
-        <p>{Card.description}</p>
-        <div className={s.giftProperties}>
-            <div className={s.property}>
-                <img src={beans}/>
-                <div>
-                    <h4>{Card.beansTitile}</h4>
-                    <h3>{Card.beansInfo}</h3>
+            <img className={s.giftImage} src={Card.image}/>
+            <div className={s.cardContent}>
+                <h2>{Card.price}</h2>
+                <h1>{Card.title}</h1>
+                <p>{Card.description}</p>
+                <div className={s.giftProperties}>
+                    <div className={s.property}>
+                        <img src={beans}/>
+                        <div>
+                            <h4>{Card.beansTitile}</h4>
+                            <h3>{Card.beansInfo}</h3>
+                        </div>
+                    </div>
+                    <div className={s.property}>
+                        <img src={place}/>
+                        <div>
+                            <h4>{Card.placeTitle}</h4>
+                            <h3>{Card.placeInfo}</h3>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div className={s.property}>
-                <img src={place}/>
-                <div>
-                    <h4>{Card.placeTitle}</h4>
-                    <h3>{Card.placeInfo}</h3>
-                </div>
+                <button className={b.buy}>MUA NGAY</button>
+                <button className={b.info}>CHI TIẾT</button>
             </div>
         </div>
-        <button className={b.buy}>MUA NGAY</button>
-        <button className={b.info}>CHI TIẾT</button>
-    </div>
-</div>
-
     )
 }
 
-export default GiftCard
+export default GiftsetCard

@@ -1,17 +1,16 @@
 import React, {useState} from "react";
 import s from "./Giftset.module.css"
-import GiftCard from "./GiftsetCard";
+import GiftsetCard from "./GiftsetCard";
 
 const Giftset = () => {
 
-    // const [isActive, setActive] = useState("false");
+    const [isActive, setActive] = useState("false");
 
     const onButtonClick = (e) => {
         e.preventDefault();
-        // (e.target.classList.contains("active") === true) ? e.target.classList.remove("active")
-
-            e.target.classList.add("active");
-        return <GiftCard id={e.target.id} />
+        setActive(!isActive)
+        e.target.classList.add("active");
+        return <GiftsetCard id={e.target.id}/>
     }
 
     return (
@@ -24,15 +23,20 @@ const Giftset = () => {
 
                 <div className={s.slider}>
 
-                    <GiftCard id={1}/>
+                    <GiftsetCard id={1}/>
 
                     <div className={s.pages}>
-                        <button id={'1'} className={s.active} onClick={onButtonClick}>1</button>
-                        <button id={'2'} onClick={onButtonClick}>2</button>
-                        <button id={'3'} onClick={onButtonClick}>3</button>
+                        <button id={'btn1'} className={s.active}
+                                onClick={onButtonClick}>1
+                        </button>
+                        <button id={'btn2'}
+                                onClick={onButtonClick}>2
+                        </button>
+                        <button id={'btn3'}
+                                onClick={onButtonClick}>3
+                        </button>
                     </div>
                 </div>
-
 
             </div>
         </div>

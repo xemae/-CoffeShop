@@ -5,7 +5,6 @@ import arrow from "./img/right-arrow.svg"
 import ComboCards from "./ComboCards";
 
 const Combo = () => {
-
     return (
         <div className={s.comboBlockWrapper} id='combo'>
             <div className={s.comboBlock}>

@@ -12,36 +12,42 @@ const CoffeeCards = () => {
 
     const ComboCards = [
         {
+            id: 1,
             image: morning,
             price: '99.000',
             title: 'REVO Morning',
             description: 'đắng, hậu ngọt, hương hoa '
         },
         {
+            id: 2,
             image: origin,
             price: '139.000',
             title: 'REVO Origin',
             description: 'hậu ngọt, ít đắng, vị chua dâu'
         },
         {
+            id: 3,
             image: everyday,
             price: '85.000',
             title: 'REVO Everyday',
             description: 'cân bằng, hậu đắng, vị chocolate '
         },
         {
+            id: 4,
             image: revo,
             price: '75.000',
             title: 'REVO Đậm Đà',
             description: 'đậm đà, đắng, truyền thống'
         },
         {
+            id: 5,
             image: honey,
             price: '195.000',
             title: 'REVO Honey',
             description: 'độ ngọt cao, hậu ngọt, chua họ táo'
         },
         {
+            id: 6,
             image: natural,
             price: '169.000',
             title: 'REVO Natural',
@@ -50,7 +56,7 @@ const CoffeeCards = () => {
     ]
 
     const Cards = ComboCards.map(c =>
-        <div className={s.slide}>
+        <div key={c.id} className={s.slide}>
             <div className={s.card}>
                 <img src={c.image}/>
                 <div className={s.cardContent}>

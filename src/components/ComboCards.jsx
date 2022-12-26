@@ -10,6 +10,7 @@ const ComboCards = () => {
 
     const ComboCards = [
         {
+            id: 1,
             image: combo1,
             price: '147.000',
             lastPrice: '155.000',
@@ -17,6 +18,7 @@ const ComboCards = () => {
             description: 'Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...'
         },
         {
+            id: 2,
             image: combo2,
             price: '156.000',
             lastPrice: '165.000',
@@ -24,6 +26,7 @@ const ComboCards = () => {
             description: 'Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...'
         },
         {
+            id: 3,
             image: combo3,
             price: '275.000',
             lastPrice: '280.000',
@@ -31,6 +34,7 @@ const ComboCards = () => {
             description: 'Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...'
         },
         {
+            id: 4,
             image: combo4,
             price: '249.000',
             lastPrice: '276.000',
@@ -40,7 +44,7 @@ const ComboCards = () => {
     ]
 
     const Cards = ComboCards.map(c =>
-        <div className={s.comboCard}>
+        <div key={c.id} className={s.comboCard}>
             <img src={c.image}/>
             <div className={s.cardContent}>
                 <div className={s.cost}>
@@ -54,6 +58,7 @@ const ComboCards = () => {
             </div>
         </div>
     )
+
     return (
         Cards
     )
