@@ -6,7 +6,6 @@ button {
     line-height: 22px;
 }
 
-
 .buy {
     background: var(--color-accent);
     border-radius: 19px;
@@ -28,6 +27,31 @@ button {
 
 .info:hover {
     color: var(--color-text);
-    background-color: var(--color-second-hover);
+    background-color: #f1f1f1;
 }
 
+.arrow {
+    background-color: var(--color-accent);
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    padding: 15px 12px 16px 12px;
+    display: flex;
+}
+
+
+.arrow.left {
+    margin-left: 74px;
+}
+
+.arrow.right {
+    margin-left: -20px;
+}
+
+.arrow.left img {
+    transform: rotate(180deg);
+}
+
+.arrow:hover {
+    background-color: var(--color-accent-hover);
+}

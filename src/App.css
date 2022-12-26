@@ -1,10 +1,11 @@
 * {
   -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+
 }
 
 body {
   background-color: #F9FBFF;
-
 }
 
 *, *:before, *::after {
@@ -28,7 +29,7 @@ h1, h2, h3, h4, h5, h6, p, div {
   font-size: inherit;
   font-weight: inherit;
   line-height: inherit;
-  font-family: 'Poppins';
+  font-family: 'Montserrat';
 }
 
 img, svg {
@@ -72,7 +73,7 @@ ul {
 :root {
   --color-primary: #415167;
   --color-accent: #C7A17A;
-  --color-text: #151D28;
+  --color-text: #151d28;
   --color-contrast: #EDF0F5;
   --color-accent-hover: #e1b281;
   --color-second-hover: #F9F5E8;

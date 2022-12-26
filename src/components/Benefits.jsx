@@ -7,7 +7,7 @@ import preparation from "./img/preparation.svg"
 
 const Benefits = () => {
     return (
-        <div className={s.benefitsBlock}>
+        <div className={s.benefitsBlock} id='benefits'>
             <div className={s.description}>
                 <p>Your Personalized Coffee</p>
                 <h1>COFFEE BUILD YOUR BASE</h1>

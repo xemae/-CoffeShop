@@ -1,0 +1,132 @@
+.comboBlockWrapper {
+    background-color: var(--color-primary);
+    height: 906px;
+    display: flex;
+}
+
+.comboBlock {
+    background-color: #F9FBFF;
+    width: 1074px;
+}
+
+.comboBlock .description {
+    position: relative;
+    left: 584px;
+    top: 86px;
+    right: auto;
+    text-align: center;
+    width: 291px;
+    height: 64px;
+    margin-bottom: 28px;
+
+}
+
+.comboBlock .description h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #415167;
+}
+
+.comboBlock .description h1{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 34px;
+    color: #415167;
+}
+
+.comboBlock .slider {
+    /*height: 562px;*/
+    display: flex;
+    padding-left: 128px;
+    padding-top: 100px;
+    /*margin-top: 128px;*/
+    position: relative;
+   padding-bottom: 128px;
+    width: 1400px;
+    overflow: hidden;
+}
+
+.comboCard {
+    background-color: #FFFFFF;
+    height: 562px;
+}
+
+.comboCard:hover {
+    box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
+}
+
+.comboCard+.comboCard {
+    margin-left: 30px;
+}
+
+.comboCard .cardContent {
+    margin: 42px 42px 42px 42px;
+}
+
+.comboCard .cost {
+    display: flex;
+    align-items: center
+}
+
+.cardContent .cost h2{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A;
+    margin-right: 20px;
+}
+
+.cardContent .cost s{
+    font-family: 'Nunito';
+    font-size: 14px;
+    line-height: 16px;
+    color: #415167;
+}
+
+.comboCard .cardContent h1{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 10px;
+    color: #232C38;
+}
+
+.comboCard .cardContent p{
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+    color: #151D28;
+    margin-top: 10px;
+    margin-bottom: 32px;
+}
+
+.buttonLeftWrap {
+    background-color: rgba(255, 255, 255, 0.24);
+    width: 102px;
+    height: 562px;
+    position: absolute;
+    padding-top: 232px;
+    margin-left: -128px;
+
+
+}
+
+.buttonRightWrap {
+    background-color: rgba(255, 255, 255, 0.24);
+    width: 102px;
+    height: 562px;
+    position: absolute;
+    padding-top: 232px;
+    left: 1298px;
+}

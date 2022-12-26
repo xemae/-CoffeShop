@@ -1,15 +1,15 @@
 .sliderBlock {
-    background-color: #232C38;
+    background-color: var(--color-primary);
     width: 384px;
     height: 894px;
+    margin-top: 128px;
 }
 
 .sliderInfo {
     position: relative;
-    left: 537px;
+    text-align: center;
+    left: 507px;
     top: 90px;
-    right: auto;
-    margin-bottom: 72px;
 }
 
 .sliderInfo h2 {
@@ -33,29 +33,29 @@
 }
 
 .slider {
-    margin-top: 72px;
-    margin-left: 130px;
-    /*overflow: hidden;*/
-    display: inline-flex;
+    padding-left: 128px;
+    padding-top: 169px;
     position: relative;
-    right: 0px;
-    top: 0px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 30px;
+    grid-row-gap: 32px;
+    width: 1400px;
+    overflow: hidden;
 }
 
-.slide {
-    width: 1149px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-right: 30px;
-    grid-auto-flow: column;
-}
+/*.cardsWrapper {*/
+/*    height: 544px;*/
+/*    width: 1400px;*/
+/*    overflow: hidden;*/
+/*    position: relative;*/
+
+/*}*/
 
 .card {
     display: flex;
     background-color: #FFFFFF;
-    margin-right: 30px;
-    margin-bottom: 32px;
     width: 559px;
     height: 256px;
 }
@@ -64,13 +64,8 @@
     box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
 }
 
-.card img {
-
-}
-
 .cardContent {
     padding: 42px 41px 42px 41px;
-
 }
 
 .card h2 {
@@ -103,36 +98,19 @@
     margin-bottom: 18px;
 }
 
-/*.card button {*/
-/*    font-family: 'Nunito';*/
-/*    font-style: normal;*/
-/*    font-weight: 700;*/
-/*    font-size: 16px;*/
-/*    line-height: 22px;*/
-/*}*/
+.buttonLeftWrap {
+    background-color: rgba(255, 255, 255, 0.24);
+    width: 94px;
+    height: 544px;
+    position: absolute;
+    margin-top: 169px;
+}
 
-
-/*.card .buy {*/
-/*    background: var(--color-accent);*/
-/*    border-radius: 19px;*/
-/*    color: #F9FBFF;*/
-/*    padding: 7px 15px 7px 17px;*/
-/*    margin-right: 18px;*/
-/*}*/
-
-/*.card .buy:hover {*/
-/*    background-color: var(--color-accent-hover);*/
-/*    color: #FFFFFF;*/
-/*}*/
-
-/*.card .info {*/
-/*    border-radius: 19px;*/
-/*    color: var(--color-primary);*/
-/*    padding: 7px 11px 7px 11px;*/
-/*}*/
-
-/*.card .info:hover {*/
-/*    color: var(--color-text);*/
-/*    background-color: var(--color-second-hover);*/
-/*}*/
-
+.buttonRightWrap {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 94px;
+    height: 544px;
+    position: absolute;
+    margin-top: 169px;
+    left: 1306px;
+}
