@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Coffee.module.css"
 import b from "./Buttons.module.css"
-import morning from "./img/morning.svg"
 import arrow from "./img/right-arrow.svg";
 import CoffeeCards from "./CoffeeCards";
 
@@ -15,20 +14,16 @@ const Coffee = () => {
             </div>
 
             <div className={s.slider}>
-                    <button className={s.buttonLeftWrap}>
-                        <button className={b.arrow + ' ' + b.left}><img src={arrow}/></button>
-                    </button>
-                {/*<div className={s.cardsWrapper}>*/}
+                <button className={s.buttonLeftWrap}>
+                    <button className={b.arrow + ' ' + b.left}><img src={arrow}/></button>
+                </button>
                 <CoffeeCards/>
-                {/*</div>*/}
-
                 <button className={s.buttonRightWrap}>
-                        <button className={b.arrow + ' ' + b.right}><img src={arrow}/></button>
-                    </button>
+                    <button className={b.arrow + ' ' + b.right}><img src={arrow}/></button>
+                </button>
             </div>
-        </div>
 
-        // </div>
+        </div>
     )
 }
 

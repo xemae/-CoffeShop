@@ -6,8 +6,6 @@
 }
 
 .description {
-    /*margin-left: auto;*/
-    /*    margin-right: auto;*/
     text-align: center;
     color: var(--color-primary);
 }
@@ -32,10 +30,7 @@
 .benefits {
     display: inline-flex;
     margin-top: 72px;
-
-
 }
-
 
 .benefit {
     text-align: center;
@@ -72,4 +67,3 @@
     color: #151D28;
     margin-top: 12px;
 }
-
