@@ -56,8 +56,7 @@ const CoffeeCards = () => {
     ]
 
     const Cards = ComboCards.map(c =>
-        <div key={c.id} className={s.slide}>
-            <div className={s.card}>
+            <div key={c.id} className={s.card}>
                 <img src={c.image}/>
                 <div className={s.cardContent}>
                     <h2>{c.price}</h2>
@@ -67,7 +66,6 @@ const CoffeeCards = () => {
                     <button className={b.info}>CHI TIẾT</button>
                 </div>
             </div>
-        </div>
     )
     return (
         Cards
