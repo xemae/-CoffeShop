@@ -38,7 +38,7 @@
     color: #415167;
 }
 
-.comboBlock .slider {
+.slide {
     display: flex;
     padding-left: 128px;
     padding-top: 100px;
@@ -71,20 +71,20 @@
 }
 
 .cardContent .cost h2 {
+    color: #C7A17A;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #C7A17A;
     margin-right: 20px;
 }
 
 .cardContent .cost s {
+    color: #415167;
     font-family: 'Nunito';
     font-size: 14px;
     line-height: 16px;
-    color: #415167;
 }
 
 .comboCard .cardContent h1 {
@@ -114,7 +114,6 @@
     height: 562px;
     position: absolute;
     padding-top: 232px;
-    margin-left: -128px;
 }
 
 .buttonRightWrap {

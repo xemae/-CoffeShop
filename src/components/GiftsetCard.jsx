@@ -12,10 +12,9 @@ import beans from "./img/coffeeBeans.svg";
 import place from "./img/mountain.svg";
 
 const GiftsetCard = (props) => {
-
     const ComboCards = [
         {
-            id: 1,
+            id: "1",
             image: gift1,
             price: '285.000',
             title: 'Giftset "Cà phê phin Việt Nam"',
@@ -29,7 +28,7 @@ const GiftsetCard = (props) => {
             placeInfo: '700 - 800m'
         },
         {
-            id: 2,
+            id: "2",
             image: gift1,
             price: '285.000',
             title: '2 Giftset "Cà phê phin Việt Nam"',
@@ -43,7 +42,7 @@ const GiftsetCard = (props) => {
             placeInfo: '700 - 800m'
         },
         {
-            id: 3,
+            id: "3",
             image: gift1,
             price: '285.000',
             title: '3 Giftset "Cà phê phin Việt Nam"',

@@ -32,26 +32,18 @@
     text-align: center;
 }
 
-.slider {
-    padding-left: 128px;
-    padding-top: 169px;
-    position: relative;
+.slide {
     display: grid;
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 30px;
     grid-row-gap: 32px;
+    padding-left: 128px;
+    padding-top: 169px;
     width: 1400px;
     overflow: hidden;
 }
 
-/*.cardsWrapper {*/
-/*    height: 544px;*/
-/*    width: 1400px;*/
-/*    overflow: hidden;*/
-/*    position: relative;*/
-
-/*}*/
 
 .card {
     display: flex;

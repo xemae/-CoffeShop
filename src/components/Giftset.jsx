@@ -4,13 +4,11 @@ import GiftsetCard from "./GiftsetCard";
 
 const Giftset = () => {
 
-    const [isActive, setActive] = useState("false");
+    const [activeSlide, setActiveSlide] = useState("1");
 
     const onButtonClick = (e) => {
         e.preventDefault();
-        setActive(!isActive)
-        e.target.classList.add("active");
-        return <GiftsetCard id={e.target.id}/>
+        setActiveSlide(e.target.id)
     }
 
     return (
@@ -23,19 +21,22 @@ const Giftset = () => {
 
                 <div className={s.slider}>
 
-                    <GiftsetCard id={1}/>
+                    <GiftsetCard id={activeSlide}/>
 
                     <div className={s.pages}>
-                        <button id={'btn1'} className={s.active}
+                        <button id={"1"} className={activeSlide === "1" ? s.active : ""}
                                 onClick={onButtonClick}>1
                         </button>
-                        <button id={'btn2'}
+                        <button id={"2"}
+                                className={activeSlide === "2" ? s.active : ""}
                                 onClick={onButtonClick}>2
                         </button>
-                        <button id={'btn3'}
+                        <button id={"3"}
+                                className={activeSlide === "3"? s.active : ""}
                                 onClick={onButtonClick}>3
                         </button>
                     </div>
+                    
                 </div>
 
             </div>
