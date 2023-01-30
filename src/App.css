@@ -2,10 +2,12 @@
   -webkit-font-smoothing: antialiased;
   scroll-behavior: smooth;
 
+
 }
 
 body {
   background-color: #F9FBFF;
+  width: 100%;
 }
 
 *, *:before, *::after {

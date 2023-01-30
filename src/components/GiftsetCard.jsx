@@ -22,7 +22,7 @@ const GiftsetCard = (props) => {
                 '                    rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình\n' +
                 '                    yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng\n' +
                 '                    cho bạn.',
-            beansTitile: 'Loại hạt',
+            beansTitle: 'Loại hạt',
             beansInfo: 'Fine Robusta Blend',
             placeTitle: 'Độ cao',
             placeInfo: '700 - 800m'
@@ -36,7 +36,7 @@ const GiftsetCard = (props) => {
                 '                    rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình\n' +
                 '                    yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng\n' +
                 '                    cho bạn.',
-            beansTitile: 'Loại hạt',
+            beansTitle: 'Loại hạt',
             beansInfo: 'Fine Robusta Blend',
             placeTitle: 'Độ cao',
             placeInfo: '700 - 800m'
@@ -50,7 +50,7 @@ const GiftsetCard = (props) => {
                 '                    rang xay theo công nghệ và bí quyết học hỏi từ những nghệ nhân nổi tiếng, cùng với tình\n' +
                 '                    yêu, sự đam mê của người làm cà phê… tạo ra những tách cà phê tinh khiết chỉ dành riêng\n' +
                 '                    cho bạn.',
-            beansTitile: 'Loại hạt',
+            beansTitle: 'Loại hạt',
             beansInfo: 'Fine Robusta Blend',
             placeTitle: 'Độ cao',
             placeInfo: '700 - 800m'
@@ -70,7 +70,7 @@ const GiftsetCard = (props) => {
                     <div className={s.property}>
                         <img src={beans}/>
                         <div>
-                            <h4>{Card.beansTitile}</h4>
+                            <h4>{Card.beansTitle}</h4>
                             <h3>{Card.beansInfo}</h3>
                         </div>
                     </div>
