@@ -3,9 +3,11 @@ import s from "./Combo.module.css"
 import b from "./Buttons.module.css"
 import arrow from "./img/right-arrow.svg"
 import ComboCards from "./ComboCards";
+import InfoModal from "./InfoModal";
 
 const Combo = () => {
     const [left, setLeft] = useState(0);
+    const [infoModal, setInfoModal] = useState(false);
 
     const onButtonRightClick = (e) => {
         setLeft(left - 390)
@@ -41,6 +43,10 @@ const Combo = () => {
         }
     }
 
+    // if (infoModal) {
+    //     return <InfoModal />
+    // }
+
     return (
         <div className={s.comboBlockWrapper} id='combo'>
             <div className={s.comboBlock}>
@@ -61,7 +67,7 @@ const Combo = () => {
                              width: `${1400 + -left}px`,
                              transition: 'all .1s'
                          }}>
-                        <ComboCards/>
+                        <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
                     </div>
                 </div>
 
