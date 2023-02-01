@@ -1,12 +1,12 @@
 import React from "react";
 import s from "./Coffee.module.css"
-import b from "./Buttons.module.css"
-import morning from "./img/morning.svg";
-import origin from "./img/origin.svg";
-import everyday from "./img/everyday.svg";
-import revo from "./img/revo.svg";
-import honey from "./img/honey.svg";
-import natural from "./img/natural.svg";
+import b from "../Buttons.module.css"
+import morning from "../img/morning.svg";
+import origin from "../img/origin.svg";
+import everyday from "../img/everyday.svg";
+import revo from "../img/revo.svg";
+import honey from "../img/honey.svg";
+import natural from "../img/natural.svg";
 
 const CoffeeCards = () => {
 
