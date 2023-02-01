@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import s from "./Coffee.module.css"
-import b from "./Buttons.module.css"
-import arrow from "./img/right-arrow.svg";
+import b from "../Buttons.module.css"
+import arrow from "../img/right-arrow.svg";
 import CoffeeCards from "./CoffeeCards";
 
 const Coffee = () => {
