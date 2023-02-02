@@ -1,12 +1,18 @@
-import {createStore} from "redux"
-import appReducer from "./app-reducer";
+import {combineReducers, configureStore} from "@reduxjs/toolkit"
+import appReducer from './app-reducer'
 
 
 // let reducers = combineReducers({
 //     appReducer
 // })
-const store = createStore(appReducer)
+const rootReducer = combineReducers({
+    toolkit: appReducer
+})
 
-// let store = createStore (reducers)
+export const store = configureStore({
+    reducer: rootReducer
+})
 
-export default store
+// let index = createStore (reducers)
+
+// export default index

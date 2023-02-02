@@ -1,4 +1,5 @@
 // import React from "react";
+import {createAction, createReducer} from "@reduxjs/toolkit"
 import combo1 from "../components/img/combo1.svg";
 import combo2 from "../components/img/combo2.svg";
 import combo3 from "../components/img/combo3.svg";
@@ -11,10 +12,6 @@ import revo from "../components/img/revo.svg";
 import honey from "../components/img/honey.svg";
 import natural from "../components/img/natural.svg";
 
-const SHOW_OR_HIDE_INFO = "SHOW_OR_HIDE_INFO"
-const SHOW_OR_HIDE_BASKET = "SHOW_OR_HIDE_BASKET"
-const ADD_TO_BASKET = "ADD_TO_BASKET"
-const REMOVE_FROM_BASKET = "REMOVE_FROM_BASKET"
 
 
 const initialState = {
@@ -187,40 +184,17 @@ const initialState = {
 
 };
 
-function appReducer (state = initialState, action) {
-    switch (action.type) {
-        case SHOW_OR_HIDE_INFO:
-            return {
-                ...state,
-                isInfoShowed: !state.isInfoShowed
-            };
-        case SHOW_OR_HIDE_BASKET:
-            return {
-                ...state,
-                isBasketShowed: !state.isBasketShowed
-            };
-        case ADD_TO_BASKET:
-            const item = item
-            return {
-                ...state,
-                basketCounter: state.basketCounter++,
-                basket: state.basket.push(item)
-            };
-        // case REMOVE_FROM_BASKET:
-        //     return {
-        //         ...state,
-        //         basket: state.basket
-        //     };
+export const showOrHideInfo = createAction("SHOW_OR_HIDE_INFO")
+export const showOrHideBasket = createAction("SHOW_OR_HIDE_BASKET")
+export const addToBasket = createAction("ADD_TO_BASKET")
+export const removeFromBasket = createAction("REMOVE_FROM_BASKET")
 
 
-        default:
-            return state;
+export default createReducer (initialState, {
+    [showOrHideInfo]: function (state) {
+        state.showOrHideInfo = !state.showOrHideInfo
+    },
+    [showOrHideBasket]: function (state) {
+        state.isBasketShowed = !state.isBasketShowed
     }
-}
-
-export const showOrHideInfoActionCreator = () => ({type: SHOW_OR_HIDE_INFO})
-export const showOrHideBasketActionCreator = () => ({type: SHOW_OR_HIDE_BASKET})
-export const addToBasketActionCreator = (item) => ({type: ADD_TO_BASKET, item})
-
-
-export default appReducer;
+})
