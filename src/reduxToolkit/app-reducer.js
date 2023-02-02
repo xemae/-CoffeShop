@@ -198,3 +198,5 @@ export default createReducer (initialState, {
         state.isBasketShowed = !state.isBasketShowed
     }
 })
+
+console.log(showOrHideBasket)
