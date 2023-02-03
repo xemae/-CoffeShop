@@ -1,18 +1,10 @@
 import {combineReducers, configureStore} from "@reduxjs/toolkit"
-import appReducer from './app-reducer'
+import toolkitSlice from "./toolkitSlice";
 
-
-// let reducers = combineReducers({
-//     appReducer
-// })
 const rootReducer = combineReducers({
-    toolkit: appReducer
+    toolkit: toolkitSlice
 })
 
 export const store = configureStore({
     reducer: rootReducer
 })
-
-// let index = createStore (reducers)
-
-// export default index
