@@ -196,7 +196,13 @@ export default createReducer (initialState, {
     },
     [showOrHideBasket]: function (state) {
         state.isBasketShowed = !state.isBasketShowed
-    }
+    },
+    [addToBasket]: function (state) {
+        state.addToBasket = state.basketCounter++
+    },
+    [removeFromBasket]: function (state) {
+        state.removeFromBasketToBasket = state.basketCounter--
+    },
 })
 
 console.log(showOrHideBasket)

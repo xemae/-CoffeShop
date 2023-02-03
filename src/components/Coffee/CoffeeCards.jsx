@@ -7,6 +7,8 @@ import everyday from "../img/everyday.svg";
 import revo from "../img/revo.svg";
 import honey from "../img/honey.svg";
 import natural from "../img/natural.svg";
+import {useDispatch, useSelector} from "react-redux";
+import {addToBasket} from "../../reduxToolkit/app-reducer";
 
 const CoffeeCards = () => {
 
@@ -55,6 +57,9 @@ const CoffeeCards = () => {
         },
     ]
 
+
+    const basket = useSelector(state => state.toolkit.basket)
+    const dispatch = useDispatch()
     const Cards = ComboCards.map(c =>
             <div key={c.id} className={s.card}>
                 <img src={c.image}/>
@@ -62,7 +67,7 @@ const CoffeeCards = () => {
                     <h2>{c.price}</h2>
                     <h1>{c.title}</h1>
                     <p>{c.description}</p>
-                    <button className={b.buy}>MUA NGAY</button>
+                    <button className={b.buy} onClick={() => dispatch(addToBasket(c.id))}>MUA NGAY</button>
                     <button className={b.info}>CHI TIẾT</button>
                 </div>
             </div>
