@@ -1,4 +1,4 @@
-import {createSlice} from "@reduxjs/toolkit";
+import {createSlice, current} from "@reduxjs/toolkit";
 import combo1 from "../components/img/combo1.svg";
 import combo2 from "../components/img/combo2.svg";
 import combo3 from "../components/img/combo3.svg";
@@ -17,63 +17,13 @@ const toolkitSlice = createSlice({
     initialState: {
         isInfoShowed: false,
         isBasketShowed: false,
+        currentCard: {},
         basketCounter: 0,
         basket: [],
         cards: [
             {
                 id: 1,
-                image: combo1,
-                price: '147.000',
-                lastPrice: '155.000',
-                title: 'Combo Revo Đậm Đà',
-                description: 'Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...',
-                shortDescription: 'Revo Đậm Đà đủ mạnh',
-                beansTitle: 'Loại hạt',
-                beansInfo: 'Fine Robusta Blend',
-                placeTitle: 'Độ cao',
-                placeInfo: '700 - 800m'
-            },
-            {
-                id: 2,
-                image: combo2,
-                price: '156.000',
-                lastPrice: '165.000',
-                title: 'Combo Revo Everyday',
-                description: 'Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...',
-                shortDescription: 'Revo Đậm Đà đủ mạnh',
-                beansTitle: 'Loại hạt',
-                beansInfo: 'Fine Robusta Blend',
-                placeTitle: 'Độ cao',
-                placeInfo: '700 - 800m'
-            },
-            {
-                id: 3,
-                image: combo3,
-                price: '275.000',
-                lastPrice: '280.000',
-                title: 'Combo Revo Honey',
-                description: 'Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...',
-                shortDescription: 'Revo Đậm Đà đủ mạnh',
-                beansTitle: 'Loại hạt',
-                beansInfo: 'Fine Robusta Blend',
-                placeTitle: 'Độ cao',
-                placeInfo: '700 - 800m'
-            },
-            {
-                id: 4,
-                image: combo4,
-                price: '249.000',
-                lastPrice: '276.000',
-                title: 'Combo Revo Honey',
-                description: 'Revo Natural là dòng cà phê đặc biệt của Revo Coffee dành riêng ...',
-                shortDescription: 'Revo Đậm Đà đủ mạnh',
-                beansTitle: 'Loại hạt',
-                beansInfo: 'Fine Robusta Blend',
-                placeTitle: 'Độ cao',
-                placeInfo: '700 - 800m'
-            },
-            {
-                id: 5,
+                type: 'gift',
                 image: gift1,
                 price: '285.000',
                 title: 'Giftset "Cà phê phin Việt Nam"',
@@ -87,7 +37,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 6,
+                id: 2,
+                type: 'gift',
                 image: gift1,
                 price: '285.000',
                 title: '2 Giftset "Cà phê phin Việt Nam"',
@@ -101,7 +52,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 7,
+                id: 3,
+                type: 'gift',
                 image: gift1,
                 price: '285.000',
                 title: '3 Giftset "Cà phê phin Việt Nam"',
@@ -115,7 +67,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 8,
+                id: 4,
+                type: 'coffee',
                 image: morning,
                 price: '99.000',
                 title: 'REVO Morning',
@@ -126,7 +79,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 9,
+                id: 5,
+                type: 'coffee',
                 image: origin,
                 price: '139.000',
                 title: 'REVO Origin',
@@ -137,7 +91,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 10,
+                id: 6,
+                type: 'coffee',
                 image: everyday,
                 price: '85.000',
                 title: 'REVO Everyday',
@@ -148,7 +103,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 11,
+                id: 7,
+                type: 'coffee',
                 image: revo,
                 price: '75.000',
                 title: 'REVO Đậm Đà',
@@ -159,7 +115,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 12,
+                id: 8,
+                type: 'coffee',
                 image: honey,
                 price: '195.000',
                 title: 'REVO Honey',
@@ -170,7 +127,8 @@ const toolkitSlice = createSlice({
                 placeInfo: '700 - 800m'
             },
             {
-                id: 13,
+                id: 9,
+                type: 'coffee',
                 image: natural,
                 price: '169.000',
                 title: 'REVO Natural',
@@ -180,25 +138,88 @@ const toolkitSlice = createSlice({
                 placeTitle: 'Độ cao',
                 placeInfo: '700 - 800m'
             },
+            {
+                id: 10,
+                type: 'combo',
+                image: combo1,
+                price: '147.000',
+                lastPrice: '155.000',
+                title: 'Combo Revo Đậm Đà',
+                description: 'Hàm lượng caffein trong Revo Đậm Đà đủ mạnh để làm bạn tỉnh táo làm việc...',
+                shortDescription: 'Revo Đậm Đà đủ mạnh',
+                beansTitle: 'Loại hạt',
+                beansInfo: 'Fine Robusta Blend',
+                placeTitle: 'Độ cao',
+                placeInfo: '700 - 800m'
+            },
+            {
+                id: 11,
+                type: 'combo',
+                image: combo2,
+                price: '156.000',
+                lastPrice: '165.000',
+                title: 'Combo Revo Everyday',
+                description: 'Revo Everyday được phối trộn giữa vị đắng của hạt Robusta và hương thơm...',
+                shortDescription: 'Revo Đậm Đà đủ mạnh',
+                beansTitle: 'Loại hạt',
+                beansInfo: 'Fine Robusta Blend',
+                placeTitle: 'Độ cao',
+                placeInfo: '700 - 800m'
+            },
+            {
+                id: 12,
+                type: 'combo',
+                image: combo3,
+                price: '275.000',
+                lastPrice: '280.000',
+                title: 'Combo Revo Honey',
+                description: 'Honey – trong tên gọi Revo Honey đến từ phương pháp chế biến hạt Arabica...',
+                shortDescription: 'Revo Đậm Đà đủ mạnh',
+                beansTitle: 'Loại hạt',
+                beansInfo: 'Fine Robusta Blend',
+                placeTitle: 'Độ cao',
+                placeInfo: '700 - 800m'
+            },
+            {
+                id: 13,
+                type: 'combo',
+                image: combo4,
+                price: '249.000',
+                lastPrice: '276.000',
+                title: 'Combo Revo Honey',
+                description: 'Revo Natural là dòng cà phê đặc biệt của Revo Coffee dành riêng ...',
+                shortDescription: 'Revo Đậm Đà đủ mạnh',
+                beansTitle: 'Loại hạt',
+                beansInfo: 'Fine Robusta Blend',
+                placeTitle: 'Độ cao',
+                placeInfo: '700 - 800m'
+            },
         ]
     },
     reducers: {
-        showOrHideInfo(state) {
+        showOrHideInfo(state, action) {
             state.isInfoShowed = !state.isInfoShowed
+            state.currentCard = action.payload
+            console.log(current(state))
         },
         showOrHideBasket(state) {
             state.isBasketShowed = !state.isBasketShowed
+            console.log(current(state))
         },
         addToBasket(state, action) {
-            state.addToBasket = state.basketCounter++
-            //добавить карточку в массив корзины
             state.basket.push(action.payload)
-            console.log(state.basket)
+            state.basketCounter++
+
+            // console.log(state.basketCounter)
+            console.log(current(state))
         },
         removeFromBasket(state, action) {
-            state.removeFromBasketToBasket = state.basketCounter--
+            state.basketCounter--
             //убрать карточку из массива корзины
+
             state.basket.filter(item => !action.payload)
+            console.log(state.basketCounter)
+            console.log(current(state))
         }
     }
 })
