@@ -1,8 +1,13 @@
 import React from "react";
 import s from "./Header.module.css"
 import logo from "./img/logo.svg"
+import {useDispatch, useSelector} from "react-redux";
+import {showOrHideBasket} from "../reduxToolkit/toolkitSlice";
 
 const Header = () => {
+    const basketCounter = useSelector(state => state.toolkit.basketCounter)
+    const dispatch = useDispatch()
+
     return (
         <div className={s.header}>
             <div className={s.container}>
@@ -12,7 +17,7 @@ const Header = () => {
                 <h1>COFFEE</h1>
             </div>
             <div className={s.nav}>
-                <button className={s.basket}>
+                <button className={s.basket} onClick={() => dispatch(showOrHideBasket())}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" fill="none"/>
                         <path
@@ -22,7 +27,7 @@ const Header = () => {
                         <path
                             d="M6.53574 21.0001C5.64814 21.0001 4.9286 20.2805 4.9286 19.3929C4.9286 18.5053 5.64814 17.7858 6.53574 17.7858C7.42334 17.7858 8.14288 18.5053 8.14288 19.3929C8.14288 20.2805 7.42334 21.0001 6.53574 21.0001Z"/>
                     </svg>
-                    <p className={s.counter}>1</p>
+                    <p className={s.counter}>{basketCounter}</p>
                 </button>
                 <ul>
                     <li><p>TRANG CHỦ</p></li>
