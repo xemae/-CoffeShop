@@ -14,12 +14,12 @@ const ComboCards = (props) => {
     const dispatch = useDispatch()
 
 
-    const onInfoClick = (c) => {
-        props.setInfoModal(true)
-        if (props.infoModal) {
-            return <InfoModal info={c}/>
-        }
-    }
+    // const onInfoClick = (c) => {
+    //     props.setInfoModal(true)
+    //     if (props.infoModal) {
+    //         return <InfoModal info={c}/>
+    //     }
+    // }
 
     const Cards = cards.map(c =>
         <div key={c.id} className={s.comboCard}>
@@ -32,8 +32,7 @@ const ComboCards = (props) => {
                 <h1>{c.title}</h1>
                 <p>{c.description}</p>
                 <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
-                {/*<button className={b.info} onClick={() => dispatch(showOrHideInfo(c))}>CHI TIẾT</button>*/}
-                <button className={b.info} onClick={onInfoClick(c)}>CHI TIẾT</button>
+                <button className={b.info} onClick={() => dispatch(showOrHideInfo(c))}>CHI TIẾT</button>
             </div>
         </div>
     )
