@@ -1,7 +1,9 @@
 .infoModalWrapper {
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(21, 29, 40, 0.3);
+    background-color: #1086ce;
+    text-align: center;
+    width: 40vw;
+    margin:2vh auto;
+    position: absolute;
 }
 
 .infoModal {

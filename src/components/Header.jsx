@@ -1,12 +1,14 @@
-import React from "react";
+import React, {useState} from "react";
 import s from "./Header.module.css"
 import logo from "./img/logo.svg"
 import {useDispatch, useSelector} from "react-redux";
 import {showOrHideBasket} from "../reduxToolkit/toolkitSlice";
+import BasketModal from "./BasketModal";
 
 const Header = () => {
     const basketCounter = useSelector(state => state.toolkit.basketCounter)
     const dispatch = useDispatch()
+
 
     return (
         <div className={s.header}>

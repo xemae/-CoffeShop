@@ -5,12 +5,25 @@ import Coffee from "./components/Coffee/Coffee";
 import Giftset from "./components/Giftset/Giftset";
 import Combo from "./components/Combo/Combo";
 import Footer from "./components/Footer";
+import {useSelector} from "react-redux";
+import BasketModal from "./components/BasketModal";
+import InfoModal from "./components/InfoModal";
 
 function App() {
-  return (
+    // const basketShowed = useSelector(state => state.toolkit.isBasketShowed)
+    // const infoShowed = useSelector(state => state.toolkit.isInfoShowed)
+    //
+    // if (basketShowed) {return <BasketModal />}
+    //
+    // if (infoShowed) {return <InfoModal />}
+
+    return (
     <div className="App">
-        <Header />
+        <BasketModal/>
+        {/*<InfoModal/>*/}
+        <Header/>
         <Benefits />
+
         <Coffee />
         <Giftset />
         <Combo />
