@@ -8,11 +8,10 @@ import {addToBasket} from "../reduxToolkit/toolkitSlice";
 
 const InfoModal = (props) => {
 
-    const {info} = props.info
-    // console.log(props)
+    // const {info} = props
 
     // const [infoModal, setInfoModal] = useState(false);
-    // const info = useSelector(state => state.toolkit.currentCard)
+    const info = useSelector(state => state.toolkit.currentCard)
     const infoShowed = useSelector(state => state.toolkit.isInfoShowed)
     const dispatch = useDispatch()
 

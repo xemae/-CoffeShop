@@ -25,6 +25,7 @@ const toolkitSlice = createSlice({
             {
                 id: 1,
                 type: 'gift',
+                count: 0,
                 image: gift1,
                 price: '285.000',
                 title: 'Giftset "Cà phê phin Việt Nam"',
@@ -40,6 +41,7 @@ const toolkitSlice = createSlice({
             {
                 id: 2,
                 type: 'gift',
+                count: 0,
                 image: gift1,
                 price: '285.000',
                 title: '2 Giftset "Cà phê phin Việt Nam"',
@@ -55,6 +57,7 @@ const toolkitSlice = createSlice({
             {
                 id: 3,
                 type: 'gift',
+                count: 0,
                 image: gift1,
                 price: '285.000',
                 title: '3 Giftset "Cà phê phin Việt Nam"',
@@ -70,6 +73,7 @@ const toolkitSlice = createSlice({
             {
                 id: 4,
                 type: 'coffee',
+                count: 0,
                 image: morning,
                 price: '99.000',
                 title: 'REVO Morning',
@@ -82,6 +86,7 @@ const toolkitSlice = createSlice({
             {
                 id: 5,
                 type: 'coffee',
+                count: 0,
                 image: origin,
                 price: '139.000',
                 title: 'REVO Origin',
@@ -94,6 +99,7 @@ const toolkitSlice = createSlice({
             {
                 id: 6,
                 type: 'coffee',
+                count: 0,
                 image: everyday,
                 price: '85.000',
                 title: 'REVO Everyday',
@@ -106,6 +112,7 @@ const toolkitSlice = createSlice({
             {
                 id: 7,
                 type: 'coffee',
+                count: 0,
                 image: revo,
                 price: '75.000',
                 title: 'REVO Đậm Đà',
@@ -118,6 +125,7 @@ const toolkitSlice = createSlice({
             {
                 id: 8,
                 type: 'coffee',
+                count: 0,
                 image: honey,
                 price: '195.000',
                 title: 'REVO Honey',
@@ -130,6 +138,7 @@ const toolkitSlice = createSlice({
             {
                 id: 9,
                 type: 'coffee',
+                count: 0,
                 image: natural,
                 price: '169.000',
                 title: 'REVO Natural',
@@ -142,6 +151,7 @@ const toolkitSlice = createSlice({
             {
                 id: 10,
                 type: 'combo',
+                count: 0,
                 image: combo1,
                 price: '147.000',
                 lastPrice: '155.000',
@@ -156,6 +166,7 @@ const toolkitSlice = createSlice({
             {
                 id: 11,
                 type: 'combo',
+                count: 0,
                 image: combo2,
                 price: '156.000',
                 lastPrice: '165.000',
@@ -170,6 +181,7 @@ const toolkitSlice = createSlice({
             {
                 id: 12,
                 type: 'combo',
+                count: 0,
                 image: combo3,
                 price: '275.000',
                 lastPrice: '280.000',
@@ -184,6 +196,7 @@ const toolkitSlice = createSlice({
             {
                 id: 13,
                 type: 'combo',
+                count: 0,
                 image: combo4,
                 price: '249.000',
                 lastPrice: '276.000',
@@ -212,6 +225,14 @@ const toolkitSlice = createSlice({
         addToBasket(state, action) {
             state.basket.push(action.payload)
             state.basketCounter++
+            // const item = state.basket.find(el => el.id == action.payload.id)
+
+            // const key = 'count';
+            // item[key] = ;
+
+            // const oldCount = item.co
+            // item.count =
+
 
             // console.log(state.basketCounter)
             console.log(current(state))
@@ -219,15 +240,27 @@ const toolkitSlice = createSlice({
         },
         removeFromBasket(state, action) {
             state.basketCounter--
-            //убрать карточку из массива корзины
+            state.basket.filter(el => el.id !== action.payload.id)
+        },
+        plusItem(state, action) {
+            state.basket.find(el => el.id == action.payload.id).count++
+        },
+        minusItem(state, action) {
+            const item = state.basket.find(el => el.id == action.payload.id)
 
-            state.basket.filter(item => !action.payload)
-            console.log(state.basketCounter)
-            console.log(current(state))
+            if (item.count === 0) {
+                state.basket.filter(el => el.id !== action.payload.id)
+            }
+            item.count--
+            state.basketCounter--
+
         }
+
     }
 })
 
 export default toolkitSlice.reducer
 
-export const {showOrHideInfo, addToBasket, removeFromBasket, showOrHideBasket} = toolkitSlice.actions
+export const {
+    showOrHideInfo, addToBasket, removeFromBasket,
+    showOrHideBasket, plusItem, minusItem} = toolkitSlice.actions
