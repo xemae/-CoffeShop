@@ -10,6 +10,7 @@ import everyday from "../components/img/everyday.svg";
 import revo from "../components/img/revo.svg";
 import honey from "../components/img/honey.svg";
 import natural from "../components/img/natural.svg";
+import InfoModal from "../components/InfoModal";
 // import {addToBasket, removeFromBasket, showOrHideBasket, showOrHideInfo} from "./app-reducer";
 
 const toolkitSlice = createSlice({
@@ -198,9 +199,11 @@ const toolkitSlice = createSlice({
     },
     reducers: {
         showOrHideInfo(state, action) {
-            state.isInfoShowed = !state.isInfoShowed
             state.currentCard = action.payload
-            console.log(current(state))
+            state.isInfoShowed = !state.isInfoShowed
+            // return <InfoModal />
+
+            // console.log(current(state))
         },
         showOrHideBasket(state) {
             state.isBasketShowed = !state.isBasketShowed
@@ -212,6 +215,7 @@ const toolkitSlice = createSlice({
 
             // console.log(state.basketCounter)
             console.log(current(state))
+
         },
         removeFromBasket(state, action) {
             state.basketCounter--

@@ -32,7 +32,8 @@ const ComboCards = (props) => {
                 <h1>{c.title}</h1>
                 <p>{c.description}</p>
                 <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
-                <button className={b.info} onClick={() => dispatch(showOrHideInfo(c))}>CHI TIẾT</button>
+                {/*<button className={b.info} onClick={() => dispatch(showOrHideInfo(c))}>CHI TIẾT</button>*/}
+                <button className={b.info} onClick={onInfoClick(c)}>CHI TIẾT</button>
             </div>
         </div>
     )
