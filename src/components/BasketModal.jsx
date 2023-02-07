@@ -31,9 +31,9 @@ const BasketModal = () => {
                     </div>
                     <h1>{c.title}</h1>
                     <p>{c.description}</p>
-                    <button className={b.buy} onClick={() => dispatch(plusItem(c))}>+</button>
-                    <div className={s.count} >1</div>
-                    <button className={b.info} onClick={() => dispatch(minusItem(c))}>-</button>
+                    {/*<button className={b.buy} onClick={() => dispatch(plusItem(c))}>+</button>*/}
+                    {/*<div className={s.count} >1</div>*/}
+                    {/*<button className={b.info} onClick={() => dispatch(minusItem(c))}>-</button>*/}
                     <button className={b.info} onClick={() => dispatch(removeFromBasket(c))}>remove</button>
 
                 </div>

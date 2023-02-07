@@ -229,13 +229,13 @@ const toolkitSlice = createSlice({
             const item = state.basket.find(el => el.id == action.payload.id)
 
             // {...item, item.count++}
-            Object.defineProperties(item, {
-                count:{
-                    value: 1,
-                    writable: true
-                }
-            })
-            item.count++
+            // Object.defineProperties(item, {
+            //     count:{
+            //         value: 1,
+            //         writable: true
+            //     }
+            // })
+            // item.count++
 
 
 
@@ -255,19 +255,19 @@ const toolkitSlice = createSlice({
             state.basketCounter--
             state.basket.filter(el => el.id !== action.payload.id)
         },
-        plusItem(state, action) {
-            state.basket.find(el => el.id == action.payload.id).count++
-        },
-        minusItem(state, action) {
-            const item = state.basket.find(el => el.id == action.payload.id)
-
-            if (item.count === 0) {
-                state.basket.filter(el => el.id !== action.payload.id)
-            }
-            item.count--
-            state.basketCounter--
-
-        }
+        // plusItem(state, action) {
+        //     // state.basket.find(el => el.id == action.payload.id).count++
+        // },
+        // minusItem(state, action) {
+        //     const item = state.basket.find(el => el.id == action.payload.id)
+        //
+        //     if (item.count === 0) {
+        //         state.basket.filter(el => el.id !== action.payload.id)
+        //     }
+        //     item.count--
+        //     state.basketCounter--
+        //
+        // }
 
     }
 })
