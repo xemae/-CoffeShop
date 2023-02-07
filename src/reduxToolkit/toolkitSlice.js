@@ -214,6 +214,7 @@ const toolkitSlice = createSlice({
         showOrHideInfo(state, action) {
             state.currentCard = action.payload
             state.isInfoShowed = !state.isInfoShowed
+
             // return <InfoModal />
 
             // console.log(current(state))
@@ -225,8 +226,20 @@ const toolkitSlice = createSlice({
         addToBasket(state, action) {
             state.basket.push(action.payload)
             state.basketCounter++
-            // const item = state.basket.find(el => el.id == action.payload.id)
+            const item = state.basket.find(el => el.id == action.payload.id)
 
+            // {...item, item.count++}
+            Object.defineProperties(item, {
+                count:{
+                    value: 1,
+                    writable: true
+                }
+            })
+            item.count++
+
+
+
+            // item.count++
             // const key = 'count';
             // item[key] = ;
 
