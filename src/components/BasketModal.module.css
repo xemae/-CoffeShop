@@ -1,0 +1,33 @@
+.basketModalWrapper {
+    background-color: rgba(158, 198, 222, 0.68);
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    /*margin: 2vh auto;*/
+    position: absolute;
+}
+
+.basketModal {
+    /*display: block;*/
+}
+
+.basketCard {
+    display: inline-flex;
+
+}
+
+.basketCard img{
+height: 100px;
+}
+
+.basketContent {
+
+}
+
+.cost {
+
+}
+
+.removeButton {
+
+}
