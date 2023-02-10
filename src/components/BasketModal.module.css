@@ -1,33 +1,97 @@
 .basketModalWrapper {
     background-color: rgba(158, 198, 222, 0.68);
-    text-align: center;
     width: 100vw;
     height: 100vh;
-    /*margin: 2vh auto;*/
+    position: fixed;
+    align-items: flex-start;
+    justify-content: center;
+    overflow-y: hidden;
+    /*display:/ ;*/
+    overflow-scrolling: initial;
+    z-index: 9;
+
+}
+
+.close {
     position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 100%;
+    color: var(--color-primary);
+    font-size: 50px;
+}
+
+.close:hover {
+    color: var(--color-text);
+    rotate: 5deg;
 }
 
 .basketModal {
     /*display: block;*/
+    background-color: rgb(255, 255, 255);
+    width: 70vw;
+    height: 80vh;
+    position: absolute;
+    left: 15vw;
+    top: 10vh;
+    padding: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    overflow-y: auto;
+    z-index: 9;
+
 }
 
 .basketCard {
-    display: inline-flex;
+    display: flex;
+    margin: 10px;
+    max-width: 70vw;
+    padding: 10px;
+}
+
+.basketCard:hover {
+    box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
 
 }
 
 .basketCard img{
-height: 100px;
+    height: 100px;
+    margin-right: 10px;
 }
 
 .basketContent {
 
 }
 
+.basketContent h2{
+ color: #e1b281;
+
+}
+
+.basketCard s, h1, p{
+    color: #415167;
+}
+
+
 .cost {
 
 }
 
 .removeButton {
+    border-radius: 19px;
+    color: var(--color-primary);
+    padding: 7px 11px 7px 11px;
+    background-color: #f1f1f1;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+
+.removeButton:hover {
+    color: var(--color-text);
+    background-color: #cecece;
 
 }
