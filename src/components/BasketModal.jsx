@@ -20,7 +20,8 @@ const BasketModal = () => {
                     <h1>{c.title}</h1>
                     <p>{c.description}</p>
                     <button className={s.removeButton} onClick={() => dispatch(removeFromBasket(c))}>remove</button>
-                    <button className={s.removeButton} onClick={() => dispatch(plusItem(c))}>remove</button>
+                    <p>{c.count}</p>
+                    <button className={s.removeButton} onClick={() => dispatch(plusItem(c))}>+</button>
 
                 </div>
             </div>
