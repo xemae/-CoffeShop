@@ -255,9 +255,9 @@ const toolkitSlice = createSlice({
             state.basketCounter--
             state.basket = state.basket.filter(el => el.id !== action.payload.id)
         },
-        // plusItem(state, action) {
-        //     // state.basket.find(el => el.id == action.payload.id).count++
-        // },
+        plusItem(state, action) {
+            // state.basket.find(el => el.id == action.payload.id).count++
+        },
         // minusItem(state, action) {
         //     const item = state.basket.find(el => el.id == action.payload.id)
         //
@@ -277,5 +277,6 @@ export default toolkitSlice.reducer
 export const {
     showOrHideInfo, addToBasket, removeFromBasket,
     showOrHideBasket,
-    // plusItem, minusItem
+    plusItem,
+    // minusItem
 } = toolkitSlice.actions

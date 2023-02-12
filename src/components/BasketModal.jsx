@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import s from "./BasketModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {removeFromBasket, showOrHideBasket} from "../reduxToolkit/toolkitSlice";
+import {plusItem, removeFromBasket, showOrHideBasket} from "../reduxToolkit/toolkitSlice";
 
 const BasketModal = () => {
     const basket = useSelector(state => state.toolkit.basket)
@@ -20,15 +20,17 @@ const BasketModal = () => {
                     <h1>{c.title}</h1>
                     <p>{c.description}</p>
                     <button className={s.removeButton} onClick={() => dispatch(removeFromBasket(c))}>remove</button>
+                    <button className={s.removeButton} onClick={() => dispatch(plusItem(c))}>remove</button>
+
                 </div>
             </div>
         )
 
         return (
             <div className={s.basketModalWrapper} onClick={() => dispatch(showOrHideBasket())}>
-                <div className={s.basketModal}>
+                <div className={s.basketModal} onClick={e => e.stopPropagation()}>
                     <button className={s.close} onClick={() => dispatch(showOrHideBasket())}>&times;</button>
-                    <div onClick={() => dispatch(showOrHideBasket())}>
+                    <div>
                         {BasketCards}
                     </div>
                 </div>
