@@ -227,9 +227,9 @@ const toolkitSlice = createSlice({
             const newItem = (action) =>  {return{...action.payload, count: action.payload.count++}}
             state.basket.push(newItem)
             state.basketCounter++
-            const item = state.basket.find(el => el.id == action.payload.id)
-            const newItem = {...item}
-            newItem.count = newItem.count++
+            // const item = state.basket.find(el => el.id == action.payload.id)
+            // const newItem = {...item}
+            // newItem.count = newItem.count++
 
 
             // {...item, item.count++}
