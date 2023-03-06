@@ -64,20 +64,23 @@ const BasketModal = () => {
                         <h1>подытог</h1>
                     </div>
 
-                        {BasketCards}
+                    {BasketCards}
 
                     <div className={s.buyWrap}>
+                        <div className={s.buyContainer}>
+                            <div className={s.discount}>
+                                <h3>скидка</h3>
+                                <h2>{'- ' + discount + '.00'}</h2>
+                            </div>
+                            <div className={s.totalPrice}>
+                                <h3>totalPrice</h3>
+                                <h2>{totalPrice + '.00'}</h2>
+                            </div>
 
-                        <div className={s.discount}>
-                            <h3>скидка</h3>
-                            <h2>{discount}</h2>
-                        </div>
-                        <div className={s.totalPrice}>
-                            <h3>totalPrice</h3>
-                            <h2>{totalPrice}</h2>
+                            <button className={s.buyAll}>Buy</button>
                         </div>
 
-                        <button className={s.buyAll}>Buy</button>
+
                     </div>
 
 
