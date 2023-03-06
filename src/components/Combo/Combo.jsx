@@ -1,9 +1,9 @@
 import React, {useState} from "react";
 import s from "./Combo.module.css"
-import b from "../Buttons.module.css"
-import arrow from "../img/right-arrow.svg"
-import ComboCards from "./ComboCards";
-import InfoModal from "../InfoModal";
+import b from "../styles/Buttons.module.css"
+import arrow from "../../img/right-arrow.svg"
+import ComboCards from "./ComboCards/ComboCards";
+import InfoModal from "../InfoModal/InfoModal";
 
 const Combo = () => {
     const [left, setLeft] = useState(0);

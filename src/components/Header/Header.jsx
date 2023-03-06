@@ -1,12 +1,11 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./Header.module.css"
-import logo from "./img/logo.svg"
+import logo from "../../img/logo.svg"
 import {useDispatch, useSelector} from "react-redux";
-import {showOrHideBasket} from "../reduxToolkit/toolkitSlice";
-import BasketModal from "./BasketModal";
+import {showBasket} from "../../reduxToolkit/toolkitSlice";
 
 const Header = () => {
-    const basketCounter = useSelector(state => state.toolkit.basketCounter)
+    const {basketCounter} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
 
@@ -19,7 +18,7 @@ const Header = () => {
                 <h1>COFFEE</h1>
             </div>
             <div className={s.nav}>
-                <button className={s.basket} onClick={() => dispatch(showOrHideBasket())}>
+                <button className={s.basket} onClick={() => dispatch(showBasket())}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect width="24" height="24" fill="none"/>
                         <path
@@ -33,11 +32,11 @@ const Header = () => {
                 </button>
                 <ul>
                     <li><p>TRANG CHỦ</p></li>
-                    <li><a href='#coffee'>COFFEE</a></li>
-                    <li><a href='#benefits'>PHIN MẠ MÀU</a></li>
-                    <li><a href='#combo'>COMBO PHIN PHÊ</a></li>
-                    <li><a href='#giftset'>GIFTSET</a></li>
-                    <li><a href='#contacts'>LIÊN HỆ</a></li>
+                    <li><a href='src/components/Header/Header#coffee'>COFFEE</a></li>
+                    <li><a href='src/components/Header/Header#benefits'>PHIN MẠ MÀU</a></li>
+                    <li><a href='src/components/Header/Header#combo'>COMBO PHIN PHÊ</a></li>
+                    <li><a href='src/components/Header/Header#giftset'>GIFTSET</a></li>
+                    <li><a href='src/components/Header/Header#contacts'>LIÊN HỆ</a></li>
                 </ul>
             </div>
         </div>

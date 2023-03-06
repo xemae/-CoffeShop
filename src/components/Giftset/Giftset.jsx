@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import s from "./Giftset.module.css"
-import GiftsetCard from "./GiftsetCard";
+import GiftsetCard from "./GiftsetCard/GiftsetCard";
 
 const Giftset = () => {
 

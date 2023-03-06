@@ -1,13 +1,13 @@
 import './App.css';
-import Header from "./components/Header";
-import Benefits from "./components/Benefits";
+import Header from "./components/Header/Header";
+import Benefits from "./components/Benefits/Benefits";
 import Coffee from "./components/Coffee/Coffee";
 import Giftset from "./components/Giftset/Giftset";
 import Combo from "./components/Combo/Combo";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 import {useSelector} from "react-redux";
-import BasketModal from "./components/BasketModal";
-import InfoModal from "./components/InfoModal";
+import BasketModal from "./components/BasketModal/BasketModal";
+import InfoModal from "./components/InfoModal/InfoModal";
 
 function App() {
     // const basketShowed = useSelector(state => state.toolkit.isBasketShowed)

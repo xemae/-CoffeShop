@@ -1,9 +1,9 @@
 import React from "react";
 import s from "./Benefits.module.css"
-import source from "./img/source.svg"
-import quality from "./img/quality.svg"
-import coffee from "./img/coffee.svg"
-import preparation from "./img/preparation.svg"
+import source from "../../img/source.svg"
+import quality from "../../img/quality.svg"
+import coffee from "../../img/coffee.svg"
+import preparation from "../../img/preparation.svg"
 
 const Benefits = () => {
     return (
