@@ -1,36 +1,142 @@
 .infoModalWrapper {
     background-color: #1086ce;
     text-align: center;
-    width: 40vw;
-    margin:2vh auto;
-    position: absolute;
     z-index: 9;
+    background-color: rgba(158, 198, 222, 0.68);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    align-items: flex-start;
+    justify-content: center;
 }
 
 .infoModal {
-
+    background-color: rgb(248, 248, 248);
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    padding: 50px;
+    cursor: default;
 }
 
-.info {
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border-radius: 100%;
+    color: var(--color-primary);
+    font-size: 50px;
+}
 
+.close:hover {
+    color: var(--color-text);
+    rotate: 5deg;
+}
+
+.CardWrapper {
+    display: flex;
+}
+
+.cardInfo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding-left: 20px;
+}
+
+.CardWrapper .cardImage {
+    width: 280px;
+    height: 280px;
+}
+
+.properties {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 30px;
+}
+
+.property {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.properties img {
+    padding-left: 34px;
+}
+
+.properties h4 {
+    color: #415167;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.properties h3 {
+    color: #415167;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
 }
 
 h2 {
-
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #C7A17A;
 }
 
-h4 {
-
+.infoModal h4 {
+    color: #415167;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
 }
 
-h1 {
-
+.infoModal h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 25px;
+    line-height: 34px;
+    color: #415167;
 }
 
-h3 {
-
+.infoModal h3 {
+    color: #415167;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
 }
 
-p {
+.infoModal p {
+    color: #151D28;
+    margin-top: 12px;
+    width: 430px;
+    font-family: 'Nunito';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 22px;
+}
 
+.infoModal .buttons {
+    padding-top: 20px;
+    display: flex;
+    margin: auto;
 }
