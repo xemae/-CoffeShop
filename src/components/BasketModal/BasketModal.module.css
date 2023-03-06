@@ -5,17 +5,29 @@
     position: fixed;
     align-items: flex-start;
     justify-content: center;
-    overflow-y: hidden;
-    /*display:/ ;*/
-    overflow-scrolling: initial;
     z-index: 9;
+}
 
+.basketModal {
+    background-color: rgb(248, 248, 248);
+    width: 70%;
+    height: 80%;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    padding: 50px;
+    display: flex;
+    flex-flow: column;
+    cursor: default;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .close {
-    position: absolute;
-    right: 0;
-    top: 0;
+    overflow: hidden;
+    position: fixed;
+    right: 14.9%;
+    top: 9.4%;
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -29,69 +41,189 @@
     rotate: 5deg;
 }
 
-.basketModal {
-    /*display: block;*/
-    background-color: rgb(255, 255, 255);
-    width: 70vw;
-    height: 80vh;
-    position: absolute;
-    left: 15vw;
-    top: 10vh;
-    padding: 50px;
-    display: flex;
-    flex-flow: column wrap;
-    overflow-y: auto;
-    z-index: 9;
+.columnsNames {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 10px;
+    font-size: 25px;
+    color: var(--color-primary);
+    background-color: #ffffff;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    width: 97%;
 
 }
 
 .basketCard {
-    display: flex;
-    margin: 10px;
-    max-width: 70vw;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 97%;
     padding: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: #ffffff;
 }
 
 .basketCard:hover {
     box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
-
 }
 
-.basketCard img{
-    height: 100px;
-    margin-right: 10px;
+.removeItemBtn {
+    position: absolute;
+    margin-left: -25px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.removeItemBtn:hover {
+    font-size: 23px;
 }
 
 .basketContent {
-
+    display: flex;
+    cursor: pointer;
 }
 
-.basketContent h2{
- color: #e1b281;
-
+.cardDescription {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
 }
 
-.basketCard s, h1, p{
+.basketContent img {
+    height: 100px;
+    margin-right: 15px;
+}
+
+.basketContent h1 {
+    color: #415167;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.basketContent p {
+    color: #50637e;
+    font-size: 14px;
+}
+
+.cost {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
     color: #415167;
 }
 
+.cost h2 {
+    color: var(--color-accent);
+    font-size: 18px;
+}
 
-.cost {
-
+.counter {
+    width: 145px;
+    height: 50px;
+    border: 1px solid #EEEEEE;
+    border-radius: 3px;
+    display: flex;
+    text-align: center;
+    font-size: 24px;
+    margin: auto;
 }
 
 .changeCountBtn {
-    border-radius: 19px;
+    width: 44px;
+    height: 44px;
+    background-color: #f1f1f1;
+    border-radius: 2px;
     color: var(--color-primary);
     padding: 7px 11px 7px 11px;
-    background-color: #f1f1f1;
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    margin: 2px;
+    font-size: 24px;
+    cursor: pointer;
 }
 
 .changeCountBtn:hover {
     color: var(--color-text);
-    background-color: #cecece;
+    background: #E9E9E9;
+}
+
+.count {
+    width: 44px;
+    height: 44px;
+    color: #EDF0F5;
+    padding: 7px 11px 7px 11px;
+    margin: 2px;
+    background: var(--color-primary);
+    border-radius: 2px;
+}
+
+.sumPrice {
+    display: flex;
+    margin: auto;
+    color: var(--color-accent);
+    font-size: 20px;
+}
+
+.buyWrap {
+    width: 400px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
 
 }
+
+.discount {
+    margin-top: 10px;
+display: flex;
+flex-direction: row;
+    background-color: #ffffff;
+}
+.discount h3{
+    text-align: left;
+}
+
+.discount h2{
+    text-align: right;
+}
+
+.totalPrice {
+    background-color: #ffffff;
+
+}
+
+
+.buyAll {
+    background: var(--color-accent);
+    width: 400px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 25px;
+    color: #F9FBFF;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buyAll:hover {
+    background-color: var(--color-accent-hover);
+    color: #FFFFFF;
+}
+
+.emptyBasket {
+    opacity: 0.5;
+    width: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+
+

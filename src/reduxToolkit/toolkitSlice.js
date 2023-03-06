@@ -21,6 +21,7 @@ const toolkitSlice = createSlice({
             basketCounter: 0,
             basket: [],
             totalPrice: 0,
+            discount: 0,
             cards: [
                 {
                     id: 1,
@@ -244,6 +245,9 @@ const toolkitSlice = createSlice({
                     itemOnBasket.count = itemOnBasket.count + 1
                     itemOnBasket.sumPrice = itemOnBasket.sumPrice + itemOnBasket.price
                     state.totalPrice = state.totalPrice + itemOnBasket.price
+                    if (itemOnBasket.lastPrice) {
+                        state.discount = state.discount + (itemOnBasket.lastPrice - itemOnBasket.price)
+                    }
                 }
                 else {
                     state.basket.push(newItem)
@@ -251,18 +255,29 @@ const toolkitSlice = createSlice({
                     state.basketCounter = state.basketCounter + 1
                     newItem.sumPrice = newItem.sumPrice + newItem.price
                     state.totalPrice = state.totalPrice + newItem.price
+                    if (newItem.lastPrice) {
+                        state.discount = state.discount + (newItem.lastPrice - newItem.price)
+                    }
                 }
             },
             removeFromBasket(state, action) {
                 state.basketCounter = state.basketCounter - 1
                 state.basket = state.basket.filter(el => el.id !== action.payload.id)
                 state.totalPrice = state.totalPrice-action.payload.sumPrice
+
+                if (action.payload.lastPrice) {
+                    state.discount = state.discount - (action.payload.lastPrice - action.payload.price)
+                }
+
             },
             plusItem(state, action) {
                 let incrementedItem = state.basket.find(card => card.id === action.payload)
                 incrementedItem.count = incrementedItem.count + 1
                 incrementedItem.sumPrice = incrementedItem.sumPrice + incrementedItem.price
                 state.totalPrice = state.totalPrice + incrementedItem.price
+                if (incrementedItem.lastPrice) {
+                    state.discount = state.discount + (incrementedItem.lastPrice - incrementedItem.price)
+                }
             },
             minusItem(state, action) {
                 let decrementedItem = state.basket.find(card => card.id === action.payload)
@@ -273,6 +288,9 @@ const toolkitSlice = createSlice({
                 decrementedItem.count = decrementedItem.count - 1
                 decrementedItem.sumPrice = decrementedItem.sumPrice - decrementedItem.price
                 state.totalPrice = state.totalPrice - decrementedItem.price
+                if (decrementedItem.lastPrice) {
+                    state.discount = state.discount - (decrementedItem.lastPrice - decrementedItem.price)
+                }
             },
         }
     }
