@@ -42,20 +42,24 @@
 }
 
 .columnsNames {
+    position: fixed;
+    margin-bottom: 10px;;
+    /*right: 100px;*/
+    z-index: 1;
+    width: 64%;
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
-    margin-left: 20px;
-    margin-right: 10px;
-    padding-left: 20px;
-    padding-right: 10px;
+    margin-left: -20px;
+    margin-top: -50px;
+    /*margin-right: 10px;*/
+    /*padding-left: 20px;*/
+    /*padding-right: 10px;*/
     font-size: 25px;
     color: var(--color-primary);
     background-color: #ffffff;
     height: 40px;
     align-items: center;
     text-align: center;
-    width: 97%;
-
 }
 
 .basketCard {
@@ -67,6 +71,8 @@
     display: grid;
     grid-template-columns: 2fr 1fr 1fr 1fr;
     background-color: #ffffff;
+    margin-bottom: 2px;
+
 }
 
 .basketCard:hover {
@@ -172,32 +178,62 @@
 }
 
 .buyWrap {
-    width: 400px;
-    display: flex;
-    text-align: center;
-    flex-direction: column;
+    background-color: var(--color-primary);
+    /*height: 594px;*/
+    width: 70%;
+    margin-top: -40px;
+    margin-left: -30px;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 150px 1fr;
+}
 
+.buyContainer {
+    width: 500px;
+    height: 180px;
+    grid-area: 1 / 1 / 2 / 2;
+    padding: 10px;
+    background-color: #ffffff;
+    margin-left: 65%;
 }
 
 .discount {
     margin-top: 10px;
-display: flex;
-flex-direction: row;
-    background-color: #ffffff;
-}
-.discount h3{
-    text-align: left;
+    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
 }
 
-.discount h2{
+.discount h3 {
+    text-align: left;
+    color: var(--color-accent);
+    font-size: 18px;
+}
+
+.discount h2 {
     text-align: right;
+    font-size: 18px;
+    color: var(--color-accent);
 }
 
 .totalPrice {
-    background-color: #ffffff;
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 10px;
 }
 
+.totalPrice h3 {
+    font-size: 18px;
+    text-align: left;
+}
+
+.totalPrice h2 {
+    text-align: right;
+    font-size: 21px;
+    font-weight: bolder;
+}
 
 .buyAll {
     background: var(--color-accent);
@@ -206,8 +242,7 @@ flex-direction: row;
     font-size: 25px;
     border-radius: 25px;
     color: #F9FBFF;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px 40px 50px 40px;
 }
 
 .buyAll:hover {
