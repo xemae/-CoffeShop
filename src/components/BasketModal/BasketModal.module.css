@@ -80,7 +80,7 @@
 
 }
 
-.removeButton {
+.changeCountBtn {
     border-radius: 19px;
     color: var(--color-primary);
     padding: 7px 11px 7px 11px;
@@ -90,7 +90,7 @@
     /*align-items: center;*/
 }
 
-.removeButton:hover {
+.changeCountBtn:hover {
     color: var(--color-text);
     background-color: #cecece;
 

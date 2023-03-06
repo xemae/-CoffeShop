@@ -4,7 +4,7 @@
 }
 
 .container {
-    background-image: url("img/background.svg");
+    background-image: url("../../img/background.svg");
     background-repeat: no-repeat;
     height: 768px;
     /*width: 74vw;*/

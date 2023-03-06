@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import s from "./Coffee.module.css"
-import b from "../Buttons.module.css"
-import arrow from "../img/right-arrow.svg";
-import CoffeeCards from "./CoffeeCards";
+import b from "../styles/Buttons.module.css"
+import arrow from "../../img/right-arrow.svg";
+import CoffeeCards from "./CoffeeCards/CoffeeCards";
 
 const Coffee = () => {
     const [left, setLeft] = useState(0)

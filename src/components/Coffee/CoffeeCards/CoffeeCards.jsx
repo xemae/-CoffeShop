@@ -1,23 +1,23 @@
 import React from "react";
-import s from "./Coffee.module.css"
-import b from "../Buttons.module.css"
+import s from "../Coffee.module.css"
+import b from "../../styles/Buttons.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {addToBasket, showOrHideInfo} from "../../reduxToolkit/toolkitSlice";
+import {addToBasket, showInfo} from "../../../reduxToolkit/toolkitSlice";
 
 const CoffeeCards = () => {
 
-    const cards = useSelector(state => state.toolkit.cards.filter(i => i.type === 'coffee'))
+    const {cards} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
-    const Cards = cards.map(c =>
+    const Cards = cards.filter(i => i.type === 'coffee').map(c =>
             <div key={c.id} className={s.card}>
                 <img src={c.image}/>
                 <div className={s.cardContent}>
-                    <h2>{c.price}</h2>
+                    <h2>{c.price + '.00'}</h2>
                     <h1>{c.title}</h1>
                     <p>{c.description}</p>
                     <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
-                    <button className={b.info} onClick={() => dispatch(showOrHideInfo(c))}>CHI TIẾT</button>
+                    <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>
                 </div>
             </div>
     )
