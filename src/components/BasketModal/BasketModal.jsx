@@ -8,6 +8,11 @@ import emptyBasket from '../../img/emptyBasket.png'
 const BasketModal = () => {
     const {basket, isBasketShowed, totalPrice, discount} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
+    const setDiscount = (lastPrice) => {
+        if (lastPrice !== undefined) {
+            return lastPrice + '.00'
+        }
+    }
 
     if (isBasketShowed) {
         const BasketCards = basket.map(c =>
@@ -24,7 +29,7 @@ const BasketModal = () => {
 
                 <div className={s.cost}>
                     {/*добавить Classnames, lastPrice мб undefined */}
-                    <s>{c.lastPrice + '.00'}</s>
+                    <s>{setDiscount(c.lastPrice)}</s>
                     <h2>{c.price + '.00'}</h2>
                 </div>
 
@@ -70,7 +75,7 @@ const BasketModal = () => {
                         <div className={s.buyContainer}>
                             <div className={s.discount}>
                                 <h3>скидка</h3>
-                                <h2>{'- ' + discount + '.00'}</h2>
+                                <h2>{discount}</h2>
                             </div>
                             <div className={s.totalPrice}>
                                 <h3>totalPrice</h3>
