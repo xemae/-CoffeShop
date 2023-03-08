@@ -41,11 +41,12 @@
     padding-left: 9vw;
 
     grid-template-rows: 1fr 1fr;
-    grid-column-gap: 30px;
+    grid-column-gap: 2.14vw;
     grid-row-gap: 32px;
+    /*grid-row-gap: 32px;*/
     /*padding-left: 128px;*/
     padding-top: 169px;
-    width: 100vw;
+    width: 91vw;
     overflow: hidden;
 }
 
@@ -53,8 +54,16 @@
 .card {
     display: flex;
     background-color: #FFFFFF;
-    width: 559px;
-    height: 256px;
+    width: 39.92vw;
+    /*width: 559px;*/
+    /*height: 256px;*/
+}
+
+.card img {
+    width: 16.86vw;
+    min-width: 137px;
+    /*margin: -2px;*/
+    /*padding: 0;*/
 }
 
 .card:hover {
@@ -62,7 +71,9 @@
 }
 
 .cardContent {
-    padding: 42px 41px 42px 41px;
+    padding: 4% 2.93vw 4% 2.93vw;
+    /*padding: 42px 2.93vw 42px 2.93vw;*/
+    /*padding: 42px 41px 42px 41px;*/
 }
 
 .card h2 {
@@ -97,17 +108,21 @@
 
 .buttonLeftWrap {
     background-color: rgba(255, 255, 255, 0.24);
-    width: 94px;
+    /*width: 94px;*/
+    width: 6.7143vw;
     height: 544px;
     position: absolute;
-    margin-top: 169px;
+    margin-top: 219px;
+    /*left: 0;*/
 }
 
 .buttonRightWrap {
     background-color: rgba(255, 255, 255, 0.6);
-    width: 94px;
+    width: 6.7143vw;
+    /*width: 94px;*/
     height: 544px;
     position: absolute;
-    margin-top: 169px;
-    left: 1306px;
+    margin-top: 219px;
+    /*left: 1306px;*/
+    left: 93.286vw;
 }

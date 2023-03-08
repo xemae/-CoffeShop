@@ -1,8 +1,7 @@
 .infoModalWrapper {
-    background-color: #1086ce;
     text-align: center;
     z-index: 9;
-    background-color: rgba(158, 198, 222, 0.68);
+    background-color: rgba(158, 198, 222, 0.36);
     width: 100vw;
     height: 100vh;
     position: fixed;
@@ -12,12 +11,14 @@
 
 .infoModal {
     background-color: rgb(248, 248, 248);
-    width: 60%;
+    width: 80vw;
     position: absolute;
-    left: 20%;
-    top: 20%;
-    padding: 50px;
+    padding: 3.57vw 50px 3.57vw 3.57vw;
     cursor: default;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
 }
 
 .close {
@@ -42,33 +43,41 @@
 }
 
 .cardInfo {
-    width: 100%;
+    width: 51vw;
     display: flex;
     flex-direction: column;
     text-align: justify;
-    padding-left: 20px;
+    padding-left: 1.43vw;
 }
 
 .CardWrapper .cardImage {
-    width: 280px;
-    height: 280px;
+    /*width: 280px;*/
+    /*height: 280px;*/
+
+    width: 20vw;
+    height: 20vw;
+    min-width: 200px;
+    min-height: 200px;
 }
 
 .properties {
+
     text-align: center;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding-right: 30px;
+    /*padding-right: 30px;*/
     margin-top: 20px;
 }
 
 .property {
     display: grid;
     grid-template-columns: 1fr 2fr;
+    max-width: 220px;
 }
 
 .properties img {
-    padding-left: 34px;
+    padding-left: 2.23vw;
+    /*padding-left: 34px;*/
 }
 
 .properties h4 {
@@ -128,14 +137,13 @@ h2 {
 .infoModal p {
     color: #151D28;
     margin-top: 12px;
-    width: 430px;
+    /*width: 430px;*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
     position: relative;
-
 }
 
 .infoModal .buttons {

@@ -15,6 +15,12 @@ const InfoModal = (props) => {
     const {showedCard} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
+    const setDiscount = (lastPrice) => {
+        if (lastPrice !== undefined) {
+            return lastPrice + '.00'
+        }
+    }
+
     if (showedCard !== null) {
         return (
             <div className={s.infoModalWrapper} onClick={() => dispatch(hideInfo())}>
@@ -25,7 +31,7 @@ const InfoModal = (props) => {
                         <img className={s.cardImage} src={showedCard.image}/>
                         <div className={s.cardInfo}>
                             <h2>{showedCard.price + '.00'}</h2>
-                            <h4>{showedCard.lastPrice + '.00'}</h4>
+                            <h4>{setDiscount(showedCard.lastPrice)}</h4>
                             <h1>{showedCard.title}</h1>
                             <h3>{showedCard.shortDescription}</h3>
                             <p>{showedCard.description}</p>

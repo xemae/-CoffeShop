@@ -1,11 +1,6 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "../Combo.module.css"
 import b from "../../styles/Buttons.module.css"
-import combo1 from "../../../img/combo1.svg"
-import combo2 from "../../../img/combo2.svg"
-import combo3 from "../../../img/combo3.svg"
-import combo4 from "../../../img/combo4.svg"
-import InfoModal from "../../InfoModal/InfoModal";
 import {useDispatch, useSelector} from "react-redux";
 import {addToBasket, showInfo} from "../../../reduxToolkit/toolkitSlice";
 

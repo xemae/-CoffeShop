@@ -1,6 +1,7 @@
 import React from "react";
 import s from "./Header.module.css"
 import logo from "../../img/logo.svg"
+import background from "../../img/background.png"
 import {useDispatch, useSelector} from "react-redux";
 import {showBasket} from "../../reduxToolkit/toolkitSlice";
 
@@ -11,12 +12,18 @@ const Header = () => {
 
     return (
         <div className={s.header}>
+            <img className={s.background} src={background}/>
+
             <div className={s.container}>
                 <img className={s.logo} src={logo}/>
                 <h1>YOUR</h1>
                 <h1 className={s.backgrounded}>PERSONALIZED</h1>
                 <h1>COFFEE</h1>
+
+
             </div>
+
+
             <div className={s.nav}>
                 <button className={s.basket} onClick={() => dispatch(showBasket())}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

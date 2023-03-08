@@ -1,8 +1,16 @@
+.comboBlockContainer {
+    margin-top: -143px;
+}
+
 .comboBlockWrapper {
     background-color: var(--color-primary);
     height: 906px;
     /*display: flex;*/
-    width: 30vw;
+    width: 23.39vw;
+    margin-left: 76.8vw;
+
+    /*position: absolute;*/
+    /*right: 0;*/
 }
 
 .description {
@@ -38,7 +46,8 @@
 
 .comboBlock {
     background-color: #F9FBFF;
-    width: 1074px;
+    width: 76.7vw;
+    /*width: 1074px;*/
 }
 
 .slide {
@@ -49,25 +58,42 @@
     padding-top: 200px;
     position: relative;
     padding-bottom: 128px;
-    width: 100vw;
+    width: 85vw;
     overflow: hidden;
 }
 
 .comboCard {
     background-color: #FFFFFF;
-    height: 562px;
+    /*height: 562px;*/
+    width: 23.7vw;
+
+}
+
+.comboCard img {
+    width: 23.7vw;
+}
+
+
+@media (max-width: 1120px) {
+    .cardContent {
+        display: flex;
+        flex-flow: column;
+    }
+    .cardContent button {
+        margin-right: 0;
+    }
 }
 
 .comboCard:hover {
-    box-shadow: 0px 4px 24px rgba(205, 205, 205, 0.5);
+    box-shadow: 0 4px 24px rgba(205, 205, 205, 0.5);
 }
 
 .comboCard + .comboCard {
-    margin-left: 30px;
+    margin-left: 2.14vw;
 }
 
 .comboCard .cardContent {
-    margin: 42px 42px 42px 42px;
+    margin: 42px 3vw 42px 3vw;
 }
 
 .comboCard .cost {
@@ -115,17 +141,25 @@
 
 .buttonLeftWrap {
     background-color: rgba(255, 255, 255, 0.24);
-    width: 102px;
-    height: 562px;
+    /*width: 102px;*/
+    height: 588px;
     position: absolute;
     padding-top: 232px;
+
+    /*background-color: rgba(255, 255, 255, 0.24);*/
+    /*width: 94px;*/
+    width: 7.286vw;
+    /*height: 544px;*/
+    margin-top: 200px;
+    /*left: 0;*/
 }
 
 .buttonRightWrap {
     background-color: rgba(255, 255, 255, 0.24);
-    width: 102px;
-    height: 562px;
+    width: 7.286vw;
+    height: 588px;
     position: absolute;
     padding-top: 232px;
-    left: 1298px;
+    margin-top: 200px;
+    left: 92.714vw;
 }

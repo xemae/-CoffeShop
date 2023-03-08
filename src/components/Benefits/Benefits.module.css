@@ -9,7 +9,6 @@
 .description {
     text-align: center;
     color: var(--color-primary);
-
 }
 
 .description p {
@@ -36,8 +35,10 @@
     /*margin-right: auto;*/
     min-width: 760px;
     /*max-width: 604px;*/
-    margin-left: 20px;
-    margin-right: 20px;
+    /*margin-left: 20px;*/
+    /*margin-right: 20px;*/
+    margin-left: 1.429vw;
+    margin-right: 1.429vw;
 
 }
 
