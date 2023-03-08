@@ -10,23 +10,25 @@ const Combo = () => {
     const [infoModal, setInfoModal] = useState(false);
 
     const onButtonRightClick = (e) => {
-        setLeft(left - 390)
+        setLeft(left - 27.857)
     }
 
     const onButtonLeftClick = (e) => {
-        setLeft(left + 390)
+        setLeft(left + 27.857)
     }
 
     const ButtonLeft = () => {
         if (left < 0) {
-            return <div className={s.buttonLeftWrap}
-                        style={{
-                            zIndex: "1"
-                        }}
+            return <div
+                className={s.buttonLeftWrap}
+                style={{
+                    zIndex: "1",
+                }}
             >
-                <button onClick={onButtonLeftClick}
-                        className={b.arrow + ' ' + b.left}
-                        style={{marginTop: "100px"}}
+                <button
+                    onClick={onButtonLeftClick}
+                    className={b.arrow + ' ' + b.left}
+                    // style={{marginTop: "100px"}}
                 ><img src={arrow}/></button>
             </div>
         }
@@ -34,11 +36,14 @@ const Combo = () => {
 
     const ButtonRight = () => {
         if (left >= 0) {
-            return <div onClick={onButtonRightClick}
-                        className={s.buttonRightWrap}
-                        style={{marginTop: "100px"}}
+            return <div
+                className={s.buttonRightWrap}
             >
-                <button className={b.arrow + ' ' + b.right}><img src={arrow}/></button>
+                <button
+                    onClick={onButtonRightClick}
+                    className={b.arrow + ' ' + b.right}>
+                    <img src={arrow}/>
+                </button>
             </div>
         }
     }
@@ -53,30 +58,30 @@ const Combo = () => {
                 <h2>Your Personalized Coffee</h2>
                 <h1>COMBO PHIN PHÊ</h1>
             </div>
-        <div className={s.comboBlockWrapper} id='combo'>
-            <div className={s.comboBlock}>
+            <div className={s.comboBlockWrapper} id='combo'>
+                <div className={s.comboBlock}>
 
 
-                <ButtonLeft/>
+                    <ButtonLeft/>
 
-                <div style={{
-                    position: 'absolute',
-                    left: `${left}px`,
-                    transition: 'all .15s'
-                }}>
-                    <div className={s.slide}
-                         style={{
-                             width: `${1400 + -left}px`,
-                             transition: 'all .1s'
-                         }}>
-                        <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
+                    <div style={{
+                        position: 'absolute',
+                        left: `${left}vw`,
+                        transition: 'all .15s'
+                    }}>
+                        <div className={s.slide}
+                             style={{
+                                 width: `${100 + -left}vw`,
+                                 transition: 'all .1s'
+                             }}>
+                            <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
+                        </div>
                     </div>
+
+                    <ButtonRight/>
+
                 </div>
-
-                <ButtonRight/>
-
             </div>
-        </div>
         </div>
 
     )

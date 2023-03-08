@@ -1,29 +1,35 @@
 .header {
-    /*display: inline-flex;*/
     display: flex;
-    max-width: 1400px;
+    overflow-y: auto;
+    overflow-x: hidden;
     width: 100vw;
+    height: 768px;
+    position: relative;
+
 }
 
 .container {
-    background-image: url("../../img/background.svg");
-    background-repeat: no-repeat;
-    height: 768px;
-    width: 1100px;
-    padding-left: 145px;
+    padding-left: 10.36vw;
     padding-top: 70px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: calc(24px + 30 * (100vw / 1400));
+    line-height: 70px;
+    position: absolute;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 28.1vw;
+    width: 691px;
+    margin-left: 40px;
 }
 
 .container h1 {
     color: var(--color-primary);
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 54px;
-    line-height: 70px;
-/*position: absolute;*/
-    /*z-index: 10;*/
-
 }
 
 .logo {
@@ -33,11 +39,6 @@
 h1.backgrounded {
     background-color: var(--color-accent);
     color: #F9FBFF;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 900;
-    font-size: 54px;
-    line-height: 70px;
     margin-left: -15px;
     display: inline-block;
     padding-right: 15px;
@@ -82,12 +83,14 @@ h1.backgrounded {
 .nav {
     color: var(--color-contrast);
     background-color: var(--color-primary);
-    width: 335px;
+    min-width: 200px;
+    width: 23.92857vw;
     height: 768px;
     padding-left: 4vw;
-    /*padding-left: 56px;*/
     overflow: hidden;
-    /*min-width: 810px;*/
+    position: absolute;
+    right: -2px;
+    z-index: 3;
 }
 
 ul li {
@@ -98,7 +101,6 @@ ul li {
     line-height: 24px;
     margin-bottom: 20px;
     min-width: 810px;
-
 }
 
 ul li a:hover {
@@ -115,3 +117,9 @@ ul li p {
     line-height: 22px;
     margin-bottom: 30px;
 }
+
+@media (max-width: 641px) {
+
+
+}
+

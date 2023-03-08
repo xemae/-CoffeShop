@@ -11,7 +11,9 @@ import InfoModal from "./components/InfoModal/InfoModal";
 function App() {
 
     return (
-        <div className="App">
+        <div
+            className="App"
+        >
             <BasketModal/>
             <InfoModal/>
             <Header/>

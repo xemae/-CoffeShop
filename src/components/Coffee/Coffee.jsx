@@ -8,11 +8,11 @@ const Coffee = () => {
     const [left, setLeft] = useState(0)
 
     const onButtonRightClick = (e) => {
-        setLeft(left - 589)
+        setLeft(left - 42.07)
     }
 
     const onButtonLeftClick = (e) => {
-        setLeft(left + 589)
+        setLeft(left + 42.07)
     }
 
     const ButtonLeft = () => {
@@ -49,13 +49,13 @@ const Coffee = () => {
 
                 <div style={{
                     position: 'absolute',
-                    left: `${left}px`,
+                    left: `${left}vw`,
                     transition: 'all .15s'
                 }}>
 
                     <div className={s.slide}
                          style={{
-                             width: `${1400+-left}px`,
+                             width: `${100+-left}vw`,
                              transition: 'all .1s'
                          }}
                     >
