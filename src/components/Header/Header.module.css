@@ -1,13 +1,14 @@
 .header {
-    display: inline-flex;
-    width: 1400px;
+    /*display: inline-flex;*/
+    display: flex;
+    max-width: 1400px;
+    width: 100vw;
 }
 
 .container {
     background-image: url("../../img/background.svg");
     background-repeat: no-repeat;
     height: 768px;
-    /*width: 74vw;*/
     width: 1100px;
     padding-left: 145px;
     padding-top: 70px;
@@ -20,6 +21,9 @@
     font-weight: 900;
     font-size: 54px;
     line-height: 70px;
+/*position: absolute;*/
+    /*z-index: 10;*/
+
 }
 
 .logo {
@@ -78,18 +82,11 @@ h1.backgrounded {
 .nav {
     color: var(--color-contrast);
     background-color: var(--color-primary);
-    /*width: 26vw;*/
     width: 335px;
     height: 768px;
     padding-left: 56px;
     overflow: hidden;
-    /*margin-right: 0;*/
-    /*overflow: hidden;*/
-    /*position: sticky;*/
-    /*top: 0;*/
-    /*right: 0;*/
-    /*left: 74vw;;*/
-
+    /*min-width: 810px;*/
 }
 
 ul li {
@@ -99,6 +96,8 @@ ul li {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 20px;
+    min-width: 810px;
+
 }
 
 ul li a:hover {

@@ -1,26 +1,24 @@
 .comboBlockWrapper {
     background-color: var(--color-primary);
     height: 906px;
-    display: flex;
+    /*display: flex;*/
+    width: 30vw;
 }
 
-.comboBlock {
-    background-color: #F9FBFF;
-    width: 1074px;
-}
-
-.comboBlock .description {
+.description {
     position: relative;
-    left: 584px;
-    top: 86px;
-    right: auto;
+    top: 120px;
+    /*bottom: 18px;*/
+    /*position: absolute;*/
+    display: flex;
+    flex-direction: column;
+    /*right: auto;*/
     text-align: center;
-    width: 291px;
-    height: 64px;
-    margin-bottom: 28px;
+    /*margin: 86px auto 18px;*/
+    margin: auto;
 }
 
-.comboBlock .description h2 {
+.description h2 {
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
@@ -29,7 +27,7 @@
     color: #415167;
 }
 
-.comboBlock .description h1 {
+.description h1 {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
@@ -38,13 +36,20 @@
     color: #415167;
 }
 
+.comboBlock {
+    background-color: #F9FBFF;
+    width: 1074px;
+}
+
 .slide {
     display: flex;
-    padding-left: 128px;
-    padding-top: 100px;
+    flex-direction: row;
+    padding-left: 15vw;
+    /*padding-left: 128px;*/
+    padding-top: 200px;
     position: relative;
     padding-bottom: 128px;
-    width: 1400px;
+    width: 100vw;
     overflow: hidden;
 }
 

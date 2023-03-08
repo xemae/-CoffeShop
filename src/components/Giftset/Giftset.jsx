@@ -13,13 +13,15 @@ const Giftset = () => {
 
     return (
         <div className={s.giftsetWrapper} id='giftset'>
+            <div className={s.desctiption}>
+                <h2>Best Gift For Best Friend</h2>
+                <h1>GIFTSET</h1>
+            </div>
             <div className={s.giftsetBlock}>
-                <div className={s.desctiption}>
-                    <h2>Best Gift For Best Friend</h2>
-                    <h1>GIFTSET</h1>
-                </div>
+
 
                 <div className={s.slider}>
+
 
                     <GiftsetCard id={activeSlide}/>
 
@@ -36,7 +38,7 @@ const Giftset = () => {
                                 onClick={onButtonClick}>3
                         </button>
                     </div>
-                    
+
                 </div>
 
             </div>

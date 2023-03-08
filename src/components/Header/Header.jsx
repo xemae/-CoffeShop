@@ -32,11 +32,11 @@ const Header = () => {
                 </button>
                 <ul>
                     <li><p>TRANG CHỦ</p></li>
-                    <li><a href='src/components/Header/Header#coffee'>COFFEE</a></li>
-                    <li><a href='src/components/Header/Header#benefits'>PHIN MẠ MÀU</a></li>
-                    <li><a href='src/components/Header/Header#combo'>COMBO PHIN PHÊ</a></li>
-                    <li><a href='src/components/Header/Header#giftset'>GIFTSET</a></li>
-                    <li><a href='src/components/Header/Header#contacts'>LIÊN HỆ</a></li>
+                    <li><a href='/Header#coffee'>COFFEE</a></li>
+                    <li><a href='/Header#benefits'>PHIN MẠ MÀU</a></li>
+                    <li><a href='/Header#combo'>COMBO PHIN PHÊ</a></li>
+                    <li><a href='/Header#giftset'>GIFTSET</a></li>
+                    <li><a href='/Header#contacts'>LIÊN HỆ</a></li>
                 </ul>
             </div>
         </div>
