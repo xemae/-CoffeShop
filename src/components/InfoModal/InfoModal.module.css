@@ -28,7 +28,7 @@
     height: 50px;
     margin: 5px;
     border-radius: 100%;
-    color: var(--color-primary);
+    color: #2d3748;
     font-size: 50px;
 }
 
@@ -59,6 +59,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-right: 30px;
+    margin-top: 20px;
 }
 
 .property {
@@ -133,6 +134,8 @@ h2 {
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
+    position: relative;
+
 }
 
 .infoModal .buttons {

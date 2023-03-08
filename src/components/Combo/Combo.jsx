@@ -48,12 +48,14 @@ const Combo = () => {
     // }
 
     return (
+        <div>
+            <div className={s.description}>
+                <h2>Your Personalized Coffee</h2>
+                <h1>COMBO PHIN PHÊ</h1>
+            </div>
         <div className={s.comboBlockWrapper} id='combo'>
             <div className={s.comboBlock}>
-                <div className={s.description}>
-                    <h2>Your Personalized Coffee</h2>
-                    <h1>COMBO PHIN PHÊ</h1>
-                </div>
+
 
                 <ButtonLeft/>
 
@@ -75,6 +77,8 @@ const Combo = () => {
 
             </div>
         </div>
+        </div>
+
     )
 }
 

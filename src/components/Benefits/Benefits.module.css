@@ -1,11 +1,15 @@
 .benefitsBlock {
-    width: 1104px;
-    margin: 87px 148px 0;
+    max-width: 1104px;
+    margin-top: 87px;
+    /*margin: 87px 148px 0;*/
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .description {
     text-align: center;
     color: var(--color-primary);
+
 }
 
 .description p {
@@ -28,15 +32,23 @@
 .benefits {
     display: inline-flex;
     margin-top: 72px;
+    /*margin-left: auto;*/
+    /*margin-right: auto;*/
+    min-width: 760px;
+    /*max-width: 604px;*/
+    margin-left: 20px;
+    margin-right: 20px;
+
 }
 
 .benefit {
     text-align: center;
-    width: 226px;
+    max-width: 226px;
 }
 
 .benefit + .benefit {
-    margin-left: 68px;
+    /*margin-left: 68px;*/
+    margin-left: 2vw;
 }
 
 .benefit img {

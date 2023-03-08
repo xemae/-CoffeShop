@@ -1,24 +1,29 @@
 .giftsetWrapper {
-    height: 802px;
+    height: 57vw;
 }
 
 .giftsetBlock {
     position: absolute;
-    width: 1076px;
+    width: 77vw;
+    /*width: 1076px;*/
     height: 803px;
     left: -2px;
     background: #EDF0F5;
+    margin-top: -214px;
 }
 
 .desctiption {
     position: relative;
-    left: 584px;
-    top: 86px;
+    display: flex;
+    flex-direction: column;
     right: auto;
-    margin-bottom: 66px;
+    margin: 86px auto 66px;
     text-align: center;
-    width: 224px;
+    /*width: 50%;*/
+    /*width: 224px;*/
     height: 62px;
+    z-index: 1;
+
 }
 
 .desctiption h2 {
@@ -41,15 +46,19 @@
 
 .slider {
     margin-top: 154px;
-    margin-left: 1180px;
+    margin-left: 84.1vw;
+    display: flex;
 }
 
 .giftCard {
     background-color: #FFFFFF;
-    width: 794px;
+    width: 57vw;
+    /*width: 794px;*/
     height: 460px;
+    /*height: 33vw;*/
     position: absolute;
-    left: 386px;
+    left: 28vw;
+    /*left: 386px;*/
     top: 216px;
     display: flex;
     box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5)
@@ -57,10 +66,16 @@
 
 .giftImage {
     margin-left: -256px;
+    max-width: 54vw;
 }
 
 .cardContent {
-    padding: 64px;
+    /*padding: 2vw;*/
+    padding: 2vw 2vw 2vw 0;
+    width: 35vw;
+    /*word-wrap: inherit;*/
+
+    /*padding: 64px;*/
 }
 
 .cardContent h2 {
@@ -80,12 +95,13 @@
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
+
 }
 
 .cardContent p {
     color: #151D28;
     margin-top: 12px;
-    width: 430px;
+    /*width: 430px;*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
@@ -95,8 +111,10 @@
 
 .giftProperties {
     display: flex;
-    margin-top: 24px;
-    margin-bottom: 46px;
+    /*margin-top: 24px;*/
+    /*margin-bottom: 46px;*/
+     margin-top: 5%;
+    margin-bottom: 10%;
 }
 
 .giftProperties .property {
@@ -124,6 +142,14 @@
 .pages {
     display: flex;
     flex-flow: column wrap;
+    position: relative;
+    top: 62px;
+    left: 1vw;
+    /*margin-right: 50%;*/
+    /*margin-left: 3vw;*/
+    /*margin-right: 3vw;*/
+    /*left: 2vw;*/
+    /*margin-left: 50%;*/
 }
 
 .pages button {
