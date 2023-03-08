@@ -1,7 +1,6 @@
 .benefitsBlock {
     max-width: 1104px;
     margin-top: 87px;
-    /*margin: 87px 148px 0;*/
     margin-left: auto;
     margin-right: auto;
 }
@@ -31,15 +30,9 @@
 .benefits {
     display: inline-flex;
     margin-top: 72px;
-    /*margin-left: auto;*/
-    /*margin-right: auto;*/
     min-width: 760px;
-    /*max-width: 604px;*/
-    /*margin-left: 20px;*/
-    /*margin-right: 20px;*/
     margin-left: 1.429vw;
     margin-right: 1.429vw;
-
 }
 
 .benefit {
@@ -48,7 +41,6 @@
 }
 
 .benefit + .benefit {
-    /*margin-left: 68px;*/
     margin-left: 2vw;
 }
 
@@ -77,4 +69,29 @@
     line-height: 22px;
     color: #151D28;
     margin-top: 12px;
+}
+
+/*подходит и для мобилок*/
+@media (max-width: 813px) {
+    .benefits {
+        margin-top: 8%;
+        min-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 90vw;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-row-gap: 20px;
+    }
+
+    .benefit {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
+    .benefit h2 {
+        margin-top: 12%;
+    }
 }
