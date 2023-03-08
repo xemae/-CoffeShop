@@ -84,7 +84,8 @@ h1.backgrounded {
     background-color: var(--color-primary);
     width: 335px;
     height: 768px;
-    padding-left: 56px;
+    padding-left: 4vw;
+    /*padding-left: 56px;*/
     overflow: hidden;
     /*min-width: 810px;*/
 }

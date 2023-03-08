@@ -1,3 +1,7 @@
+.comboBlockContainer {
+    margin-top: 169px;
+}
+
 .comboBlockWrapper {
     background-color: var(--color-primary);
     height: 906px;
@@ -38,7 +42,8 @@
 
 .comboBlock {
     background-color: #F9FBFF;
-    width: 1074px;
+    width: 76.7vw;
+    /*width: 1074px;*/
 }
 
 .slide {

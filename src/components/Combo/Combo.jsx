@@ -48,7 +48,7 @@ const Combo = () => {
     // }
 
     return (
-        <div>
+        <div className={s.comboBlockContainer}>
             <div className={s.description}>
                 <h2>Your Personalized Coffee</h2>
                 <h1>COMBO PHIN PHÊ</h1>
