@@ -1,7 +1,6 @@
 .sliderBlock {
     background-color: var(--color-primary);
     width: 27vw;
-    /*width: 384px;*/
     height: 894px;
     margin-top: 128px;
 }
@@ -39,31 +38,27 @@
     display: grid;
     grid-auto-flow: column;
     padding-left: 9vw;
-
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 2.14vw;
     grid-row-gap: 32px;
-    /*grid-row-gap: 32px;*/
-    /*padding-left: 128px;*/
     padding-top: 169px;
     width: 91vw;
     overflow: hidden;
 }
 
-
 .card {
-    display: flex;
     background-color: #FFFFFF;
     width: 39.92vw;
-    /*width: 559px;*/
-    /*height: 256px;*/
+    display: grid;
+    grid-template-areas:
+      "ci ci ci cc cc"
+      "ci ci ci cb cb";
 }
 
 .card img {
     width: 16.86vw;
-    min-width: 137px;
-    /*margin: -2px;*/
-    /*padding: 0;*/
+    min-width: 140px;
+    grid-area: ci;
 }
 
 .card:hover {
@@ -71,9 +66,9 @@
 }
 
 .cardContent {
-    padding: 4% 2.93vw 4% 2.93vw;
-    /*padding: 42px 2.93vw 42px 2.93vw;*/
-    /*padding: 42px 41px 42px 41px;*/
+    padding: 42px 2.93vw 0 2.93vw;
+    grid-area: cc;
+    margin-bottom: 18px;
 }
 
 .card h2 {
@@ -103,26 +98,152 @@
     line-height: 22px;
     color: #151D28;
     margin-top: 24px;
-    margin-bottom: 18px;
+}
+
+.buttons {
+    grid-area: cb;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 38px;
+    height: 37px;
+
 }
 
 .buttonLeftWrap {
     background-color: rgba(255, 255, 255, 0.24);
-    /*width: 94px;*/
     width: 6.7143vw;
+    /*height: calc(100% + 95px);*/
     height: 544px;
+    /*height: 544px;*/
     position: absolute;
     margin-top: 219px;
-    /*left: 0;*/
 }
 
 .buttonRightWrap {
     background-color: rgba(255, 255, 255, 0.6);
     width: 6.7143vw;
-    /*width: 94px;*/
     height: 544px;
     position: absolute;
     margin-top: 219px;
-    /*left: 1306px;*/
     left: 93.286vw;
+}
+
+@media (max-width: 1203px) {
+
+    .sliderBlock {
+        /*background-color: var(--color-primary);*/
+        /*width: 27vw;*/
+        height: 754px;
+        /*margin-top: 128px;*/
+    }
+
+    .cardContent {
+        padding: 4% 4% 0 6%;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        position: relative;
+        margin-top: 4%;
+        margin-bottom: 4%;
+    }
+
+
+    .buttonLeftWrap {
+
+        height: calc(100% - 95px);
+
+    }
+
+    .buttonRightWrap {
+
+        height: calc(100% - 95px);
+
+    }
+
+}
+
+@media (max-width: 1043px) {
+    .card {
+        display: grid;
+        grid-template-areas:
+      "ci ci ci cc cc"
+      "ci ci ci cb cb"
+      "ci ci ci cb cb"
+      "ci ci ci cb cb"
+      "ci ci ci cb cb"
+      "ci ci ci cb cb"
+      "ci ci ci cb cb"
+    ;
+        min-height: 210px;
+    }
+
+    .card p {
+        margin-top: 5px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    .cardContent {
+        padding: 4% 4% 0 6%;
+        margin-bottom: 0;
+    }
+
+}
+
+
+@media (max-width: 842px) {
+
+    .sliderBlock {
+        margin-top: 12%;
+    }
+
+    .sliderInfo {
+        margin-left: 30px;
+    }
+
+    .card h2 {
+        font-size: 18px;
+    }
+
+    .card h1 {
+        font-size: 22px;
+        margin-top: 3px;
+    }
+
+
+    .card {
+        display: grid;
+        grid-template-areas:
+      "ci ci cc cc cc"
+      "cb cb cb cb cb";
+    }
+
+    .card p {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .cardContent {
+        padding: 4% 4% 0 6%;
+        margin-bottom: 0;
+    }
+
+    .buttons {
+        position: relative;
+        margin-top: 4%;
+        margin-bottom: 4%;
+        flex-direction: row;
+
+    }
+
+    .card button {
+        display: block;
+        margin-left: auto;
+        margin-right: auto
+    }
+
 }

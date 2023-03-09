@@ -3,7 +3,7 @@ import combo1 from "../img/combo1.svg";
 import combo2 from "../img/combo2.svg";
 import combo3 from "../img/combo3.svg";
 import combo4 from "../img/combo4.svg";
-import gift1 from "../img/gift1.svg";
+import gift1 from "../img/gift1- remove it.svg";
 import morning from "../img/morning.svg";
 import origin from "../img/origin.svg";
 import everyday from "../img/everyday.svg";
