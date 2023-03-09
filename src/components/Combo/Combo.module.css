@@ -1,5 +1,5 @@
 .comboBlockContainer {
-    margin-top: -143px;
+    /*margin-top: 169px;*/
 }
 
 .comboBlockWrapper {
@@ -7,10 +7,10 @@
     height: 906px;
     /*display: flex;*/
     width: 23.39vw;
-    margin-left: 76.8vw;
+    margin-left: 76.7vw;
 
     /*position: absolute;*/
-    /*right: 0;*/
+    right: 0;
 }
 
 .description {

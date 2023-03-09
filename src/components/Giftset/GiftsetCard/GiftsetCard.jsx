@@ -7,7 +7,7 @@ import b from "../../styles/Buttons.module.css"
 // import revo from "../img/revo.svg";
 // import honey from "../img/honey.svg";
 // import natural from "../img/natural.svg";
-// import gift1 from "../img/gift1.svg";
+// import gift1 from "../img/gift1- remove it.svg";
 import beans from "../../../img/coffeeBeans.svg";
 import place from "../../../img/mountain.svg";
 import {useDispatch, useSelector} from "react-redux";
@@ -44,8 +44,11 @@ const GiftsetCard = (props) => {
                         </div>
                     </div>
                 </div>
-                <button className={b.buy} onClick={() => dispatch(addToBasket(card))}>MUA NGAY</button>
-                <button className={b.info} onClick={() => dispatch(showInfo(card))}>CHI TIẾT</button>
+                <div className={s.buttons}>
+                    <button className={b.buy} onClick={() => dispatch(addToBasket(card))}>MUA NGAY</button>
+                    <button className={b.info} onClick={() => dispatch(showInfo(card))}>CHI TIẾT</button>
+                </div>
+
             </div>
         </div>
     )

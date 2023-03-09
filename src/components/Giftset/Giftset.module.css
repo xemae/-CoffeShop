@@ -1,12 +1,11 @@
 .giftsetWrapper {
-    /*height: 57vw;*/
-    height: 802px;
+    display: flex;
+    flex-direction: column;
 }
 
 .giftsetBlock {
-    position: absolute;
     width: 77vw;
-    /*width: 1076px;*/
+    margin-right: 33vw;
     height: 803px;
     left: -2px;
     background: #EDF0F5;
@@ -20,11 +19,8 @@
     right: auto;
     margin: 86px auto 66px;
     text-align: center;
-    /*width: 50%;*/
-    /*width: 224px;*/
     height: 62px;
     z-index: 1;
-
 }
 
 .desctiption h2 {
@@ -47,36 +43,29 @@
 
 .slider {
     margin-top: 154px;
-    margin-left: 84.1vw;
     display: flex;
 }
 
 .giftCard {
     background-color: #FFFFFF;
     width: 57vw;
-    /*width: 794px;*/
-    height: 460px;
-    /*height: 33vw;*/
-    position: absolute;
+    height: 35.169vw;
     left: 28vw;
-    /*left: 386px;*/
     top: 216px;
     display: flex;
+    margin-top: 68px;
+    margin-left: 27.57vw;
     box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5)
 }
 
 .giftImage {
     margin-left: -256px;
-    max-width: 54vw;
+    width: 35vw;
 }
 
 .cardContent {
-    /*padding: 2vw;*/
-    padding: 2vw 2vw 2vw 0;
+    margin: 5.6vw 2vw 2vw 0;
     width: 35vw;
-    /*word-wrap: inherit;*/
-
-    /*padding: 64px;*/
 }
 
 .cardContent h2 {
@@ -90,18 +79,17 @@
 
 .cardContent h1 {
     color: #232C38;
-    margin-top: 12px;
+    margin-top: 1.1vw;
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-
 }
 
 .cardContent p {
     color: #151D28;
-    margin-top: 12px;
+    margin-top: 1vw;
     /*width: 430px;*/
     font-family: 'Nunito';
     font-style: normal;
@@ -111,11 +99,10 @@
 }
 
 .giftProperties {
-    display: flex;
-    /*margin-top: 24px;*/
-    /*margin-bottom: 46px;*/
-     margin-top: 5%;
+    margin-top: 5%;
     margin-bottom: 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .giftProperties .property {
@@ -140,17 +127,18 @@
     line-height: 22px;
 }
 
+.buttons {
+    display: grid;
+    margin-right: 2vw;
+    grid-template-columns: 166px 166px;
+    grid-column-gap: 3vw;
+}
+
 .pages {
     display: flex;
     flex-flow: column wrap;
     position: relative;
-    top: 62px;
-    left: 1vw;
-    /*margin-right: 50%;*/
-    /*margin-left: 3vw;*/
-    /*margin-right: 3vw;*/
-    /*left: 2vw;*/
-    /*margin-left: 50%;*/
+    top: 68px;
 }
 
 .pages button {
@@ -160,7 +148,7 @@
     cursor: pointer;
     padding: 62px 33px 58px 36px;
     width: 88px;
-    height: 154px;
+    height: 11.723vw;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
@@ -181,4 +169,8 @@
 .pages button.active {
     background-color: #FFFFFF;;
     color: var(--color-primary);
+}
+
+@media (max-width: 1203px) {
+
 }
