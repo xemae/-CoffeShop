@@ -26,6 +26,13 @@ const ComboCards = (props) => {
                 </div>
                 <h1>{c.title}</h1>
                 <p>{c.description}</p>
+                {/*<div className={s.buttons}>*/}
+                {/*    <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>*/}
+                {/*    <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>*/}
+                {/*</div>*/}
+
+            </div>
+            <div className={s.buttons}>
                 <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
                 <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>
             </div>

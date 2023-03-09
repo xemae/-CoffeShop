@@ -156,7 +156,90 @@
 @media (max-width: 862px) {
     .slide {
         padding-left: 5vw;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 2vw;
+        grid-column-gap: 5vw;
+
+    }
+
+    .comboCard {
+        background-color: #FFFFFF;
+        /*width: 23.7vw;*/
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+      "ci cc cc cc"
+      /*"ci cc cc cc"*/
+      /*"ci cc cc cc"*/
+      "cb cb cb cb"
+    ;
+        /*min-height: 210px;*/
 
 
     }
+
+    .comboCard img {
+        grid-area: ci;
+        width: 20vw;
+        min-width: 170px;
+    }
+
+    .buttons {
+        grid-area: cb;
+
+        margin-right: 10%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+        margin-bottom: 8px;
+    }
+
+
+    .comboCard + .comboCard {
+        margin-left: auto;
+    }
+
+    .comboCard .cardContent {
+        grid-area: cc;
+        margin: 2vw 3vw 2vw 3vw;
+        /*min-height: 100px;*/
+
+    }
+
+    .comboCard .cost {
+        display: flex;
+        align-items: center
+    }
+
+    .cardContent .cost h2 {
+         font-size: calc(19px + 1 * (100vw / 1400));
+
+        line-height: 24px;
+        margin-right: 20px;
+    }
+
+    .cardContent .cost s {
+        color: #415167;
+        font-family: 'Nunito';
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .comboCard .cardContent h1 {
+        font-size: calc(21px + 3 * (100vw / 1400));
+        margin-top: 0vw;
+    }
+
+    .comboCard .cardContent p {
+        font-size: calc(15px + 1 * (100vw / 1400));
+
+        margin-top: 0vw;
+        margin-bottom: 0vw;
+    }
+
+
 }
