@@ -5,7 +5,6 @@
 
 .giftsetBlock {
     width: 77vw;
-    margin-right: 33vw;
     height: 803px;
     left: -2px;
     background: #EDF0F5;
@@ -49,7 +48,6 @@
 .giftCard {
     background-color: #FFFFFF;
     width: 57vw;
-    height: 35.169vw;
     left: 28vw;
     top: 216px;
     display: flex;
@@ -59,7 +57,7 @@
 }
 
 .giftImage {
-    margin-left: -256px;
+    margin-left: -18.2857vw;
     width: 35vw;
 }
 
@@ -72,7 +70,7 @@
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
-    font-size: 20px;
+    font-size: calc(19px + 1 * (100vw / 1400));
     line-height: 24px;
     color: #C7A17A;
 }
@@ -83,7 +81,8 @@
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: calc(22px + 1 * (100vw / 1400));
+    /*font-size: 24px;*/
     line-height: 28px;
 }
 
@@ -94,7 +93,8 @@
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
-    font-size: 16px;
+    font-size: calc(15px + 1 * (100vw / 1400));
+    /*font-size: 16px;*/
     line-height: 22px;
 }
 
@@ -103,6 +103,11 @@
     margin-bottom: 10%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+}
+
+.giftProperties img {
+    width: 40px;
+    height: 40px;
 }
 
 .giftProperties .property {
@@ -135,8 +140,8 @@
 }
 
 .pages {
-    display: flex;
-    flex-flow: column wrap;
+    display: grid;
+    grid-template-rows: 29% 28% 29%;
     position: relative;
     top: 68px;
 }
@@ -146,9 +151,8 @@
     color: rgba(65, 81, 103, 0.3);
     margin-left: 2px;
     cursor: pointer;
-    padding: 62px 33px 58px 36px;
+    padding: 62px 33px 62px 36px;
     width: 88px;
-    height: 11.723vw;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
@@ -172,5 +176,47 @@
 }
 
 @media (max-width: 1203px) {
+    .cardContent {
+        margin: 1.6vw 2vw 2vw -3vw;
+        width: 35vw;
+    }
+
+    .giftProperties {
+        margin-top: 1vw;
+        margin-bottom: 2vw;
+        display: grid;
+        grid-template-columns: 6fr 4fr;
+    }
+
+    .buttons {
+        display: grid;
+        margin-right: 2vw;
+        grid-template-columns: 166px 166px;
+        grid-column-gap: 0;
+    }
+
+    .giftCard {
+        height: auto;
+    }
+}
+
+@media (max-width: 981px) {
+    .giftCard {
+        height: auto;
+    }
+
+    .giftProperties {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        grid-row-gap: 0.5vw;
+    }
+
+    .buttons {
+        display: grid;
+        margin-right: 2%;
+        grid-template-columns: 133px 133px;
+        grid-column-gap: 0;
+    }
 
 }

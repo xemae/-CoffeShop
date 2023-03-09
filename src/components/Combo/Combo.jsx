@@ -61,7 +61,6 @@ const Combo = () => {
             <div className={s.comboBlockWrapper} id='combo'>
                 <div className={s.comboBlock}>
 
-
                     <ButtonLeft/>
 
                     <div style={{
