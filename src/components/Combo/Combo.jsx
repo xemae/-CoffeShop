@@ -10,6 +10,7 @@ const Combo = () => {
     const [infoModal, setInfoModal] = useState(false);
 
     const onButtonRightClick = (e) => {
+        // setLeft(left - 27.857)
         setLeft(left - 27.857)
     }
 
