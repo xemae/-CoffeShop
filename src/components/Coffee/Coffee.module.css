@@ -107,15 +107,12 @@
     margin-right: auto;
     margin-bottom: 38px;
     height: 37px;
-
 }
 
 .buttonLeftWrap {
     background-color: rgba(255, 255, 255, 0.24);
     width: 6.7143vw;
-    /*height: calc(100% + 95px);*/
     height: 544px;
-    /*height: 544px;*/
     position: absolute;
     margin-top: 219px;
 }
@@ -130,12 +127,8 @@
 }
 
 @media (max-width: 1203px) {
-
     .sliderBlock {
-        /*background-color: var(--color-primary);*/
-        /*width: 27vw;*/
         height: 754px;
-        /*margin-top: 128px;*/
     }
 
     .cardContent {
@@ -147,34 +140,26 @@
         position: relative;
         margin-top: 4%;
         margin-bottom: 4%;
-
     }
 
-
     .buttonLeftWrap {
-
-        height: calc(100% - 95px);
-
+        height: calc(100% - 402px);
     }
 
     .buttonRightWrap {
-
-        height: calc(100% - 95px);
-
+        height: calc(100% - 402px);
     }
-
 }
 
 @media (max-width: 1043px) {
+    .sliderBlock {
+        margin-top: 50px;
+    }
+
     .card {
         display: grid;
         grid-template-areas:
       "ci ci ci cc cc"
-      "ci ci ci cb cb"
-      "ci ci ci cb cb"
-      "ci ci ci cb cb"
-      "ci ci ci cb cb"
-      "ci ci ci cb cb"
       "ci ci ci cb cb"
     ;
         min-height: 210px;
@@ -186,7 +171,6 @@
 
     .buttons {
         flex-direction: column;
-
     }
 
     .cardContent {
@@ -194,13 +178,19 @@
         margin-bottom: 0;
     }
 
-}
+    .buttonLeftWrap {
+        height: calc(100% - 210px);
+    }
 
+    .buttonRightWrap {
+        height: calc(100% - 210px);
+    }
+}
 
 @media (max-width: 842px) {
 
     .sliderBlock {
-        margin-top: 12%;
+        margin-top: 50px;
     }
 
     .sliderInfo {
@@ -215,7 +205,6 @@
         font-size: 22px;
         margin-top: 3px;
     }
-
 
     .card {
         display: grid;
@@ -238,12 +227,9 @@
         position: relative;
         margin-top: 4%;
         margin-bottom: 4%;
-        /*flex-direction: row;*/
         display: grid;
         grid-column-gap: 2vw;
         grid-template-columns: 1fr 1fr;
-
-
     }
 
     .card button {
@@ -251,9 +237,43 @@
         margin-left: auto;
         margin-right: auto
     }
-
 }
 
 @media (max-width: 680px) {
+    .sliderBlock {
+        margin-top: 50px;
+        height: 970px;
+    }
 
+    .sliderInfo {
+        margin-top: 80px;
+        background-color: #F9FBFF;
+    }
+
+    .slide {
+        margin-top: 0px;
+    }
+
+    .card {
+        display: grid;
+        grid-template-areas:
+      "ci"
+      "cc"
+      "cb "
+      ;
+        height: auto;
+    }
+    .buttons {
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: 1fr;
+        grid-row-gap: 3px;
+        margin-bottom: 38px;
+        height: 37px;
+    }
+
+    .card img {
+        display: flex;
+        margin: auto;
+    }
 }
