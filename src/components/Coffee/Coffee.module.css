@@ -255,5 +255,10 @@
 }
 
 @media (max-width: 680px) {
-
+    .sliderBlock {
+        background-color: var(--color-primary);
+        width: 27vw;
+        height: 894px;
+        margin-top: 128px;
+    }
 }
