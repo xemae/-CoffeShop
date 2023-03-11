@@ -16,9 +16,9 @@ const Header = () => {
 
             <div className={s.container}>
                 <img className={s.logo} src={logo}/>
-                <h1>YOUR</h1>
+                <h1 className={s.text}>YOUR</h1>
                 <h1 className={s.backgrounded}>PERSONALIZED</h1>
-                <h1>COFFEE</h1>
+                <h1 className={s.text}>COFFEE</h1>
 
 
             </div>

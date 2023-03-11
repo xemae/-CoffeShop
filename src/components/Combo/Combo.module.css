@@ -50,7 +50,7 @@
     padding-left: 15vw;
     padding-top: 200px;
     position: relative;
-    padding-bottom: 128px;
+    /*padding-bottom: 128px;*/
     width: 85vw;
     overflow: hidden;
 }
@@ -73,7 +73,7 @@
 }
 
 .comboCard .cardContent {
-    margin: 42px 3vw 42px 3vw;
+    margin: 42px 3vw 0px 3vw;
 }
 
 .comboCard .cost {
@@ -119,10 +119,21 @@
     margin-bottom: 32px;
 }
 
+.buttons {
+    grid-area: cb;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10% 8px;
+
+    align-items: flex-end;
+
+    /*float: bottom;*/
+}
+
 .buttonLeftWrap {
     background-color: rgba(255, 255, 255, 0.24);
     height: 100%;
-    max-height: 543px;
+    max-height: 538px;
     position: absolute;
     padding-top: 232px;
     width: 7.286vw;
@@ -134,7 +145,7 @@
     background-color: rgba(255, 255, 255, 0.24);
     width: 7.286vw;
     height: 100vw;
-    max-height: 543px;
+    max-height: 536px;
     position: absolute;
     padding-top: 232px;
     margin-top: 200px;
@@ -142,7 +153,25 @@
 }
 
 
-@media (max-width: 1120px) {
+/*@media (max-width: 1120px) {*/
+/*    .cardContent {*/
+/*        display: flex;*/
+/*        flex-flow: column;*/
+/*    }*/
+
+/*    .cardContent button {*/
+/*        margin-right: 0;*/
+/*    }*/
+
+/*    .buttons {*/
+/*        display: grid;*/
+/*        grid-template-rows: 1fr 1fr;*/
+
+/*    }*/
+/*}*/
+
+@media (max-width: 1176px) {
+/*@media (max-width: 1120px) {*/
     .cardContent {
         display: flex;
         flex-flow: column;
@@ -150,6 +179,16 @@
 
     .cardContent button {
         margin-right: 0;
+    }
+
+    .buttons {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        margin-left: 5.5vw;
+    }
+
+    .comboCard .cardContent p {
+        margin-bottom: 12px;
     }
 }
 
@@ -161,24 +200,17 @@
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 2vw;
         grid-column-gap: 5vw;
-
     }
 
     .comboCard {
         background-color: #FFFFFF;
-        /*width: 23.7vw;*/
         width: 80vw;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-areas:
       "ci cc cc cc"
-      /*"ci cc cc cc"*/
-      /*"ci cc cc cc"*/
       "cb cb cb cb"
     ;
-        /*min-height: 210px;*/
-
-
     }
 
     .comboCard img {
@@ -189,15 +221,10 @@
 
     .buttons {
         grid-area: cb;
-
-        margin-right: 10%;
-        margin-left: 10%;
         display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-        margin-bottom: 8px;
+        justify-content: space-around;
+        margin: 10px 10% 8px;
     }
-
 
     .comboCard + .comboCard {
         margin-left: auto;
@@ -206,8 +233,6 @@
     .comboCard .cardContent {
         grid-area: cc;
         margin: 2vw 3vw 2vw 3vw;
-        /*min-height: 100px;*/
-
     }
 
     .comboCard .cost {
@@ -222,13 +247,6 @@
         margin-right: 20px;
     }
 
-    .cardContent .cost s {
-        color: #415167;
-        font-family: 'Nunito';
-        font-size: 14px;
-        line-height: 16px;
-    }
-
     .comboCard .cardContent h1 {
         font-size: calc(21px + 3 * (100vw / 1400));
         margin-top: 0vw;
@@ -236,10 +254,31 @@
 
     .comboCard .cardContent p {
         font-size: calc(15px + 1 * (100vw / 1400));
-
         margin-top: 0vw;
         margin-bottom: 0vw;
     }
 
+
+    .buttonLeftWrap {
+        /*background-color: rgba(255, 255, 255, 0.24);*/
+        /*height: 100%;*/
+        /*max-height: 543px;*/
+        /*position: absolute;*/
+        max-height: 404px;
+        /*width: 7.286vw;*/
+        /*margin-top: 200px;*/
+        /*left: 0;*/
+    }
+
+    .buttonRightWrap {
+        /*background-color: rgba(255, 255, 255, 0.24);*/
+        /*width: 7.286vw;*/
+        /*height: 100vw;*/
+        max-height: 404px;
+        /*position: absolute;*/
+        /*padding-top: 232px;*/
+        /*margin-top: 200px;*/
+        /*right: 0;*/
+    }
 
 }
