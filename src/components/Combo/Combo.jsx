@@ -10,12 +10,21 @@ const Combo = () => {
     const [infoModal, setInfoModal] = useState(false);
 
     const onButtonRightClick = (e) => {
-        // setLeft(left - 27.857)
-        setLeft(left - 27.857)
+        if(window.innerWidth > 862) {
+            setLeft(left - 27.857)
+        }
+        else {
+            setLeft(left - 100)
+        }
     }
 
     const onButtonLeftClick = (e) => {
-        setLeft(left + 27.857)
+        if(window.innerWidth > 862) {
+            setLeft(left + 27.857)
+        }
+        else {
+            setLeft(left + 100)
+        }
     }
 
     const ButtonLeft = () => {
@@ -29,7 +38,6 @@ const Combo = () => {
                 <button
                     onClick={onButtonLeftClick}
                     className={b.arrow + ' ' + b.left}
-                    // style={{marginTop: "100px"}}
                 ><img src={arrow}/></button>
             </div>
         }
@@ -48,10 +56,6 @@ const Combo = () => {
             </div>
         }
     }
-
-    // if (infoModal) {
-    //     return <InfoModal />
-    // }
 
     return (
         <div className={s.comboBlockContainer}>

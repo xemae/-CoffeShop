@@ -73,8 +73,14 @@
 
 /*подходит и для мобилок*/
 @media (max-width: 813px) {
+    .benefitsBlock {
+        /*max-width: 1104px;*/
+        margin-top: 50px;
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+    }
     .benefits {
-        margin-top: 8%;
+        margin-top: 40px;
         min-width: 300px;
         margin-left: auto;
         margin-right: auto;
@@ -86,12 +92,22 @@
     }
 
     .benefit {
-        display: block;
+        display: flex;
+        flex-direction: column;
         margin-left: auto;
         margin-right: auto
     }
 
     .benefit h2 {
         margin-top: 12%;
+    }
+
+    .benefit img {
+        width: 50px;
+        margin-top: 17px;
+    }
+
+    .benefit + .benefit {
+        margin-left: auto;
     }
 }
