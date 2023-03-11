@@ -141,26 +141,8 @@ ul li p {
         overflow: hidden;
         display: flex;
         flex-direction: column;
-        /*display: grid;*/
-        /*grid-template-rows: 335px 1fr 1fr 1fr ;*/
-
     }
 
-
-    .container h1 {
-        /*color: var(--color-primary);*/
-        /*background-color: #FFFFFF;*/
-        /*color: #F9FBFF;*/
-        /*margin-left: -15px;*/
-        /*display: inline-block;*/
-        /*min-width: 300px;*/
-        /*max-width: 150px;*/
-        /*position: initial;*/
-
-
-        /*padding-right: 15px;*/
-        /*padding-left: 15px;*/
-    }
     .text {
         color: var(--color-primary);
         background-color: #F9FBFF;
@@ -174,8 +156,6 @@ ul li p {
         margin-left: -15px;
         display: inline-block;
         width: auto;
-        /*max-width: 400px;*/
-        /*position: initial;*/
         padding-right: 15px;
         padding-left: 15px;
     }
@@ -184,7 +164,6 @@ ul li p {
         position: absolute;
         top: 0;
         left: 22vw;
-        /*right: 0;*/
         width: 540px;
         margin-left: 40px;
     }
@@ -193,8 +172,6 @@ ul li p {
         padding-bottom: 300px;
         width: 20vw;
         min-width: 100px;
-        /*display: ;*/
-
     }
 
     .nav {

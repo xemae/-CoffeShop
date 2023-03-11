@@ -71,13 +71,9 @@
     margin-top: 12px;
 }
 
-/*подходит и для мобилок*/
 @media (max-width: 813px) {
     .benefitsBlock {
-        /*max-width: 1104px;*/
         margin-top: 50px;
-        /*margin-left: auto;*/
-        /*margin-right: auto;*/
     }
     .benefits {
         margin-top: 40px;
