@@ -33,6 +33,13 @@
     color: #415167;
 }
 
+.slider {
+    display: contents;
+    /*background-color: #e1b281;*/
+    /*position: absolute;*/
+    /*height: auto;*/
+}
+
 .slide {
     margin-top: 50px;
     display: grid;
@@ -110,25 +117,33 @@
 }
 
 .buttonLeftWrap {
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(65, 81, 103, 0.53);
+    /*background-color: rgba(255, 255, 255, 0.24);*/
     width: 6.7143vw;
-    height: 544px;
+    /*height: 544px;*/
     position: absolute;
-    margin-top: 219px;
+    margin-top: 166px;
+    height: 100%;
+
 }
 
 .buttonRightWrap {
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(203, 14, 14, 0.6);
+    /*background-color: rgba(249, 251, 255, 0.65);*/
     width: 6.7143vw;
-    height: 544px;
+    /*height: 544px;*/
     position: absolute;
-    margin-top: 219px;
+    margin-top: 166px;
     left: 93.286vw;
+    height: 100%;
+
 }
+
 
 @media (max-width: 1203px) {
     .sliderBlock {
-        height: 754px;
+        height: 100vw;
+        /*height: 754px;*/
     }
 
     .cardContent {
@@ -142,13 +157,12 @@
         margin-bottom: 4%;
     }
 
-    .buttonLeftWrap {
-        height: calc(100% - 402px);
-    }
-
-    .buttonRightWrap {
-        height: calc(100% - 402px);
-    }
+    /*.buttonLeftWrap {*/
+    /*    height: calc(100% + 86px);*/
+    /*}*/
+    /*.buttonRightWrap {*/
+    /*    height: calc(100% + 86px);*/
+    /*}*/
 }
 
 @media (max-width: 1043px) {
@@ -160,8 +174,7 @@
         display: grid;
         grid-template-areas:
       "ci ci ci cc cc"
-      "ci ci ci cb cb"
-    ;
+      "ci ci ci cb cb";
         min-height: 210px;
     }
 
@@ -178,13 +191,12 @@
         margin-bottom: 0;
     }
 
-    .buttonLeftWrap {
-        height: calc(100% - 210px);
-    }
-
-    .buttonRightWrap {
-        height: calc(100% - 210px);
-    }
+    /*.buttonLeftWrap {*/
+    /*    height: calc(100% - 210px);*/
+    /*}*/
+    /*.buttonRightWrap {*/
+    /*    height: calc(100% - 210px);*/
+    /*}*/
 }
 
 @media (max-width: 842px) {
@@ -262,13 +274,13 @@
         grid-template-areas:
       "ci"
       "cc"
-      "cb "
-      ;
+      "cb ";
         height: auto;
     }
+
     .buttons {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
         grid-row-gap: 3px;
         margin-bottom: 38px;
@@ -280,3 +292,22 @@
         margin: auto;
     }
 }
+
+/*@media (max-width: 680px) {*/
+/*    .buttonLeftWrap {*/
+/*        height: 200%;*/
+/*    }*/
+/*    .buttonRightWrap {*/
+/*        height: 200%;*/
+/*    }*/
+/*}*/
+
+/*!*до 335*!*/
+/*@media (max-width: 448px) {*/
+/*    .buttonLeftWrap {*/
+/*        height: 210%;*/
+/*    }*/
+/*    .buttonRightWrap {*/
+/*        height: 210%;*/
+/*    }*/
+/*}*/

@@ -45,6 +45,8 @@ const Coffee = () => {
                 <h1>CHUẨN GU ĐÚNG VỊ</h1>
             </div>
 
+            <div className={s.slider}>
+
                 <ButtonLeft/>
 
                 <div style={{
@@ -66,6 +68,7 @@ const Coffee = () => {
 
                 <ButtonRight/>
 
+            </div>
         </div>
     )
 }
