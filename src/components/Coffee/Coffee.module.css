@@ -246,12 +246,15 @@
     }
 
     .sliderInfo {
-        margin-top: 80px;
-        background-color: #F9FBFF;
+        margin-top: 10vw;
+        margin-right: 3vw;
+        width: 73vw;
+        transform: none;
+        left: 20vw;
     }
 
     .slide {
-        margin-top: 0px;
+        margin-top: 3vw;
     }
 
     .card {

@@ -20,17 +20,16 @@ const ComboCards = (props) => {
         <div key={c.id} className={s.comboCard}>
             <img src={c.image}/>
             <div className={s.cardContent}>
-                <div className={s.cost}>
-                    <h2>{c.price + '.00'}</h2>
-                    <s>{c.lastPrice + '.00'}</s>
+                <div className={s.cardTitle}>
+                    <div className={s.cost}>
+                        <h2>{c.price + '.00'}</h2>
+                        <s>{c.lastPrice + '.00'}</s>
+                    </div>
+                    <h1>{c.title}</h1>
                 </div>
-                <h1>{c.title}</h1>
-                <p>{c.description}</p>
-                {/*<div className={s.buttons}>*/}
-                {/*    <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>*/}
-                {/*    <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>*/}
-                {/*</div>*/}
-
+                <div className={s.cardDescription}>
+                    <p>{c.description}</p>
+                </div>
             </div>
             <div className={s.buttons}>
                 <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
