@@ -50,7 +50,7 @@ const Coffee = () => {
                 <ButtonLeft/>
 
                 <div style={{
-                    position: 'absolute',
+                    // position: 'absolute',
                     left: `${left}vw`,
                     transition: 'all .15s'
                 }}>

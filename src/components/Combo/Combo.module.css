@@ -1,24 +1,23 @@
 .comboBlockContainer {
-    margin-top: -58px;
-}
-
-.comboBlockWrapper {
     background-color: var(--color-primary);
     height: 100vw;
     min-height: 800px;
     max-height: 906px;
     width: 23.39vw;
-    margin-left: 76.9vw;
     right: 0;
+    padding-top: 200px;
 }
 
+
 .description {
-    position: relative;
-    top: 120px;
+    position: absolute;
     display: flex;
-    flex-direction: column;
     text-align: center;
-    margin: auto;
+    flex-direction: column;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    margin-top: -98px;
 }
 
 .description h2 {
@@ -40,15 +39,14 @@
 }
 
 .comboBlock {
-    background-color: #F9FBFF;
-    width: 76.7vw;
+    display: flex;
+    position: absolute;
 }
 
 .slide {
     display: flex;
     flex-direction: row;
     padding-left: 15vw;
-    padding-top: 200px;
     position: relative;
     width: 85vw;
     overflow: hidden;
@@ -128,23 +126,19 @@
 
 .buttonLeftWrap {
     background-color: rgba(249, 251, 255, 0.65);
-    height: 150%;
-    /*max-height: 538px;*/
+    height: 100%;
     position: absolute;
     padding-top: 232px;
     width: 7.286vw;
-    margin-top: 200px;
     left: 0;
 }
 
 .buttonRightWrap {
-    background-color: rgba(65, 81, 103, 0.53);
+    background-color: rgba(22, 105, 218, 0.53);
     width: 7.286vw;
-    height: 150%;
-    /*max-height: 536px;*/
+    height: 100%;
     position: absolute;
     padding-top: 232px;
-    margin-top: 200px;
     right: 0;
 }
 
@@ -248,7 +242,6 @@
         flex-direction: column;
         margin: 10px auto 8px;
         align-items: center;
-
     }
 }
 
@@ -256,7 +249,6 @@
 @media (max-width: 400px) {
 
     .comboCard {
-
         display: flex;
         flex-direction: column;
     }

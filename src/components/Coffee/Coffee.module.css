@@ -3,16 +3,19 @@
     width: 27vw;
     height: 894px;
     margin-top: 128px;
+    padding-top: 240px;
+    margin-bottom: 50px;
 }
 
 .sliderInfo {
     position: absolute;
+    display: flex;
     text-align: center;
     flex-direction: column;
     left: 50%;
-    margin-top: 95px;
     margin-right: -50%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    padding-bottom: 232px;
 }
 
 .sliderInfo h2 {
@@ -34,21 +37,17 @@
 }
 
 .slider {
-    display: contents;
-    /*background-color: #e1b281;*/
-    /*position: absolute;*/
-    /*height: auto;*/
+    display: flex;
+    position: absolute;
 }
 
 .slide {
-    margin-top: 50px;
     display: grid;
     grid-auto-flow: column;
     padding-left: 9vw;
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 2.14vw;
     grid-row-gap: 32px;
-    padding-top: 169px;
     width: 91vw;
     overflow: hidden;
 }
@@ -117,33 +116,24 @@
 }
 
 .buttonLeftWrap {
-    background-color: rgba(65, 81, 103, 0.53);
-    /*background-color: rgba(255, 255, 255, 0.24);*/
+    background-color: rgba(249, 251, 255, 0.65);
     width: 6.7143vw;
-    /*height: 544px;*/
     position: absolute;
-    margin-top: 166px;
     height: 100%;
-
 }
 
 .buttonRightWrap {
-    background-color: rgba(203, 14, 14, 0.6);
-    /*background-color: rgba(249, 251, 255, 0.65);*/
+    background-color: rgba(249, 251, 255, 0.65);
     width: 6.7143vw;
-    /*height: 544px;*/
     position: absolute;
-    margin-top: 166px;
-    left: 93.286vw;
+    right: 0;
     height: 100%;
-
 }
 
 
 @media (max-width: 1203px) {
     .sliderBlock {
-        height: 100vw;
-        /*height: 754px;*/
+        /*height: 100vw;*/
     }
 
     .cardContent {
@@ -156,18 +146,11 @@
         margin-top: 4%;
         margin-bottom: 4%;
     }
-
-    /*.buttonLeftWrap {*/
-    /*    height: calc(100% + 86px);*/
-    /*}*/
-    /*.buttonRightWrap {*/
-    /*    height: calc(100% + 86px);*/
-    /*}*/
 }
 
 @media (max-width: 1043px) {
     .sliderBlock {
-        margin-top: 50px;
+        height: 800px;
     }
 
     .card {
@@ -190,19 +173,12 @@
         padding: 4% 4% 0 6%;
         margin-bottom: 0;
     }
-
-    /*.buttonLeftWrap {*/
-    /*    height: calc(100% - 210px);*/
-    /*}*/
-    /*.buttonRightWrap {*/
-    /*    height: calc(100% - 210px);*/
-    /*}*/
 }
 
 @media (max-width: 842px) {
 
     .sliderBlock {
-        margin-top: 50px;
+        /*margin-top: 50px;*/
     }
 
     .sliderInfo {
@@ -253,16 +229,16 @@
 
 @media (max-width: 680px) {
     .sliderBlock {
-        margin-top: 50px;
-        height: 970px;
+        height: 1040px;
     }
 
     .sliderInfo {
-        margin-top: 10vw;
-        margin-right: 3vw;
-        width: 73vw;
-        transform: none;
-        left: 20vw;
+        /*!*margin-top: 10vw;*!*/
+        /*margin-right: 3vw;*/
+        /*width: 73vw;*/
+        /*transform: none;*/
+        /*left: 20vw;*/
+        margin-right: 1vw;
     }
 
     .slide {
@@ -292,22 +268,3 @@
         margin: auto;
     }
 }
-
-/*@media (max-width: 680px) {*/
-/*    .buttonLeftWrap {*/
-/*        height: 200%;*/
-/*    }*/
-/*    .buttonRightWrap {*/
-/*        height: 200%;*/
-/*    }*/
-/*}*/
-
-/*!*до 335*!*/
-/*@media (max-width: 448px) {*/
-/*    .buttonLeftWrap {*/
-/*        height: 210%;*/
-/*    }*/
-/*    .buttonRightWrap {*/
-/*        height: 210%;*/
-/*    }*/
-/*}*/
