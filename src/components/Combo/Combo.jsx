@@ -63,13 +63,13 @@ const Combo = () => {
                 <h2>Your Personalized Coffee</h2>
                 <h1>COMBO PHIN PHÊ</h1>
             </div>
-            <div className={s.comboBlockWrapper} id='combo'>
-                <div className={s.comboBlock}>
+            <div className={s.comboBlock} id='combo'>
+                {/*<div className={s.comboBlock}>*/}
 
                     <ButtonLeft/>
 
                     <div style={{
-                        position: 'absolute',
+                        // position: 'absolute',
                         left: `${left}vw`,
                         transition: 'all .15s'
                     }}>
@@ -84,7 +84,7 @@ const Combo = () => {
 
                     <ButtonRight/>
 
-                </div>
+                {/*</div>*/}
             </div>
         </div>
 
