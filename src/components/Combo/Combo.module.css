@@ -127,9 +127,9 @@
 }
 
 .buttonLeftWrap {
-    background-color: rgba(255, 255, 255, 0.24);
-    height: 100%;
-    max-height: 538px;
+    background-color: rgba(249, 251, 255, 0.65);
+    height: 150%;
+    /*max-height: 538px;*/
     position: absolute;
     padding-top: 232px;
     width: 7.286vw;
@@ -138,10 +138,10 @@
 }
 
 .buttonRightWrap {
-    background-color: rgba(255, 255, 255, 0.24);
+    background-color: rgba(65, 81, 103, 0.53);
     width: 7.286vw;
-    height: 100vw;
-    max-height: 536px;
+    height: 150%;
+    /*max-height: 536px;*/
     position: absolute;
     padding-top: 232px;
     margin-top: 200px;
@@ -232,12 +232,13 @@
     }
 
     .buttonLeftWrap {
-        max-height: 404px;
+        height: 150%;
     }
 
     .buttonRightWrap {
-        max-height: 404px;
+        height: 150%;
     }
+
 }
 
 @media (max-width: 673px) {
@@ -294,5 +295,13 @@
         grid-row-gap: 3px;
         margin-bottom: 38px;
         height: 37px;
+    }
+
+    .buttonLeftWrap {
+        height: 207%;
+    }
+
+    .buttonRightWrap {
+        height: 207%;
     }
 }
