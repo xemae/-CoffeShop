@@ -1,12 +1,12 @@
 .footer {
-    background-color: #EDF0F5;
+    background-color: var(--color-contrast);
     padding: 18px 20px;
 }
 
 .footer h3{
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-size: 16px;
     line-height: 22px;
-    color: #415167;
     text-align: center;
 }

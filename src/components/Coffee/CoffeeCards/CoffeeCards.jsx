@@ -10,26 +10,20 @@ const CoffeeCards = () => {
     const dispatch = useDispatch()
 
     const Cards = cards.filter(i => i.type === 'coffee').map(c =>
-            <div key={c.id} className={s.card}>
+        <div key={c.id} className={s.card}>
 
-                <img src={c.image}/>
-                <div className={s.cardContent}>
-                    {/*<div className={s.headContent}>*/}
-                        <h2>{c.price + '.00'}</h2>
-                        <h1>{c.title}</h1>
-                    {/*</div>*/}
-                    <p>{c.description}</p>
-                    {/*<div className={s.buttons}>*/}
-                    {/*    <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>*/}
-                    {/*    <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>*/}
-                    {/*</div>*/}
-
-                </div>
-                <div className={s.buttons}>
-                    <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
-                    <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>
-                </div>
+            <img src={c.image}/>
+            <div className={s.cardContent}>
+                <h2>{c.price + '.00'}</h2>
+                <h1>{c.title}</h1>
+                <p>{c.description}</p>
             </div>
+
+            <div className={s.buttons}>
+                <button className={b.buy} onClick={() => dispatch(addToBasket(c))}>MUA NGAY</button>
+                <button className={b.info} onClick={() => dispatch(showInfo(c))}>CHI TIẾT</button>
+            </div>
+        </div>
     )
     return (
         Cards

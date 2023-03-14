@@ -1,7 +1,6 @@
 * {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
-    /*max-width: 1400px;*/
 }
 
 body {
@@ -79,6 +78,10 @@ ul {
     --color-accent: #C7A17A;
     --color-text: #151d28;
     --color-contrast: #EDF0F5;
+    --color-text-contrast: #F9FBFF;
+    --color-text-contrast-hover: #ffffff;
     --color-accent-hover: #e0b182;
+    --color-modal: #F8F8F8FF;
+    --color-modal-background: rgba(237, 240, 245, 0.38);
     --color-second-hover: #F9F5E8;
 }

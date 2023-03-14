@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import s from "./InfoModal.module.css"
 import b from "../styles/Buttons.module.css"
 import beans from "../../img/coffeeBeans.svg";
@@ -6,12 +6,7 @@ import place from "../../img/mountain.svg";
 import {useDispatch, useSelector} from "react-redux";
 import {addToBasket, hideBasket, hideInfo} from "../../reduxToolkit/toolkitSlice";
 
-const InfoModal = (props) => {
-
-    // const {info} = props
-
-    // const [infoModal, setInfoModal] = useState(false);
-    // const info = useSelector(state => state.toolkit.currentCard)
+const InfoModal = () => {
     const {showedCard} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
@@ -58,18 +53,14 @@ const InfoModal = (props) => {
                             <button className={b.buy} onClick={() => dispatch(addToBasket(showedCard))}>
                                 MUA NGAY
                             </button>
-                            {/*<button className={b.info}>CHI TIẾT</button>*/}
                         </div>
-                    {/*</div>*/}
+                    </div>
+
 
                 </div>
-
-
             </div>
-    </div>
-    )
+        )
     }
 }
-
 
 export default InfoModal

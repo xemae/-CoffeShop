@@ -1,7 +1,7 @@
 .infoModalWrapper {
+    background-color: var(--color-modal-background);
     text-align: center;
     z-index: 9;
-    background-color: rgba(158, 198, 222, 0.36);
     width: 105vw;
     height: 105vh;
     position: fixed;
@@ -10,7 +10,8 @@
 }
 
 .infoModal {
-    background-color: rgb(248, 248, 248);
+    background-color: var(--color-modal);
+    color: var(--color-primary);
     width: 80vw;
     position: absolute;
     padding: 3.57vw 50px 3.57vw 3.57vw;
@@ -44,8 +45,7 @@
     grid-template-areas:
       "cim cin cin cin"
       "cim cp cp cp"
-      "cim cb cb cb"
-;
+      "cim cb cb cb";
 }
 
 .cardInfo {
@@ -84,11 +84,10 @@
 
 .properties img {
     padding-left: 2.23vw;
-    /*padding-left: 34px;*/
 }
 
 .properties h4 {
-    color: #415167;
+    /*color: var(--color-primary);*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
@@ -97,7 +96,7 @@
 }
 
 .properties h3 {
-    color: #415167;
+    /*color: var(--color-primary);*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
@@ -106,16 +105,16 @@
 }
 
 h2 {
+    color: var(--color-accent);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #C7A17A;
 }
 
 .infoModal h4 {
-    color: #415167;
+    /*color: var(--color-primary);*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
@@ -124,16 +123,16 @@ h2 {
 }
 
 .infoModal h1 {
+    /*color: var(--color-primary);*/
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 25px;
     line-height: 34px;
-    color: #415167;
 }
 
 .infoModal h3 {
-    color: #415167;
+    /*color: var(--color-primary);*/
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
@@ -142,7 +141,7 @@ h2 {
 }
 
 .infoModal p {
-    color: #151D28;
+    color: var(--color-text);
     margin-top: 12px;
     font-family: 'Nunito';
     font-style: normal;
@@ -165,8 +164,7 @@ h2 {
         grid-template-areas:
       "cim cin cin cin"
       "cp cp cp cp"
-      "cb cb cb cb"
-    ;
+      "cb cb cb cb";
     }
 }
 
@@ -179,6 +177,7 @@ h2 {
         right: 0vw;
         top: 0vh;
     }
+
     .infoModal {
         width: 90vw;
         padding: 3.57vw 50px 3.57vw 3.57vw;
@@ -189,8 +188,7 @@ h2 {
         grid-template-areas:
       "cim cin cin cin"
       "cp cp cp cp"
-      "cb cb cb cb"
-    ;
+      "cb cb cb cb";
     }
 
     .cardInfo {
@@ -205,15 +203,12 @@ h2 {
         min-height: 150px;
     }
 }
-@media (max-width: 493px) {
 
+@media (max-width: 493px) {
     .infoModal {
-        /*background-color: rgb(248, 248, 248);*/
         width: 105vw;
         height: 105vh;
-        /*position: absolute;*/
         padding: 3.57vw 3.57vw 3.57vw 3.57vw;
-
         max-height: none;
     }
 
@@ -231,8 +226,7 @@ h2 {
       "cim cim cim cim"
       "cin cin cin cin"
       "cp cp cp cp"
-      "cb cb cb cb"
-    ;
+      "cb cb cb cb";
     }
 
     .cardWrapper .cardImage {
@@ -256,16 +250,12 @@ h2 {
         padding-left: 5vw;
         word-wrap: break-word;
     }
-    .properties{
-        /*display: flex;*/
-        /*margin-left: auto;*/
-        /*margin-right: auto;*/
+
+    .properties {
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr;
         padding-left: 10vw;
         grid-row-gap: 8px;
-
-
     }
 }

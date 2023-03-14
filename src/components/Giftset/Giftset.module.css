@@ -5,9 +5,9 @@
 }
 
 .giftsetBlock {
+    background: var(--color-contrast);
     width: 77vw;
     left: -2px;
-    background: #EDF0F5;
     margin-top: -214px;
 }
 
@@ -22,21 +22,21 @@
 }
 
 .desctiption h2 {
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #415167;
 }
 
 .desctiption h1 {
+    color: var(--color-primary);
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
     line-height: 34px;
-    color: #415167;
 }
 
 .slider {
@@ -46,16 +46,14 @@
 }
 
 .giftCard {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-contrast-hover);
+    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
     width: 57vw;
     left: 28vw;
     top: 216px;
     display: flex;
     margin-top: 68px;
-    /*margin-left: 27.57vw;*/
-    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
     margin-left: 150px;
-
 }
 
 .giftImage {
@@ -68,32 +66,28 @@
     margin: 5.6vw 2vw 2vw 0;
     width: 35vw;
     max-width: 800px;
+    font-family: 'Nunito';
+    font-style: normal;
 }
 
 .cardContent h2 {
-    font-family: 'Nunito';
-    font-style: normal;
+    color: var(--color-accent);
     font-weight: 600;
     font-size: calc(19px + 1 * (100vw / 1400));
     line-height: 24px;
-    color: #C7A17A;
 }
 
 .cardContent h1 {
-    color: #232C38;
+    color: var(--color-primary);
     margin-top: 1.1vw;
-    font-family: 'Nunito';
-    font-style: normal;
     font-weight: 700;
     font-size: calc(22px + 1 * (100vw / 1400));
     line-height: 28px;
 }
 
 .cardContent p {
-    color: #151D28;
+    color: var(--color-text);
     margin-top: 1vw;
-    font-family: 'Nunito';
-    font-style: normal;
     font-weight: 300;
     font-size: calc(15px + 1 * (100vw / 1400));
     line-height: 22px;
@@ -116,7 +110,7 @@
 }
 
 .giftProperties h4 {
-    color: #415167;
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
@@ -125,7 +119,7 @@
 }
 
 .giftProperties h3 {
-    color: #415167;
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
@@ -172,7 +166,7 @@
 }
 
 .pages button.active {
-    background-color: #FFFFFF;;
+    background-color: var(--color-text-contrast-hover);;
     color: var(--color-primary);
 }
 
@@ -231,7 +225,6 @@
         width: 80vw;
         height: 100%;
         left: -2px;
-        background: #EDF0F5;
         margin-top: -214px;
     }
 
@@ -248,8 +241,7 @@
     .giftCard {
         width: 80vw;
         margin-left: 7vw;
-        margin-top: 0px;
-
+        margin-top: 0;
         display: flex;
         flex-direction: column;
     }
@@ -270,9 +262,6 @@
         display: flex;
         flex-direction: column;
         margin-top: -68px;
-        /*position: absolute;*/
-        /*height: 100%;*/
-        /*top: 0;*/
     }
 
     .pages button {
