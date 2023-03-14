@@ -18,23 +18,22 @@
     margin-right: -50%;
     transform: translate(-50%, -50%);
     padding-bottom: 232px;
-    /*max-width: 1400px;*/
 }
 
 .sliderInfo h2 {
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #415167;
 }
 
 .sliderInfo h1 {
+    color: var(--color-primary);
     font-family: 'Montserrat';
     font-weight: 900;
     font-size: 30px;
     line-height: 34px;
-    color: #415167;
 }
 
 .slider {
@@ -50,12 +49,11 @@
     grid-template-rows: 1fr 1fr;
     grid-column-gap: 2.14%;
     grid-row-gap: 32px;
-    /*width: 91vw;*/
     overflow: hidden;
 }
 
 .card {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-contrast-hover);
     width: 39.92vw;
     display: grid;
     grid-template-areas:
@@ -82,31 +80,31 @@
 }
 
 .card h2 {
+    color: var(--color-accent);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: var(--color-accent);
 }
 
 .card h1 {
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
-    color: #232C38;
     margin-top: 8px;
 }
 
 .card p {
+    color: var(--color-text);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
-    color: #151D28;
     margin-top: 24px;
 }
 
@@ -270,5 +268,4 @@
         display: flex;
         margin: auto;
     }
-
 }

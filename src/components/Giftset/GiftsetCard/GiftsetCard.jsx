@@ -1,13 +1,6 @@
 import React from "react";
 import s from "../Giftset.module.css"
 import b from "../../styles/Buttons.module.css"
-// import morning from "../img/morning.svg";
-// import origin from "../img/origin.svg";
-// import everyday from "../img/everyday.svg";
-// import revo from "../img/revo.svg";
-// import honey from "../img/honey.svg";
-// import natural from "../img/natural.svg";
-// import gift1 from "../img/gift1- remove it.svg";
 import beans from "../../../img/coffeeBeans.svg";
 import place from "../../../img/mountain.svg";
 import {useDispatch, useSelector} from "react-redux";
@@ -17,9 +10,8 @@ const GiftsetCard = (props) => {
 
     const cards = useSelector(state => state.toolkit.cards.filter(i => i.type === 'gift'))
     const dispatch = useDispatch()
-    // console.log(props.id)
 
-    const card = cards.find(el => el.id == props.id )
+    const card = cards.find(el => el.id == props.id)
 
     return (
         <div className={s.giftCard}>

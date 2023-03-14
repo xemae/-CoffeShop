@@ -4,36 +4,32 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
-    border-radius: 19px;
-
-
 }
 
 .buy {
     background: var(--color-accent);
+    color: var(--color-text-contrast);
     border-radius: 19px;
-    color: #F9FBFF;
     padding: 7px 15px 7px 17px;
     margin-right: 1.2857vw;
     height: 32px;
-
 }
 
 .buy:hover {
     background-color: var(--color-accent-hover);
-    color: #FFFFFF;
+    color: var(--color-text-contrast-hover);
 }
 
 .info {
-    border-radius: 19px;
     color: var(--color-primary);
+    border-radius: 19px;
     padding: 7px 11px 7px 11px;
     height: 32px;
 }
 
 .info:hover {
+    background-color: var(--color-contrast);
     color: var(--color-text);
-    background-color: #f1f1f1;
 }
 
 .arrow {
@@ -58,7 +54,6 @@ button {
         margin-left: -3.143vw;
         margin-right: 2vw;
     }
-
 }
 
 .arrow.left img {

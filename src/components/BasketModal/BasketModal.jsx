@@ -2,7 +2,6 @@ import React from "react";
 import s from "./BasketModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {hideBasket, minusItem, plusItem, removeFromBasket, showInfo} from "../../reduxToolkit/toolkitSlice";
-import b from "../styles/Buttons.module.css";
 import emptyBasket from '../../img/emptyBasket.png'
 
 const BasketModal = () => {
@@ -28,7 +27,6 @@ const BasketModal = () => {
                 </div>
 
                 <div className={s.cost}>
-                    {/*добавить Classnames, lastPrice мб undefined */}
                     <s>{setDiscount(c.lastPrice)}</s>
                     <h2>{c.price + '.00'}</h2>
                 </div>
@@ -62,13 +60,6 @@ const BasketModal = () => {
                 <div className={s.basketModal} onClick={e => e.stopPropagation()}>
                     <button className={s.close} onClick={() => dispatch(hideBasket())}>&times;</button>
 
-                    {/*<div className={s.columnsNames}>*/}
-                    {/*    <h1>товар</h1>*/}
-                    {/*    <h1>цена</h1>*/}
-                    {/*    <h1>количество</h1>*/}
-                    {/*    <h1>подытог</h1>*/}
-                    {/*</div>*/}
-
                     {BasketCards}
 
                     <div className={s.buyWrap}>
@@ -85,10 +76,7 @@ const BasketModal = () => {
                             <button className={s.buyAll}>Buy</button>
                         </div>
 
-
                     </div>
-
-
                 </div>
             </div>
         )

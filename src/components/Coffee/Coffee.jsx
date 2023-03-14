@@ -8,19 +8,11 @@ const Coffee = () => {
     const [left, setLeft] = useState(0)
 
     const onButtonRightClick = (e) => {
-        // if (window.innerWidth > 862) {
-        //     setLeft(left - 27.857)
-        // } else {
-            setLeft(left - 42.07)
-        // }
+        setLeft(left - 42.07)
     }
 
     const onButtonLeftClick = (e) => {
-        // if (window.innerWidth > 862) {
-        //     setLeft(left + 27.857)
-        // } else {
-            setLeft(left + 42.07)
-        // }
+        setLeft(left + 42.07)
     }
 
     const ButtonLeft = () => {
@@ -30,11 +22,8 @@ const Coffee = () => {
                 zIndex: "1",
                 position: 'absolute',
                 right: '93.2857vw',
-                // right: '86.2857vw',
-                // left: '27.857',
                 top: '0',
                 transition: 'all .15s'
-
             }}>
                 <button className={b.arrow + ' ' + b.left}
                         onClick={onButtonLeftClick}
@@ -47,11 +36,9 @@ const Coffee = () => {
         if (left >= 0) {
             return <button className={s.buttonRightWrap} style={{
                 position: 'absolute',
-                // left: '100vw',
                 right: '0',
                 top: '0',
                 transition: 'all .15s'
-
             }}
             >
                 <button className={b.arrow + ' ' + b.right}

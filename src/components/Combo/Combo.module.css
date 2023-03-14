@@ -20,21 +20,21 @@
 }
 
 .description h2 {
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 24px;
-    color: #415167;
 }
 
 .description h1 {
+    color: var(--color-primary);
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
     font-size: 30px;
     line-height: 34px;
-    color: #415167;
 }
 
 .comboBlock {
@@ -53,7 +53,7 @@
 }
 
 .comboCard {
-    background-color: #FFFFFF;
+    background-color: var(--color-text-contrast-hover);
     width: 23.7vw;
     max-width: 332px;
 }
@@ -81,7 +81,7 @@
 }
 
 .cardContent .cost h2 {
-    color: #C7A17A;
+    color: var(--color-accent);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 600;
@@ -91,29 +91,29 @@
 }
 
 .cardContent .cost s {
-    color: #415167;
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-size: 14px;
     line-height: 16px;
 }
 
 .comboCard .cardContent h1 {
+    color: var(--color-primary);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
     line-height: 28px;
     margin-top: 10px;
-    color: #232C38;
 }
 
 .comboCard .cardContent p {
+    color: var(--color-text);
     font-family: 'Nunito';
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
     line-height: 22px;
-    color: #151D28;
     margin-top: 10px;
     margin-bottom: 32px;
 }
@@ -149,10 +149,7 @@
 }
 
 @media (max-width: 1176px) {
-
     .comboBlockContainer {
-        background-color: var(--color-primary);
-        /*height: 100vw;*/
         min-height: 700px;
         max-height: 850px;
         width: 23.39vw;
@@ -186,14 +183,13 @@
     }
 
     .slide {
-        grid-template-rows: 1fr ;
+        grid-template-rows: 1fr;
         grid-template-columns: 1fr 1fr;
         column-gap: 3vw;
         padding-left: 6vw;
     }
 
     .comboCard {
-        background-color: #FFFFFF;
         width: 80vw;
         display: flex;
         flex-direction: column;
@@ -263,6 +259,7 @@
         display: flex;
         flex-direction: column;
     }
+
     .slide {
         padding-left: 5vw;
         display: grid;
@@ -285,6 +282,7 @@
         width: 20vw;
         min-width: 170px;
     }
+
     .buttons {
         display: grid;
         grid-template-rows: 1fr 1fr;
