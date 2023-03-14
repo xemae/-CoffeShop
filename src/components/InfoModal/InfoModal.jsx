@@ -27,7 +27,7 @@ const InfoModal = (props) => {
                 <div className={s.infoModal} onClick={e => e.stopPropagation()}>
                     <button className={s.close} onClick={() => dispatch(hideInfo())}>&times;</button>
 
-                    <div className={s.CardWrapper}>
+                    <div className={s.cardWrapper}>
                         <img className={s.cardImage} src={showedCard.image}/>
                         <div className={s.cardInfo}>
                             <h2>{showedCard.price + '.00'}</h2>
@@ -35,40 +35,41 @@ const InfoModal = (props) => {
                             <h1>{showedCard.title}</h1>
                             <h3>{showedCard.shortDescription}</h3>
                             <p>{showedCard.description}</p>
+                        </div>
 
-                            <div className={s.properties}>
-                                <div className={s.property}>
-                                    <img src={beans}/>
-                                    <div>
-                                        <h4>{showedCard.beansTitle}</h4>
-                                        <h3>{showedCard.beansInfo}</h3>
-                                    </div>
-                                </div>
-                                <div className={s.property}>
-                                    <img src={place}/>
-                                    <div>
-                                        <h4>{showedCard.placeTitle}</h4>
-                                        <h3>{showedCard.placeInfo}</h3>
-                                    </div>
+                        <div className={s.properties}>
+                            <div className={s.property}>
+                                <img src={beans}/>
+                                <div>
+                                    <h4>{showedCard.beansTitle}</h4>
+                                    <h3>{showedCard.beansInfo}</h3>
                                 </div>
                             </div>
-                            <div className={s.buttons}>
-                                <button className={b.buy} onClick={() => dispatch(addToBasket(showedCard))}>MUA NGAY</button>
-                                {/*<button className={b.info}>CHI TIẾT</button>*/}
+                            <div className={s.property}>
+                                <img src={place}/>
+                                <div>
+                                    <h4>{showedCard.placeTitle}</h4>
+                                    <h3>{showedCard.placeInfo}</h3>
+                                </div>
                             </div>
                         </div>
 
-                    </div>
-
-
-
+                        <div className={s.buttons}>
+                            <button className={b.buy} onClick={() => dispatch(addToBasket(showedCard))}>
+                                MUA NGAY
+                            </button>
+                            {/*<button className={b.info}>CHI TIẾT</button>*/}
+                        </div>
+                    {/*</div>*/}
 
                 </div>
-            </div>
-        )
-    }
-    }
 
+
+            </div>
+    </div>
+    )
+    }
+}
 
 
 export default InfoModal

@@ -1,15 +1,14 @@
 .giftsetWrapper {
     display: flex;
     flex-direction: column;
+    max-width: 1400px;
 }
 
 .giftsetBlock {
     width: 77vw;
-    /*height: 803px;*/
     left: -2px;
     background: #EDF0F5;
     margin-top: -214px;
-    /*margin-top: -214px;*/
 }
 
 .desctiption {
@@ -44,7 +43,6 @@
     margin-top: 154px;
     display: flex;
     margin-bottom: 100px;
-
 }
 
 .giftCard {
@@ -54,18 +52,22 @@
     top: 216px;
     display: flex;
     margin-top: 68px;
-    margin-left: 27.57vw;
-    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5)
+    /*margin-left: 27.57vw;*/
+    box-shadow: 1px 0px 10px rgba(205, 205, 205, 0.5);
+    margin-left: 150px;
+
 }
 
 .giftImage {
-    margin-left: -18.2857vw;
+    margin-left: -150px;
     width: 35vw;
+    max-width: 428px;
 }
 
 .cardContent {
     margin: 5.6vw 2vw 2vw 0;
     width: 35vw;
+    max-width: 800px;
 }
 
 .cardContent h2 {
