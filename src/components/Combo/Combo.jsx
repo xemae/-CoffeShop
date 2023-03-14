@@ -33,7 +33,6 @@ const Combo = () => {
                     zIndex: "1",
                     position: 'absolute',
                     left: '27.8vw',
-                    // left: '100vw',
                     top: '0',
                     transition: 'all .15s'
                 }}
@@ -52,7 +51,6 @@ const Combo = () => {
                     marginLeft: "0px",
                     zIndex: "1",
                     position: 'absolute',
-                    // left: '27.8vw',
                     left: '100vw',
                     top: '0',
                     transition: 'all .15s'
@@ -64,8 +62,6 @@ const Combo = () => {
                 ><img src={arrow}/></button>
             </div>
         }
-
-
     }
 
     const ButtonRight = () => {
@@ -73,7 +69,6 @@ const Combo = () => {
             return <div
                 style={{
                     position: 'absolute',
-                    // left: '100vw',
                     right: '0',
                     top: '0',
                     transition: 'all .15s'

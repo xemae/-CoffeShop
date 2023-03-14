@@ -24,10 +24,9 @@
 }
 
 .close {
-    overflow: hidden;
-    position: fixed;
-    right: 4.9%;
-    top: 9.4%;
+    position: absolute;
+    right: 0;
+    top: 0;
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -40,23 +39,6 @@
     color: var(--color-text);
     rotate: 5deg;
 }
-
-/*.columnsNames {*/
-/*    background-color: rgba(65, 81, 103, 0.72);*/
-/*    color: #EDF0F5;*/
-/*    position: fixed;*/
-/*    margin-bottom: 10px;;*/
-/*    z-index: 1;*/
-/*    width: 78.2%;*/
-/*    display: grid;*/
-/*    grid-template-columns: 2fr 1fr 1fr 1fr;*/
-/*    margin-left: 20px;*/
-/*    margin-top: -50px;*/
-/*    font-size: 18px;*/
-/*    height: 40px;*/
-/*    align-items: center;*/
-/*    text-align: center;*/
-/*}*/
 
 .basketCard {
     margin-right: 20px;
@@ -189,6 +171,7 @@
 .buyWrap {
     background-color: var(--color-primary);
     width: 67vw;
+    max-width: 900px;
     margin-top: -40px;
     margin-left: -30px;
     padding-top: 100px;
@@ -199,11 +182,12 @@
 
 .buyContainer {
     width: 60vw;
+    max-width: 900px;
     height: 180px;
     grid-area: 1 / 1 / 2 / 2;
     padding: 10px;
     background-color: #ffffff;
-    margin-left: 14vw;
+    margin-left: 14%;
 }
 
 .discount {
@@ -247,11 +231,12 @@
 .buyAll {
     background: var(--color-accent);
     width: 48vw;
+    max-width: 650px;
     height: 50px;
     font-size: 25px;
     border-radius: 25px;
     color: #F9FBFF;
-    margin: 20px 5.3vw 50px 5.3vw;
+    margin: 20px auto 50px 5.3vw;
 }
 
 .buyAll:hover {
@@ -274,7 +259,6 @@
         overflow: hidden;
         position: absolute;
         z-index: 1;
-        /*right: 15px;*/
         right: 5vw;
         top: 0;
     }
@@ -285,7 +269,6 @@
         left: 0;
         top: 0;
         padding: 60px 5.8vw 30px 5.8vw;
-
     }
 
     .basketContent {
@@ -314,17 +297,9 @@
 
     .buyContainer {
         width: 75vw;
-        /*grid-area: 1 / 1 / 1 / 1;*/
-        /*padding: 10px;*/
-        /*background-color: #ffffff;*/
-        /*display: flex;*/
-        /*margin-left: auto;*/
-        /*margin-right: auto;*/
         display: flex;
         flex-direction: column;
         margin-left: 18vw;
-
-        /*margin-right: auto;*/
     }
     .buyAll {
         background: var(--color-accent);

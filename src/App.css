@@ -1,11 +1,16 @@
 * {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    /*max-width: 1400px;*/
 }
 
 body {
     background-color: #F9FBFF;
     width: 100vw;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    min-width: 300px;
 }
 
 *, *:before, *::after {
@@ -74,7 +79,6 @@ ul {
     --color-accent: #C7A17A;
     --color-text: #151d28;
     --color-contrast: #EDF0F5;
-    --color-accent-hover: #e1b281;
+    --color-accent-hover: #e0b182;
     --color-second-hover: #F9F5E8;
-
 }

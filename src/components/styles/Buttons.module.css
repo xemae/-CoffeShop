@@ -4,6 +4,8 @@ button {
     font-weight: 700;
     font-size: 16px;
     line-height: 22px;
+    border-radius: 19px;
+
 
 }
 
@@ -20,8 +22,6 @@ button {
 .buy:hover {
     background-color: var(--color-accent-hover);
     color: #FFFFFF;
-    /*height: 32px;*/
-
 }
 
 .info {

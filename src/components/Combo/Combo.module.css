@@ -46,7 +46,7 @@
 .slide {
     display: flex;
     flex-direction: row;
-    padding-left: 15vw;
+    padding-left: 15%;
     position: relative;
     width: 85vw;
     overflow: hidden;
@@ -55,10 +55,12 @@
 .comboCard {
     background-color: #FFFFFF;
     width: 23.7vw;
+    max-width: 332px;
 }
 
 .comboCard img {
     width: 23.7vw;
+    max-width: 332px;
 }
 
 .comboCard:hover {
@@ -66,7 +68,7 @@
 }
 
 .comboCard + .comboCard {
-    margin-left: 2.14vw;
+    margin-left: 2.14%;
 }
 
 .comboCard .cardContent {
@@ -130,6 +132,7 @@
     position: absolute;
     padding-top: 232px;
     width: 7.286vw;
+    max-width: 102px;
     left: 0;
     z-index: 1;
 }
@@ -137,6 +140,7 @@
 .buttonRightWrap {
     background-color: rgba(249, 251, 255, 0.65);
     width: 7.286vw;
+    max-width: 102px;
     height: 100%;
     position: absolute;
     padding-top: 232px;
