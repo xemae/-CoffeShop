@@ -41,22 +41,22 @@
     rotate: 5deg;
 }
 
-.columnsNames {
-    background-color: rgba(65, 81, 103, 0.72);
-    color: #EDF0F5;
-    position: fixed;
-    margin-bottom: 10px;;
-    z-index: 1;
-    width: 78.2%;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-    margin-left: 20px;
-    margin-top: -50px;
-    font-size: 18px;
-    height: 40px;
-    align-items: center;
-    text-align: center;
-}
+/*.columnsNames {*/
+/*    background-color: rgba(65, 81, 103, 0.72);*/
+/*    color: #EDF0F5;*/
+/*    position: fixed;*/
+/*    margin-bottom: 10px;;*/
+/*    z-index: 1;*/
+/*    width: 78.2%;*/
+/*    display: grid;*/
+/*    grid-template-columns: 2fr 1fr 1fr 1fr;*/
+/*    margin-left: 20px;*/
+/*    margin-top: -50px;*/
+/*    font-size: 18px;*/
+/*    height: 40px;*/
+/*    align-items: center;*/
+/*    text-align: center;*/
+/*}*/
 
 .basketCard {
     margin-right: 20px;
@@ -267,4 +267,72 @@
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%)
+}
+
+@media (max-width: 600px) {
+    .close {
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        /*right: 15px;*/
+        right: 5vw;
+        top: 0;
+    }
+    .basketModal {
+        background-color: rgb(248, 248, 248);
+        width: 105vw;
+        height: 105vh;
+        left: 0;
+        top: 0;
+        padding: 60px 5.8vw 30px 5.8vw;
+
+    }
+
+    .basketContent {
+        grid-area: bc;
+    }
+
+    .cost{
+        grid-area: cs;
+    }
+
+    .counter{
+        grid-area: cn;
+    }
+
+    .sumPrice{
+        grid-area: sp;
+    }
+    .basketCard {
+        display: grid;
+        grid-template-areas:
+      "bc bc bc bc"
+      "cs cn sp sp";
+        grid-row-gap: 10px;
+        grid-column-gap: 2vw;
+    }
+
+    .buyContainer {
+        width: 75vw;
+        /*grid-area: 1 / 1 / 1 / 1;*/
+        /*padding: 10px;*/
+        /*background-color: #ffffff;*/
+        /*display: flex;*/
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+        display: flex;
+        flex-direction: column;
+        margin-left: 18vw;
+
+        /*margin-right: auto;*/
+    }
+    .buyAll {
+        background: var(--color-accent);
+        width: 48vw;
+        height: 50px;
+        font-size: 25px;
+        border-radius: 25px;
+        color: #F9FBFF;
+        margin: 20px auto 20px auto;
+    }
 }

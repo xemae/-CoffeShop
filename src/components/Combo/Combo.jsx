@@ -25,7 +25,7 @@ const Combo = () => {
     }
 
     const ButtonLeft = () => {
-        if (left < 0) {
+        if (left < 0 && window.innerWidth > 862) {
             return <div
                 className={s.buttonLeftWrap}
                 style={{
@@ -33,6 +33,7 @@ const Combo = () => {
                     zIndex: "1",
                     position: 'absolute',
                     left: '27.8vw',
+                    // left: '100vw',
                     top: '0',
                     transition: 'all .15s'
                 }}
@@ -43,6 +44,28 @@ const Combo = () => {
                 ><img src={arrow}/></button>
             </div>
         }
+
+        if (left < 0 && window.innerWidth < 862) {
+            return <div
+                className={s.buttonLeftWrap}
+                style={{
+                    marginLeft: "0px",
+                    zIndex: "1",
+                    position: 'absolute',
+                    // left: '27.8vw',
+                    left: '100vw',
+                    top: '0',
+                    transition: 'all .15s'
+                }}
+            >
+                <button
+                    onClick={onButtonLeftClick}
+                    className={b.arrow + ' ' + b.left}
+                ><img src={arrow}/></button>
+            </div>
+        }
+
+
     }
 
     const ButtonRight = () => {

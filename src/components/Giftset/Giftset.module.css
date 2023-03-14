@@ -5,10 +5,11 @@
 
 .giftsetBlock {
     width: 77vw;
-    height: 803px;
+    /*height: 803px;*/
     left: -2px;
     background: #EDF0F5;
     margin-top: -214px;
+    /*margin-top: -214px;*/
 }
 
 .desctiption {
@@ -42,6 +43,8 @@
 .slider {
     margin-top: 154px;
     display: flex;
+    margin-bottom: 100px;
+
 }
 
 .giftCard {
@@ -219,6 +222,7 @@
 @media (max-width: 750px) {
     .slider {
         margin-top: 200px;
+        margin-bottom: 60px;
     }
 
     .giftsetBlock {
@@ -263,10 +267,14 @@
     .pages {
         display: flex;
         flex-direction: column;
+        margin-top: -68px;
+        /*position: absolute;*/
+        /*height: 100%;*/
+        /*top: 0;*/
     }
 
     .pages button {
-        height: calc(33.33% - 22px);
+        height: calc(33.33% - 22.5px);
     }
 }
 
