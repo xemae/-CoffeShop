@@ -19,7 +19,12 @@ const Coffee = () => {
         if (left < 0) {
             return <button className={s.buttonLeftWrap} style={{
                 marginLeft: "0px",
-                zIndex: "1"
+                zIndex: "1",
+                position: 'absolute',
+                right: '93.2857vw',
+                top: '0',
+                transition: 'all .15s'
+
             }}>
                 <button className={b.arrow + ' ' + b.left}
                         onClick={onButtonLeftClick}
@@ -30,7 +35,15 @@ const Coffee = () => {
 
     const ButtonRight = () => {
         if (left >= 0) {
-            return <button className={s.buttonRightWrap}>
+            return <button className={s.buttonRightWrap} style={{
+                position: 'absolute',
+                // left: '100vw',
+                right: '0',
+                top: '0',
+                transition: 'all .15s'
+
+            }}
+            >
                 <button className={b.arrow + ' ' + b.right}
                         onClick={onButtonRightClick}
                 ><img src={arrow}/></button>
@@ -47,26 +60,25 @@ const Coffee = () => {
 
             <div className={s.slider}>
 
-                <ButtonLeft/>
-
                 <div style={{
-                    // position: 'absolute',
+                    position: 'absolute',
                     left: `${left}vw`,
                     transition: 'all .15s'
                 }}>
+                    <ButtonLeft/>
 
                     <div className={s.slide}
                          style={{
-                             width: `${100+-left}vw`,
+                             width: `${100 + -left}vw`,
                              transition: 'all .1s'
                          }}
                     >
                         <CoffeeCards/>
                     </div>
+                    <ButtonRight/>
 
                 </div>
 
-                <ButtonRight/>
 
             </div>
         </div>

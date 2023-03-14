@@ -3,26 +3,23 @@ import s from "./Combo.module.css"
 import b from "../styles/Buttons.module.css"
 import arrow from "../../img/right-arrow.svg"
 import ComboCards from "./ComboCards/ComboCards";
-import InfoModal from "../InfoModal/InfoModal";
 
 const Combo = () => {
     const [left, setLeft] = useState(0);
     const [infoModal, setInfoModal] = useState(false);
 
     const onButtonRightClick = (e) => {
-        if(window.innerWidth > 862) {
+        if (window.innerWidth > 862) {
             setLeft(left - 27.857)
-        }
-        else {
+        } else {
             setLeft(left - 100)
         }
     }
 
     const onButtonLeftClick = (e) => {
-        if(window.innerWidth > 862) {
+        if (window.innerWidth > 862) {
             setLeft(left + 27.857)
-        }
-        else {
+        } else {
             setLeft(left + 100)
         }
     }
@@ -32,7 +29,12 @@ const Combo = () => {
             return <div
                 className={s.buttonLeftWrap}
                 style={{
+                    marginLeft: "0px",
                     zIndex: "1",
+                    position: 'absolute',
+                    left: '27.8vw',
+                    top: '0',
+                    transition: 'all .15s'
                 }}
             >
                 <button
@@ -46,6 +48,14 @@ const Combo = () => {
     const ButtonRight = () => {
         if (left >= 0) {
             return <div
+                style={{
+                    position: 'absolute',
+                    // left: '100vw',
+                    right: '0',
+                    top: '0',
+                    transition: 'all .15s'
+
+                }}
                 className={s.buttonRightWrap}
             >
                 <button
@@ -64,27 +74,24 @@ const Combo = () => {
                 <h1>COMBO PHIN PHÊ</h1>
             </div>
             <div className={s.comboBlock} id='combo'>
-                {/*<div className={s.comboBlock}>*/}
-
+                <div style={{
+                    position: 'absolute',
+                    left: `${left}vw`,
+                    transition: 'all .15s'
+                }}>
                     <ButtonLeft/>
 
-                    <div style={{
-                        // position: 'absolute',
-                        left: `${left}vw`,
-                        transition: 'all .15s'
-                    }}>
-                        <div className={s.slide}
-                             style={{
-                                 width: `${100 + -left}vw`,
-                                 transition: 'all .1s'
-                             }}>
-                            <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
-                        </div>
+                    <div className={s.slide}
+                         style={{
+                             width: `${100 + -left}vw`,
+                             transition: 'all .1s'
+                         }}>
+                        <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
                     </div>
-
                     <ButtonRight/>
 
-                {/*</div>*/}
+                </div>
+
             </div>
         </div>
 

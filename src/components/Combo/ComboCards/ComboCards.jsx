@@ -4,17 +4,9 @@ import b from "../../styles/Buttons.module.css"
 import {useDispatch, useSelector} from "react-redux";
 import {addToBasket, showInfo} from "../../../reduxToolkit/toolkitSlice";
 
-const ComboCards = (props) => {
+const ComboCards = () => {
     const cards = useSelector(state => state.toolkit.cards.filter(i => i.type === 'combo'))
     const dispatch = useDispatch()
-
-
-    // const onInfoClick = (c) => {
-    //     props.setInfoModal(true)
-    //     if (props.infoModal) {
-    //         return <InfoModal info={c}/>
-    //     }
-    // }
 
     const Cards = cards.map(c =>
         <div key={c.id} className={s.comboCard}>
