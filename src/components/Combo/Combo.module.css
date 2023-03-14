@@ -8,7 +8,6 @@
     padding-top: 200px;
 }
 
-
 .description {
     position: absolute;
     display: flex;
@@ -41,6 +40,7 @@
 .comboBlock {
     display: flex;
     position: absolute;
+    height: 100%;
 }
 
 .slide {
@@ -131,15 +131,17 @@
     padding-top: 232px;
     width: 7.286vw;
     left: 0;
+    z-index: 1;
 }
 
 .buttonRightWrap {
-    background-color: rgba(22, 105, 218, 0.53);
+    background-color: rgba(249, 251, 255, 0.65);
     width: 7.286vw;
     height: 100%;
     position: absolute;
     padding-top: 232px;
-    right: 0;
+    right: -100vw;
+    z-index: 1;
 }
 
 @media (max-width: 1176px) {
@@ -224,15 +226,6 @@
         margin-top: 0vw;
         margin-bottom: 0vw;
     }
-
-    .buttonLeftWrap {
-        height: 150%;
-    }
-
-    .buttonRightWrap {
-        height: 150%;
-    }
-
 }
 
 @media (max-width: 673px) {
@@ -287,13 +280,5 @@
         grid-row-gap: 3px;
         margin-bottom: 38px;
         height: 37px;
-    }
-
-    .buttonLeftWrap {
-        height: 207%;
-    }
-
-    .buttonRightWrap {
-        height: 207%;
     }
 }
