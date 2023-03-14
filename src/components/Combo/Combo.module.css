@@ -145,6 +145,17 @@
 }
 
 @media (max-width: 1176px) {
+
+    .comboBlockContainer {
+        background-color: var(--color-primary);
+        /*height: 100vw;*/
+        min-height: 700px;
+        max-height: 850px;
+        width: 23.39vw;
+        right: 0;
+        padding-top: 200px;
+    }
+
     .cardContent {
         display: flex;
         flex-flow: column;
@@ -238,8 +249,11 @@
     }
 }
 
-
 @media (max-width: 400px) {
+    .comboBlockContainer {
+        min-height: 940px;
+        max-height: 1020px;
+    }
 
     .comboCard {
         display: flex;
@@ -252,20 +266,14 @@
         grid-template-columns: 1fr 1fr;
         grid-row-gap: 2vw;
         grid-column-gap: 5vw;
-    }
-
-    .comboBlockWrapper {
-        width: 20.1vw;
-        margin-left: 79.9vw;
+        margin-top: 0vw;
     }
 
     .description {
-        margin-right: 20vw
+        margin-left: 10vw;
+        width: 70vw;
     }
 
-    .comboBlockContainer {
-        margin-top: -56px;
-    }
     .comboCard img {
         display: flex;
         margin-left: auto;
@@ -280,5 +288,11 @@
         grid-row-gap: 3px;
         margin-bottom: 38px;
         height: 37px;
+    }
+}
+
+@media (max-width: 303px) {
+    .comboBlockContainer {
+        min-height: 1070px;
     }
 }

@@ -62,12 +62,12 @@ const BasketModal = () => {
                 <div className={s.basketModal} onClick={e => e.stopPropagation()}>
                     <button className={s.close} onClick={() => dispatch(hideBasket())}>&times;</button>
 
-                    <div className={s.columnsNames}>
-                        <h1>товар</h1>
-                        <h1>цена</h1>
-                        <h1>количество</h1>
-                        <h1>подытог</h1>
-                    </div>
+                    {/*<div className={s.columnsNames}>*/}
+                    {/*    <h1>товар</h1>*/}
+                    {/*    <h1>цена</h1>*/}
+                    {/*    <h1>количество</h1>*/}
+                    {/*    <h1>подытог</h1>*/}
+                    {/*</div>*/}
 
                     {BasketCards}
 

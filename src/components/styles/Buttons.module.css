@@ -53,6 +53,14 @@ button {
     margin-left: -1.143vw;
 }
 
+@media (max-width: 780px) {
+    .arrow.right {
+        margin-left: -3.143vw;
+        margin-right: 2vw;
+    }
+
+}
+
 .arrow.left img {
     transform: rotate(180deg);
 }
