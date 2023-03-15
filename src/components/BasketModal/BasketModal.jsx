@@ -1,7 +1,7 @@
 import React from "react";
 import s from "./BasketModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {hideBasket, minusItem, plusItem, removeFromBasket, showInfo} from "../../reduxToolkit/toolkitSlice";
+import {buy, hideBasket, minusItem, plusItem, removeFromBasket, showInfo} from "../../reduxToolkit/toolkitSlice";
 import emptyBasket from '../../img/emptyBasket.png'
 
 const BasketModal = () => {
@@ -73,7 +73,10 @@ const BasketModal = () => {
                                 <h2>{totalPrice + '.00'}</h2>
                             </div>
 
-                            <button className={s.buyAll}>Buy</button>
+                            <button
+                                className={s.buyAll}
+                                onClick={() => dispatch(buy())}
+                            >Buy</button>
                         </div>
 
                     </div>
