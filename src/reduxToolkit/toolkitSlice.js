@@ -18,6 +18,7 @@ const toolkitSlice = createSlice({
         initialState: {
             showedCard: null,
             isBasketShowed: false,
+            isBuyFormShowed: false,
             basketCounter: 0,
             basket: [],
             totalPrice: 0,
@@ -292,12 +293,17 @@ const toolkitSlice = createSlice({
                     state.discount = state.discount - (decrementedItem.lastPrice - decrementedItem.price)
                 }
             },
+            setBuyForm(state) {
+                state.isBuyFormShowed = !state.isBuyFormShowed
+                console.log(state.isBuyFormShowed)
+            },
             buy(state) {
                 state.basketCounter = 0
                 state.basket = []
                 state.totalPrice = 0
                 state.discount = 0
             }
+
         }
     }
 )
@@ -306,5 +312,5 @@ export default toolkitSlice.reducer
 
 export const {
     showInfo, hideInfo, addToBasket, removeFromBasket,
-    hideBasket, showBasket, plusItem, minusItem, buy
+    hideBasket, showBasket, plusItem, minusItem, setBuyForm, buy
 } = toolkitSlice.actions

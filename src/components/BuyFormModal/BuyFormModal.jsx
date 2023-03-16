@@ -1,13 +1,42 @@
-import React from "react";
-import s from "./BuyFormModal.modal.css"
+import React, {useCallback, useState} from "react";
+import s from "./BuyFormModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {buy, hideBasket, minusItem, plusItem, removeFromBasket, showInfo} from "../../reduxToolkit/toolkitSlice";
-import emptyBasket from '../../img/emptyBasket.png'
+import {buy, hideBasket, setBuyForm} from "../../reduxToolkit/toolkitSlice";
 
 const BuyFormModal = () => {
-    const {basket} = useSelector(state => state.toolkit)
+    console.log('hey')
+
+    const {isBuyFormShowed} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
+    const [form, setForm] = useState({
+        email: '',
+        phone: ''
+    })
+
+    const changeHandler = useCallback((event) => {
+        setForm({...form, [event.target.name]: event.target.value})
+    }, [form])
+
+    const handlerSubmit = useCallback(async (event) => {
+            dispatch(buy())
+        }, [form]
+    )
+
+    // if (isBuyFormShowed === true) {
+        return (
+            <div className={s.byeContainer}>
+                <div className={s.buy}>
+                    <button className={s.close} onClick={() => dispatch(setBuyForm())}>&times;</button>
+                    <form className={s.form} onSubmit={handlerSubmit}>
+                        <input onChange={changeHandler} type="text" placeholder='Почта' name='email'/>
+                        <input onChange={changeHandler} type={"text"} name={'phone'} placeholder='phone number'/>
+                        <button className={s.buyButton}>Buy</button>
+                    </form>
+                </div>
+            </div>
+        )
+    // }
 
 }
 
