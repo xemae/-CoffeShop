@@ -1,0 +1,110 @@
+.byeContainer {
+    background-color: var(--color-modal-background);
+    text-align: center;
+    z-index: 9;
+    width: 105vw;
+    height: 105vh;
+    position: fixed;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.buy {
+    background-color: var(--color-modal);
+    color: var(--color-primary);
+    width: 80vw;
+    position: absolute;
+    padding: 3.57vw 50px 3.57vw 3.57vw;
+    cursor: default;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    max-height: 500px;
+}
+
+.close {
+    color: var(--color-primary);
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    border-radius: 100%;
+    font-size: 50px;
+    display: flex;
+}
+
+.close:hover {
+    color: var(--color-text);
+    rotate: 5deg;
+}
+
+/*.byeText {*/
+/*    background-color: #3098d5;*/
+/*    color: #eeeeee;*/
+/*    padding: 2vh;*/
+/*    border-bottom: 1px solid rgba(40, 44, 52, 0.14);*/
+/*    text-align: center;*/
+/*    font-weight: bold;*/
+/*    font-size: 30px;*/
+/*}*/
+
+.form {
+    margin: 20px auto;
+    width: 80%;
+    color: var(--color-primary);
+
+}
+
+.form input {
+    border: none;
+    width: 50%;
+    min-width: 240px;
+    font-size: 18px;
+    margin: 10px;
+    padding: 7px;
+    background-color: var(--color-text-contrast-hover);
+    /*background-color: #1355c4;*/
+    color: var(--color-primary);
+}
+
+.form input::placeholder{
+    color: rgba(65, 81, 103, 0.45);
+}
+
+.form input:hover {
+    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.16);
+}
+
+.form input:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(73, 86, 117, 0.56);
+    background-color: #ffffff;
+}
+
+
+
+.buyButton {
+    background: var(--color-accent);
+    color: var(--color-text-contrast);
+    width: 200px;
+    height: 50px;
+    font-size: 25px;
+    border-radius: 25px;
+    display: flex;
+    margin: 20px auto 50px auto;
+    padding-left: 79px;
+    align-items: center;
+}
+
+.buyButton:hover {
+    background-color: var(--color-accent-hover);
+    color: var(--color-text-contrast-hover);
+}
+
+.buyButton:active {
+    background-color: var(--color-accent-hover);
+    color: var(--color-text-contrast-hover);
+}

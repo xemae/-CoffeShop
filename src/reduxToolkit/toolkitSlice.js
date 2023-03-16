@@ -10,14 +10,15 @@ import everyday from "../img/everyday.svg";
 import revo from "../img/revo.svg";
 import honey from "../img/honey.svg";
 import natural from "../img/natural.svg";
-import InfoModal from "../components/InfoModal/InfoModal";
-// import {addToBasket, removeFromBasket, showOrHideBasket, showOrHideInfo} from "./app-reducer";
+// import InfoModal from "../components/InfoModal/InfoModal";
+// // import {addToBasket, removeFromBasket, showOrHideBasket, showOrHideInfo} from "./app-reducer";
 
 const toolkitSlice = createSlice({
         name: 'toolkit',
         initialState: {
             showedCard: null,
             isBasketShowed: false,
+            isBuyFormShowed: false,
             basketCounter: 0,
             basket: [],
             totalPrice: 0,
@@ -292,6 +293,17 @@ const toolkitSlice = createSlice({
                     state.discount = state.discount - (decrementedItem.lastPrice - decrementedItem.price)
                 }
             },
+            setBuyForm(state) {
+                state.isBuyFormShowed = !state.isBuyFormShowed
+                console.log(state.isBuyFormShowed)
+            },
+            buy(state) {
+                state.basketCounter = 0
+                state.basket = []
+                state.totalPrice = 0
+                state.discount = 0
+            }
+
         }
     }
 )
@@ -300,7 +312,5 @@ export default toolkitSlice.reducer
 
 export const {
     showInfo, hideInfo, addToBasket, removeFromBasket,
-    hideBasket, showBasket,
-    plusItem,
-    minusItem
+    hideBasket, showBasket, plusItem, minusItem, setBuyForm, buy
 } = toolkitSlice.actions

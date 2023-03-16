@@ -1,11 +1,19 @@
 import React from "react";
 import s from "./BasketModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {hideBasket, minusItem, plusItem, removeFromBasket, showInfo} from "../../reduxToolkit/toolkitSlice";
+import {
+    hideBasket,
+    minusItem,
+    plusItem,
+    removeFromBasket,
+    setBuyForm,
+    showInfo
+} from "../../reduxToolkit/toolkitSlice";
 import emptyBasket from '../../img/emptyBasket.png'
+import BuyFormModal from "../BuyFormModal/BuyFormModal";
 
 const BasketModal = () => {
-    const {basket, isBasketShowed, totalPrice, discount} = useSelector(state => state.toolkit)
+    const {basket, isBasketShowed, totalPrice, discount, isBuyFormShowed} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
     const setDiscount = (lastPrice) => {
         if (lastPrice !== undefined) {
@@ -55,6 +63,12 @@ const BasketModal = () => {
             )
         }
 
+        if(isBuyFormShowed) {
+            return (
+                <BuyFormModal/>
+            )
+        }
+
         return (
             <div className={s.basketModalWrapper} onClick={() => dispatch(hideBasket())}>
                 <div className={s.basketModal} onClick={e => e.stopPropagation()}>
@@ -73,7 +87,12 @@ const BasketModal = () => {
                                 <h2>{totalPrice + '.00'}</h2>
                             </div>
 
-                            <button className={s.buyAll}>Buy</button>
+                            {/*<BuyFormModal/>*/}
+
+                            <button
+                                className={s.buyAll}
+                                onClick={() => dispatch(setBuyForm())}
+                            >Buy</button>
                         </div>
 
                     </div>
