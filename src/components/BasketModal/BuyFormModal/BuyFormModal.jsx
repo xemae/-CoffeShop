@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from "react";
 import s from "./BuyFormModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {buy, setBuyForm} from "../../reduxToolkit/toolkitSlice";
+import {buy, setBuyForm} from "../../../reduxToolkit/toolkitSlice";
 
 const BuyFormModal = () => {
     console.log('hey')
@@ -28,8 +28,8 @@ const BuyFormModal = () => {
                 <div className={s.buy}>
                     <button className={s.close} onClick={() => dispatch(setBuyForm())}>&times;</button>
                     <form className={s.form} onSubmit={handlerSubmit}>
-                        <input onChange={changeHandler} type="text" placeholder='Почта' name='email'/>
-                        <input onChange={changeHandler} type={"text"} name={'phone'} placeholder='phone number'/>
+                        <input onChange={changeHandler} type="text" placeholder='Thư' name='email'/>
+                        <input onChange={changeHandler} type={"text"} name={'phone'} placeholder='số điện thoại'/>
                         <button className={s.buyButton}>Buy</button>
                     </form>
                 </div>

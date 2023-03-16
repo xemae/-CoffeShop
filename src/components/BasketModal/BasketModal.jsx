@@ -10,7 +10,7 @@ import {
     showInfo
 } from "../../reduxToolkit/toolkitSlice";
 import emptyBasket from '../../img/emptyBasket.png'
-import BuyFormModal from "../BuyFormModal/BuyFormModal";
+import BuyFormModal from "./BuyFormModal/BuyFormModal";
 
 const BasketModal = () => {
     const {basket, isBasketShowed, totalPrice, discount, isBuyFormShowed} = useSelector(state => state.toolkit)
