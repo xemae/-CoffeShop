@@ -34,7 +34,7 @@ const Giftset = () => {
                                 onClick={onButtonClick}>2
                         </button>
                         <button id={"3"}
-                                className={activeSlide === "3"? s.active : ""}
+                                className={activeSlide === "3" ? s.active : ""}
                                 onClick={onButtonClick}>3
                         </button>
                     </div>

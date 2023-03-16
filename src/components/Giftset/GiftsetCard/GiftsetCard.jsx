@@ -20,6 +20,7 @@ const GiftsetCard = (props) => {
                 <h2>{card.price + '.00'}</h2>
                 <h1>{card.title}</h1>
                 <p>{card.description}</p>
+
                 <div className={s.giftProperties}>
                     <div className={s.property}>
                         <img src={beans}/>
@@ -36,6 +37,7 @@ const GiftsetCard = (props) => {
                         </div>
                     </div>
                 </div>
+
                 <div className={s.buttons}>
                     <button className={b.buy} onClick={() => dispatch(addToBasket(card))}>MUA NGAY</button>
                     <button className={b.info} onClick={() => dispatch(showInfo(card))}>CHI TIẾT</button>

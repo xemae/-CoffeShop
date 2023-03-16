@@ -87,10 +87,12 @@ const Combo = () => {
 
     return (
         <div className={s.comboBlockContainer}>
+
             <div className={s.description}>
                 <h2>Your Personalized Coffee</h2>
                 <h1>COMBO PHIN PHÊ</h1>
             </div>
+
             <div className={s.comboBlock} id='combo'>
                 <div style={{
                     position: 'absolute',
@@ -106,6 +108,7 @@ const Combo = () => {
                          }}>
                         <ComboCards infoModal={infoModal} setInfoModal={setInfoModal}/>
                     </div>
+
                     <ButtonRight/>
 
                 </div>

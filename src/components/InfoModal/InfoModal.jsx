@@ -4,7 +4,7 @@ import b from "../styles/Buttons.module.css"
 import beans from "../../img/coffeeBeans.svg";
 import place from "../../img/mountain.svg";
 import {useDispatch, useSelector} from "react-redux";
-import {addToBasket, hideBasket, hideInfo} from "../../reduxToolkit/toolkitSlice";
+import {addToBasket, hideInfo} from "../../reduxToolkit/toolkitSlice";
 
 const InfoModal = () => {
     const {showedCard} = useSelector(state => state.toolkit)
@@ -55,7 +55,6 @@ const InfoModal = () => {
                             </button>
                         </div>
                     </div>
-
 
                 </div>
             </div>

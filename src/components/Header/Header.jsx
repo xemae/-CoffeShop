@@ -9,7 +9,6 @@ const Header = () => {
     const {basketCounter} = useSelector(state => state.toolkit)
     const dispatch = useDispatch()
 
-
     return (
         <div className={s.header}>
             <img className={s.background} src={background}/>
@@ -19,10 +18,7 @@ const Header = () => {
                 <h1 className={s.text}>YOUR</h1>
                 <h1 className={s.backgrounded}>PERSONALIZED</h1>
                 <h1 className={s.text}>COFFEE</h1>
-
-
             </div>
-
 
             <div className={s.nav}>
                 <button className={s.basket} onClick={() => dispatch(showBasket())}>
