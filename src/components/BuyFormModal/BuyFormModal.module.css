@@ -108,3 +108,22 @@
     background-color: var(--color-accent-hover);
     color: var(--color-text-contrast-hover);
 }
+
+
+@media (max-width: 493px) {
+    .buy {
+        width: 105vw;
+        height: 105vh;
+        padding: 3.57vw 3.57vw 3.57vw 3.57vw;
+        max-height: none;
+        padding-top: 30%;
+    }
+
+    .close {
+        overflow: hidden;
+        position: absolute;
+        z-index: 1;
+        right: 5vw;
+        top: 0;
+    }
+}
