@@ -1,4 +1,4 @@
-import {createSlice, current} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 import combo1 from "../img/combo1.svg";
 import combo2 from "../img/combo2.svg";
 import combo3 from "../img/combo3.svg";
@@ -10,8 +10,6 @@ import everyday from "../img/everyday.svg";
 import revo from "../img/revo.svg";
 import honey from "../img/honey.svg";
 import natural from "../img/natural.svg";
-// import InfoModal from "../components/InfoModal/InfoModal";
-// // import {addToBasket, removeFromBasket, showOrHideBasket, showOrHideInfo} from "./app-reducer";
 
 const toolkitSlice = createSlice({
         name: 'toolkit',
@@ -249,8 +247,7 @@ const toolkitSlice = createSlice({
                     if (itemOnBasket.lastPrice) {
                         state.discount = state.discount + (itemOnBasket.lastPrice - itemOnBasket.price)
                     }
-                }
-                else {
+                } else {
                     state.basket.push(newItem)
                     newItem.count = newItem.count + 1
                     state.basketCounter = state.basketCounter + 1
@@ -264,7 +261,7 @@ const toolkitSlice = createSlice({
             removeFromBasket(state, action) {
                 state.basketCounter = state.basketCounter - 1
                 state.basket = state.basket.filter(el => el.id !== action.payload.id)
-                state.totalPrice = state.totalPrice-action.payload.sumPrice
+                state.totalPrice = state.totalPrice - action.payload.sumPrice
 
                 if (action.payload.lastPrice) {
                     state.discount = state.discount - (action.payload.lastPrice - action.payload.price)
@@ -282,7 +279,7 @@ const toolkitSlice = createSlice({
             },
             minusItem(state, action) {
                 let decrementedItem = state.basket.find(card => card.id === action.payload)
-                if(decrementedItem.count === 1) {
+                if (decrementedItem.count === 1) {
                     state.basketCounter = state.basketCounter - 1
                     state.basket = state.basket.filter(el => el.id !== action.payload)
                 }
@@ -303,7 +300,6 @@ const toolkitSlice = createSlice({
                 state.totalPrice = 0
                 state.discount = 0
             }
-
         }
     }
 )

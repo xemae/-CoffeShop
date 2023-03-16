@@ -18,7 +18,6 @@ function App() {
             <InfoModal/>
             <Header/>
             <Benefits/>
-
             <Coffee/>
             <Giftset/>
             <Combo/>

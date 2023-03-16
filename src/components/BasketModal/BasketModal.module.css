@@ -178,7 +178,6 @@
     display: grid;
     grid-template-columns: 350px 1fr;
     grid-template-rows: 240px 1fr;
-
 }
 
 .buyContainer {
@@ -238,7 +237,7 @@
     border-radius: 25px;
     display: flex;
     margin: 20px auto 50px auto;
-    padding-left: 79px;
+    padding-left: 34px;
     align-items: center;
 }
 
@@ -265,6 +264,7 @@
         right: 5vw;
         top: 0;
     }
+
     .basketModal {
         width: 105vw;
         height: 105vh;
@@ -277,17 +277,18 @@
         grid-area: bc;
     }
 
-    .cost{
+    .cost {
         grid-area: cs;
     }
 
-    .counter{
+    .counter {
         grid-area: cn;
     }
 
-    .sumPrice{
+    .sumPrice {
         grid-area: sp;
     }
+
     .basketCard {
         display: grid;
         grid-template-areas:
@@ -303,11 +304,8 @@
         flex-direction: column;
         margin-left: 18vw;
     }
+
     .buyAll {
-        width: 200px;
         margin: 20px auto 20px auto;
-        display: flex;
-        padding-left: 79px;
-        align-items: center;
     }
 }

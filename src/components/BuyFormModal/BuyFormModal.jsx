@@ -1,7 +1,7 @@
 import React, {useCallback, useState} from "react";
 import s from "./BuyFormModal.module.css"
 import {useDispatch, useSelector} from "react-redux";
-import {buy, hideBasket, setBuyForm} from "../../reduxToolkit/toolkitSlice";
+import {buy, setBuyForm} from "../../reduxToolkit/toolkitSlice";
 
 const BuyFormModal = () => {
     console.log('hey')
@@ -23,7 +23,6 @@ const BuyFormModal = () => {
         }, [form]
     )
 
-    // if (isBuyFormShowed === true) {
         return (
             <div className={s.byeContainer}>
                 <div className={s.buy}>
@@ -36,8 +35,6 @@ const BuyFormModal = () => {
                 </div>
             </div>
         )
-    // }
-
 }
 
 export default BuyFormModal

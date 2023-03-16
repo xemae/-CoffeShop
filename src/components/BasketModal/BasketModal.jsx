@@ -46,7 +46,6 @@ const BasketModal = () => {
                 </div>
 
                 <div className={s.sumPrice}><h2>{c.sumPrice + '.00'}</h2></div>
-
             </div>
         )
 
@@ -63,7 +62,7 @@ const BasketModal = () => {
             )
         }
 
-        if(isBuyFormShowed) {
+        if (isBuyFormShowed) {
             return (
                 <BuyFormModal/>
             )
@@ -79,20 +78,20 @@ const BasketModal = () => {
                     <div className={s.buyWrap}>
                         <div className={s.buyContainer}>
                             <div className={s.discount}>
-                                <h3>скидка</h3>
+                                <h3>giảm giá</h3>
                                 <h2>{discount}</h2>
                             </div>
                             <div className={s.totalPrice}>
-                                <h3>totalPrice</h3>
+                                <h3>Tổng</h3>
                                 <h2>{totalPrice + '.00'}</h2>
                             </div>
-
-                            {/*<BuyFormModal/>*/}
 
                             <button
                                 className={s.buyAll}
                                 onClick={() => dispatch(setBuyForm())}
-                            >Buy</button>
+                            >
+                                MUA NGAY
+                            </button>
                         </div>
 
                     </div>
